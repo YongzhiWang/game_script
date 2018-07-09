@@ -1,0 +1,118 @@
+[{
+	"action": "tap",
+	"xpos": 1200,
+	"ypos": 950,
+	"message": "click possible drop button match",
+	"sleepTime": 6
+},
+	{
+		"action": "tap",
+		"xpos": 2160,
+		"ypos": 650,
+		"message": "click Jing Dian match",
+		"sleepTime": 5
+	},
+
+	{
+		"action": "tap",
+		"xpos": 1210,
+		"ypos": 600,
+		"message": "click Huo Dong match",
+		"sleepTime": 5
+	},
+
+	{
+		"action": "swipe_end",
+		"message": "swipe to end",
+		"sleepTime": 1
+	},
+
+	{
+		"action": "tap",
+		"xpos": 2300,
+		"ypos": 650,
+		"message": "click last match",
+		"sleepTime": 1
+	},
+
+	{
+		"action": "tap",
+		"xpos": 1350,
+		"ypos": 1050,
+		"message": "click very easy match",
+		"sleepTime": 1
+	},
+
+	{
+		"action": "tap",
+		"xpos": 2220,
+		"ypos": 1280,
+		"message": "click match begin button",
+		"sleepTime": 2
+	},
+
+	{
+		"action": "tap",
+		"xpos": 600,
+		"ypos": 600,
+		"message": "click self match",
+		"sleepTime": 7
+	},
+
+	{
+		"action": "tap",
+		"xpos": 1250,
+		"ypos": 350,
+		"message": "click first friend button",
+		"sleepTime": 1
+	},
+
+	{
+		"action": "tap",
+		"xpos": 2350,
+		"ypos": 1100,
+		"message": "click game ready button",
+		"sleepTime": 1
+	},
+
+	{
+		"action": "tap",
+		"xpos": 1480,
+		"ypos": 1060,
+		"message": "skip boost button",
+		"sleepTime": 1
+	},
+
+	{
+		"action": "sleep",
+		"message": "Sleep until game done",
+		"sleepTime": 80
+	},
+
+	{
+		"action": "kill",
+		"message": "Kill game",
+		"sleepTime": 2
+	},
+
+
+	{
+		"action": "launch",
+		"message": "launch game",
+		"sleepTime": 1
+	},
+
+	{
+		"action": "sleep",
+		"message": "Sleep until game is fully launched",
+		"sleepTime": 20
+	},
+
+	{
+		"action": "tap",
+		"xpos": 2400,
+		"ypos": 1100,
+		"message": "click launch screen",
+		"sleepTime": 5
+	}
+]
