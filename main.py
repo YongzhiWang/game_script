@@ -1,8 +1,19 @@
 import sys
 import actions
 import datetime
+import utils
+
+def init():
+    print('kill Trubasa app')
+    utils.kill_app()
+    utils.sleep_wait(3)
+    print('launch Trubasa app')
+    utils.launch_app()
+    utils.sleep_wait(20)
+
 
 if __name__=='__main__':
+    init()
     if len(sys.argv) == 3:
             total = int(sys.argv[2])
             for i in range(total):
