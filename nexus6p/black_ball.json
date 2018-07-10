@@ -1,0 +1,98 @@
+[
+    {
+	    "action": "tap",
+	    "xpos": 968,
+	    "ypos": 965,
+	    "message": "click possible drop button match",
+	    "sleepTime": 3 
+    },
+
+    {
+        "action": "tap",
+	    "xpos": 968,
+	    "ypos": 965,
+	    "message": "click to give up last unfinished match",
+	    "sleepTime": 6 
+    },
+
+	{
+		"action": "tap",
+		"xpos": 1907,
+		"ypos": 655,
+		"message": "click Jing Dian match",
+		"sleepTime": 4
+	},
+
+	{
+		"action": "tap",
+		"xpos": 1250,
+		"ypos": 644,
+		"message": "click Huo Dong match",
+		"sleepTime": 4 
+	},
+
+	{
+		"action": "tap",
+		"xpos": 1127,
+		"ypos": 674,
+		"message": "click black ball match",
+		"sleepTime": 1
+	},
+
+	{
+		"action": "tap",
+		"xpos": 1126,
+		"ypos": 383,
+		"message": "click first position match",
+		"sleepTime": 1
+	},
+
+	{
+		"action": "tap",
+		"xpos": 2024,
+		"ypos": 1250,
+		"message": "click match begin button",
+		"sleepTime": 2
+	},
+
+	{
+		"action": "tap",
+		"xpos": 1277,
+		"ypos": 387,
+		"message": "click join global share match",
+		"sleepTime": 9 
+	},
+
+	{
+		"action": "tap",
+		"xpos": 2130,
+		"ypos": 1100,
+		"message": "click game ready button",
+		"sleepTime": 1
+	},
+
+	{
+		"action": "sleep",
+		"message": "Sleep until game done",
+		"sleepTime": 100
+	},
+
+	{
+		"action": "kill",
+		"message": "Kill game",
+		"sleepTime": 2
+	},
+
+
+	{
+		"action": "launch",
+		"message": "launch game",
+		"sleepTime": 1
+	},
+
+	{
+		"action": "sleep",
+		"message": "Sleep until game is fully launched",
+		"sleepTime": 18 
+	}
+]
