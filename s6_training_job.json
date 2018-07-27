@@ -1,0 +1,121 @@
+[
+  {
+    "action": "tap",
+    "xpos": 126,
+    "ypos": 980,
+    "message": "click Team button",
+    "sleepTime": 3
+  },
+  {
+    "action": "tap",
+    "xpos": 270,
+    "ypos": 500,
+    "message": "click Training match",
+    "sleepTime": 4
+  },
+  {
+    "action": "tap",
+    "xpos": 200,
+    "ypos": 250,
+    "message": "click first SR or R users",
+    "sleepTime": 3
+  },
+  {
+    "action": "tap",
+    "xpos": 195,
+    "ypos": 810,
+    "message": "click first slot",
+    "sleepTime": 4
+  },
+  {
+    "action": "tap",
+    "xpos": 200,
+    "ypos": 250,
+    "message": "click first book slot",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 1700,
+    "ypos": 1000,
+    "message": "click okay button",
+    "sleepTime": 2
+  },
+  {
+    "action": "tap",
+    "xpos": 1600,
+    "ypos": 1000,
+    "message": "click okay training match",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 1400,
+    "ypos": 950,
+    "message": "click watch video button",
+    "sleepTime": 20
+  },
+  {
+    "action": "tap",
+    "xpos": 1845,
+    "ypos": 75,
+    "message": "click close ads button, not necessary?",
+    "sleepTime": 2
+  },
+  {
+    "action": "tap",
+    "xpos": 1845,
+    "ypos": 75,
+    "message": "click close ads button, not necessary?",
+    "sleepTime": 2
+  },
+  {
+    "action": "tap",
+    "xpos": 1845,
+    "ypos": 75,
+    "message": "click close ads button, not necessary?",
+    "sleepTime": 2
+  },
+  {
+    "action": "tap",
+    "xpos": 1000,
+    "ypos": 720,
+    "message": "click next page button",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 1200,
+    "ypos": 300,
+    "message": "click dream ball page",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 1000,
+    "ypos": 720,
+    "message": "click next page button",
+    "sleepTime": 3
+  },
+  {
+    "action": "tap",
+    "xpos": 1200,
+    "ypos": 300,
+    "message": "click anywhere",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 950,
+    "ypos": 1000,
+    "message": "click done",
+    "sleepTime": 3
+  },
+  {
+    "action": "tap",
+    "xpos": 400,
+    "ypos": 1000,
+    "message": "click done",
+    "sleepTime": 3
+  }
+]

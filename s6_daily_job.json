@@ -1,0 +1,44 @@
+[
+  {
+    "action": "script",
+    "fileName": "s6_zhaomu_job.json",
+    "message": "Zhao Mu",
+    "sleepTime": 5
+  },
+  {
+    "action": "script",
+    "fileName": "s6_juqing_job.json",
+    "message": "Do Juqing",
+    "sleepTime": 5
+  },
+  {
+    "action": "script",
+    "fileName": "s6_training_job.json",
+    "message": "Do Traning",
+    "sleepTime": 5
+  },
+  {
+    "action": "script",
+    "fileName": "s6_juexing_job.json",
+    "message": "Do Juqing",
+    "sleepTime": 5
+  },
+  {
+    "action": "script",
+    "fileName": "s6_juexing_job.json",
+    "message": "Do Juqing",
+    "sleepTime": 5
+  },
+  {
+    "action": "script",
+    "fileName": "s6_training_job.json",
+    "message": "Do Traning",
+    "sleepTime": 5
+  },
+  {
+    "action": "script",
+    "fileName": "s6_training_job.json",
+    "message": "Do Traning",
+    "sleepTime": 5
+  }
+]

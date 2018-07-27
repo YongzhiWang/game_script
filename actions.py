@@ -33,6 +33,16 @@ class SleepActionInfo(BaseActionInfo):
         BaseActionInfo.execute(self)
         utils.sleep_wait(self.sleepTime)
 
+class SleepAndDetectActionInfo(BaseActionInfo):
+    def __init__(self, message, sleepTime, detectTimes):
+        BaseActionInfo.__init__(self,message, 0)
+        self.sleepTime = sleepTime
+        self.detectTimes = detectTimes
+
+    def execute(self):
+        BaseActionInfo.execute(self)
+        utils.sleep_wait_detect(self.sleepTime, self.detectTimes)
+
 class KillActionInfo(BaseActionInfo):
     def __init__(self, message, sleepTime):
         BaseActionInfo.__init__(self, message, sleepTime)
@@ -60,6 +70,16 @@ class SwipeEndActionInfo(BaseActionInfo):
         utils.horizontal_swipe_screen()
         BaseActionInfo.execute(self)
 
+class SwipeOnceActionInfo(BaseActionInfo):
+    def __init__(self, message, sleepTime):
+        BaseActionInfo.__init__(self,message, sleepTime)
+        self.sleepTime = sleepTime
+
+    def execute(self):
+        utils.horizontal_swipe_screen_once()
+        BaseActionInfo.execute(self)
+
+
 
 class ActionExecutor:
 
@@ -68,6 +88,7 @@ class ActionExecutor:
 
 
     def executeJson(self):
+        #print "inner"
         #print json.dumps(self.jsonObject, indent=4, sort_keys=True)
         actionName = self.jsonObject["action"]
         if actionName == "kill":
@@ -80,15 +101,24 @@ class ActionExecutor:
             TapActionInfo(self.jsonObject["xpos"], self.jsonObject["ypos"], self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
         elif actionName == "sleep":
             SleepActionInfo(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
+        elif actionName == "sleep_detect":
+            SleepAndDetectActionInfo(self.jsonObject["message"], self.jsonObject["sleepTime"], self.jsonObject["detectTimes"]).execute()
+        elif actionName == "swipe":
+            SwipeOnceActionInfo(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
+        elif actionName == "script":
+            print "enter script"
+            ScenarioExecutor(self.jsonObject["fileName"]).execute()
 
 
 class ScenarioExecutor:
 
     def __init__(self, filePath):
+        #print filePath
         with open(filePath) as data_file:
             self.senario = json.load(data_file)
 
     def execute(self):
         for action in self.senario:
+            #print json.dumps(action, indent=4, sort_keys=True)
             singleAction = ActionExecutor(action)
             singleAction.executeJson()

@@ -1,15 +1,16 @@
 import sys
+import cv2
 import actions
 import datetime
 import utils
 
 def init():
     print('kill Trubasa app')
-    utils.kill_app()
-    utils.sleep_wait(3)
+    #utils.kill_app()
+    #utils.sleep_wait(3)
     print('launch Trubasa app')
-    utils.launch_app()
-    utils.sleep_wait(20)
+    #utils.launch_app()
+    #utils.sleep_wait(20)
 
 
 if __name__=='__main__':

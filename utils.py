@@ -1,5 +1,6 @@
 import os
 import time
+import cv2
 
 def tap_screen(x, y):
     os.system('adb shell input tap {} {}'.format(x,y))
@@ -10,6 +11,37 @@ def sleep_wait(total_time):
         time.sleep(1)
         # keep the device on
         os.system('adb shell input keyevent 82')
+
+def sleep_wait_detect(total_time, detect_times):
+    for i in range(total_time):
+        print('sleep {} second.'.format(i))
+        time.sleep(1)
+        # keep the device on
+        os.system('adb shell input keyevent 82')
+
+    for j in range(detect_times):
+        print("Detect rounds {}!".format(j))
+        result = image_detection()
+        if result > 0:
+            return
+
+def image_detection():
+    os.system('adb shell screencap -p /sdcard/screencap.png')
+    os.system('adb pull /sdcard/screencap.png')
+    img = cv2.imread('screencap.png', 0)
+    img2 = img.copy()
+    template = cv2.imread('winning_flag.png', 0)
+    w, h = template.shape[::-1]
+    img = img2.copy()
+    method = eval('cv2.TM_CCOEFF_NORMED')
+    # Apply template Matching
+    res = cv2.matchTemplate(img, template, method)
+    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
+    print("Detect result {}!".format(max_val))
+    if max_val > 0.99:
+        print("Matched!")
+        return 1
+    return 0
 
 def launch_app():
     os.system('adb shell monkey -p com.klab.captain283.global -c android.intent.category.LAUNCHER 1')
@@ -30,5 +62,9 @@ def horizontal_swipe_screen():
     time.sleep(0.2)
     os.system('adb shell input swipe 1800 500 0 500')
     time.sleep(0.2)
+    os.system('adb shell input swipe 1800 500 0 500')
+    time.sleep(0.2)
+
+def horizontal_swipe_screen_once():
     os.system('adb shell input swipe 1800 500 0 500')
     time.sleep(0.2)

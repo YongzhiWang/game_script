@@ -1,0 +1,44 @@
+[
+  {
+    "action": "tap",
+    "xpos": 1000,
+    "ypos": 1000,
+    "message": "click Tong meng",
+    "sleepTime": 5
+  },
+  {
+    "action": "tap",
+    "xpos": 800,
+    "ypos": 750,
+    "message": "click Challenge",
+    "sleepTime": 5
+  },
+  {
+    "action": "tap",
+    "xpos": 1610,
+    "ypos": 500,
+    "message": "click anywhere",
+    "sleepTime": 2
+  },
+  {
+    "action": "tap",
+    "xpos": 450,
+    "ypos": 700,
+    "message": "click left bottom",
+    "sleepTime": 4
+  },
+  {
+    "action": "tap",
+    "xpos": 950,
+    "ypos": 720,
+    "message": "click okay",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 415,
+    "ypos": 1015,
+    "message": "click home",
+    "sleepTime": 2
+  }
+]

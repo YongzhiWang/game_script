@@ -23,7 +23,7 @@
 
 	{
 		"action": "tap",
-		"xpos": 1400,
+		"xpos": 880,
 		"ypos": 500,
 		"message": "click last match",
 		"sleepTime": 1
@@ -32,7 +32,7 @@
 	{
 		"action": "tap",
 		"xpos": 1440,
-		"ypos": 280,
+		"ypos": 550,
 		"message": "click very easy match",
 		"sleepTime": 1
 	},
@@ -64,7 +64,7 @@
 	{
 		"action": "sleep",
 		"message": "Sleep until game done",
-		"sleepTime": 85
+		"sleepTime": 83
 	},
 
 	{

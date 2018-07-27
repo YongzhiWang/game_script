@@ -1,13 +1,6 @@
 [
   {
     "action": "tap",
-    "xpos": 740,
-    "ypos": 710,
-    "message": "click possible drop button match",
-    "sleepTime": 5
-  },
-  {
-    "action": "tap",
     "xpos": 1500,
     "ypos": 500,
     "message": "click Jing Dian match",
@@ -17,7 +10,7 @@
     "action": "tap",
     "xpos": 380,
     "ypos": 450,
-    "message": "click Huo Dong match",
+    "message": "click Jing Dian match",
     "sleepTime": 5
   },
   {
@@ -51,7 +44,7 @@
     "xpos": 400,
     "ypos": 500,
     "message": "click self match",
-    "sleepTime": 7
+    "sleepTime": 10
   },
   {
     "action": "tap",
@@ -69,10 +62,52 @@
   },
   {
     "action": "tap",
-    "xpos": 970,
+    "xpos": 1400,
     "ypos": 770,
-    "message": "click skip boost button",
+    "message": "click watch video button",
+    "sleepTime": 20
+  },
+  {
+    "action": "tap",
+    "xpos": 1845,
+    "ypos": 75,
+    "message": "click close ads button, not necessary?",
+    "sleepTime": 2
+  },
+  {
+    "action": "tap",
+    "xpos": 1845,
+    "ypos": 75,
+    "message": "click close ads button, not necessary?",
+    "sleepTime": 2
+  },
+  {
+    "action": "tap",
+    "xpos": 1845,
+    "ypos": 75,
+    "message": "click close ads button, not necessary?",
+    "sleepTime": 2
+  },
+  {
+    "action": "tap",
+    "xpos": 1000,
+    "ypos": 720,
+    "message": "click next page button",
     "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 1200,
+    "ypos": 300,
+    "message": "click dream ball page",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 1000,
+    "ypos": 720,
+    "message": "click next page button",
+    "sleepTime": 3
   },
   {
     "action": "sleep",
