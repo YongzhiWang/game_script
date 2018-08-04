@@ -1,0 +1,197 @@
+[
+  {
+    "action": "tap",
+    "xpos": 400,
+    "ypos": 400,
+    "message": "click anywhere",
+    "sleepTime": 2
+  },
+  {
+    "action": "tap",
+    "xpos": 400,
+    "ypos": 400,
+    "message": "click anywhere",
+    "sleepTime": 2
+  },
+  {
+    "action": "tap",
+    "xpos": 400,
+    "ypos": 400,
+    "message": "click anywhere",
+    "sleepTime": 2
+  },
+
+  {
+    "action": "tap",
+    "xpos": 960,
+    "ypos": 1000,
+    "message": "click anywhere",
+    "sleepTime": 6
+  },
+
+  {
+    "action": "tap",
+    "xpos": 400,
+    "ypos": 1000,
+    "message": "click anywhere",
+    "sleepTime": 2
+  },
+
+  {
+    "action": "tap",
+    "xpos": 126,
+    "ypos": 980,
+    "message": "click Team button",
+    "sleepTime": 3
+  },
+  {
+    "action": "tap",
+    "xpos": 270,
+    "ypos": 500,
+    "message": "click Training match",
+    "sleepTime": 4
+  },
+  {
+    "action": "tap",
+    "xpos": 200,
+    "ypos": 250,
+    "message": "click first SR or R users",
+    "sleepTime": 3
+  },
+  {
+    "action": "tap",
+    "xpos": 195,
+    "ypos": 810,
+    "message": "click first slot",
+    "sleepTime": 4
+  },
+  {
+    "action": "tap",
+    "xpos": 200,
+    "ypos": 250,
+    "message": "click first book slot",
+    "sleepTime": 0
+  },
+  {
+    "action": "tap",
+    "xpos": 460,
+    "ypos": 250,
+    "message": "click first book slot",
+    "sleepTime": 0
+  },
+  {
+    "action": "tap",
+    "xpos": 700,
+    "ypos": 250,
+    "message": "click first book slot",
+    "sleepTime": 0
+  },
+  {
+    "action": "tap",
+    "xpos": 950,
+    "ypos": 250,
+    "message": "click first book slot",
+    "sleepTime": 0
+  },
+
+  {
+    "action": "tap",
+    "xpos": 1200,
+    "ypos": 250,
+    "message": "click first book slot",
+    "sleepTime": 0
+  },
+  {
+    "action": "tap",
+    "xpos": 200,
+    "ypos": 550,
+    "message": "click first book slot",
+    "sleepTime": 0
+  },
+  {
+    "action": "tap",
+    "xpos": 460,
+    "ypos": 550,
+    "message": "click first book slot",
+    "sleepTime": 0
+  },
+  {
+    "action": "tap",
+    "xpos": 700,
+    "ypos": 550,
+    "message": "click first book slot",
+    "sleepTime": 0
+  },
+  {
+    "action": "tap",
+    "xpos": 950,
+    "ypos": 550,
+    "message": "click first book slot",
+    "sleepTime": 0
+  },
+
+  {
+    "action": "tap",
+    "xpos": 1200,
+    "ypos": 550,
+    "message": "click first book slot",
+    "sleepTime": 0
+  },
+  {
+    "action": "tap",
+    "xpos": 200,
+    "ypos": 800,
+    "message": "click first book slot",
+    "sleepTime": 0
+  },
+  {
+    "action": "tap",
+    "xpos": 460,
+    "ypos": 800,
+    "message": "click first book slot",
+    "sleepTime": 0
+  },
+  {
+    "action": "tap",
+    "xpos": 700,
+    "ypos": 800,
+    "message": "click first book slot",
+    "sleepTime": 0
+  },
+  {
+    "action": "tap",
+    "xpos": 950,
+    "ypos": 800,
+    "message": "click first book slot",
+    "sleepTime": 0
+  },
+
+  {
+    "action": "tap",
+    "xpos": 1200,
+    "ypos": 800,
+    "message": "click first book slot",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 1700,
+    "ypos": 1000,
+    "message": "click okay button",
+    "sleepTime": 2
+  },
+  {
+    "action": "tap",
+    "xpos": 1600,
+    "ypos": 1000,
+    "message": "click okay training match",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 1185,
+    "ypos": 880,
+    "message": "click okay training match",
+    "sleepTime": 4
+  }
+]

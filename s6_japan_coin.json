@@ -1,6 +1,13 @@
 [
   {
     "action": "tap",
+    "xpos": 740,
+    "ypos": 710,
+    "message": "click possible drop button match",
+    "sleepTime": 5
+  },
+  {
+    "action": "tap",
     "xpos": 1500,
     "ypos": 500,
     "message": "click Jing Dian match",
@@ -14,39 +21,37 @@
     "sleepTime": 5
   },
   {
+    "action": "swipe",
+    "message": "swipe once",
+    "sleepTime": 1
+  },
+  {
     "action": "tap",
-    "xpos": 265,
+    "xpos": 970,
     "ypos": 500,
     "message": "click last match",
     "sleepTime": 1
   },
   {
     "action": "tap",
-    "xpos": 820,
-    "ypos": 1042,
+    "xpos": 1440,
+    "ypos": 280,
     "message": "click very easy match",
     "sleepTime": 1
   },
   {
     "action": "tap",
-    "xpos": 1550,
-    "ypos": 950,
+    "xpos": 1500,
+    "ypos": 930,
     "message": "click match begin button",
     "sleepTime": 2
   },
   {
     "action": "tap",
-    "xpos": 600,
-    "ypos": 450,
-    "message": "click join global share match",
-    "sleepTime": 9
-  },
-  {
-    "action": "tap",
-    "xpos": 800,
+    "xpos": 1000,
     "ypos": 300,
     "message": "click join global share match",
-    "sleepTime": 2
+    "sleepTime": 7
   },
   {
     "action": "tap",
@@ -58,8 +63,8 @@
   {
     "action": "sleep_detect",
     "message": "Sleep until game done",
-    "sleepTime": 55,
-    "detectTimes": 20
+    "sleepTime": 68,
+    "detectTimes": 25
   },
   {
     "action": "kill",
@@ -81,6 +86,6 @@
     "xpos": 1000,
     "ypos": 500,
     "message": "click launch screen",
-    "sleepTime": 7
+    "sleepTime": 5
   }
 ]

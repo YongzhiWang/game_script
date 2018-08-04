@@ -62,9 +62,10 @@
 	},
 
 	{
-		"action": "sleep",
+		"action": "sleep_detect",
 		"message": "Sleep until game done",
-		"sleepTime": 83
+		"sleepTime": 68,
+		"detectTimes": 14
 	},
 
 	{

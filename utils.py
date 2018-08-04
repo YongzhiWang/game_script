@@ -23,7 +23,8 @@ def sleep_wait_detect(total_time, detect_times):
         print("Detect rounds {}!".format(j))
         result = image_detection()
         if result > 0:
-            return
+            return 1
+    return 0
 
 def image_detection():
     os.system('adb shell screencap -p /sdcard/screencap.png')
@@ -66,5 +67,5 @@ def horizontal_swipe_screen():
     time.sleep(0.2)
 
 def horizontal_swipe_screen_once():
-    os.system('adb shell input swipe 1800 500 0 500')
+    os.system('adb shell input swipe 900 500 0 500')
     time.sleep(0.2)

@@ -43,6 +43,18 @@ class SleepAndDetectActionInfo(BaseActionInfo):
         BaseActionInfo.execute(self)
         utils.sleep_wait_detect(self.sleepTime, self.detectTimes)
 
+class SleepAndDetectCoachActionInfo(BaseActionInfo):
+    def __init__(self, message, sleepTime, detectTimes):
+        BaseActionInfo.__init__(self,message, 0)
+        self.sleepTime = sleepTime
+        self.detectTimes = detectTimes
+
+    def execute(self):
+        BaseActionInfo.execute(self)
+        result = utils.sleep_wait_detect(self.sleepTime, self.detectTimes)
+        if result > 0:
+            ScenarioExecutor("s6_training_coach_job.json").execute()
+
 class KillActionInfo(BaseActionInfo):
     def __init__(self, message, sleepTime):
         BaseActionInfo.__init__(self, message, sleepTime)
@@ -103,6 +115,8 @@ class ActionExecutor:
             SleepActionInfo(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
         elif actionName == "sleep_detect":
             SleepAndDetectActionInfo(self.jsonObject["message"], self.jsonObject["sleepTime"], self.jsonObject["detectTimes"]).execute()
+        elif actionName == "sleep_detect_coach":
+            SleepAndDetectCoachActionInfo(self.jsonObject["message"], self.jsonObject["sleepTime"], self.jsonObject["detectTimes"]).execute()
         elif actionName == "swipe":
             SwipeOnceActionInfo(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
         elif actionName == "script":
