@@ -58,7 +58,7 @@
   {
     "action": "sleep_detect",
     "message": "Sleep until game done",
-    "sleepTime": 55,
+    "sleepTime": 75,
     "detectTimes": 20
   },
   {

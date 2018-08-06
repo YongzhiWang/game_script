@@ -91,6 +91,41 @@ class SwipeOnceActionInfo(BaseActionInfo):
         utils.horizontal_swipe_screen_once()
         BaseActionInfo.execute(self)
 
+class LeagueActionInfo(BaseActionInfo):
+    def __init__(self, message, sleepTime, count):
+        BaseActionInfo.__init__(self,message, sleepTime)
+        self.message = message
+        self.sleepTime = sleepTime
+        self.count = count
+
+    def execute(self):
+        for i in range(self.count):
+            result = utils.isValidLeagueUser()
+            if result > 0:
+                ScenarioExecutor("s6_begin_league_match.json").execute()
+                return
+            ScenarioExecutor("s6_go_back_league.json").execute()
+
+        ScenarioExecutor("s6_go_back_home.json").execute()
+        BaseActionInfo.execute(self)
+
+
+class PenaltyActionInfo(BaseActionInfo):
+    def __init__(self, message, sleepTime):
+        BaseActionInfo.__init__(self,message, sleepTime)
+        self.sleepTime = sleepTime
+
+    def execute(self):
+        result = utils.isRunningPenatly()
+        if result > 1:
+            # Just handle the 8v8 cases without fancy for loop.
+            ScenarioExecutor("s6_do_penalty.json").execute()
+
+        #    "xpos": 1265,
+        #    "xpos": 1515
+        #    "xpos": 1765
+
+        BaseActionInfo.execute(self)
 
 
 class ActionExecutor:
@@ -119,6 +154,10 @@ class ActionExecutor:
             SleepAndDetectCoachActionInfo(self.jsonObject["message"], self.jsonObject["sleepTime"], self.jsonObject["detectTimes"]).execute()
         elif actionName == "swipe":
             SwipeOnceActionInfo(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
+        elif actionName == "league":
+            LeagueActionInfo(self.jsonObject["message"], self.jsonObject["sleepTime"], self.jsonObject["count"]).execute()
+        elif actionName == "do_penalty":
+            PenaltyActionInfo(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
         elif actionName == "script":
             print "enter script"
             ScenarioExecutor(self.jsonObject["fileName"]).execute()

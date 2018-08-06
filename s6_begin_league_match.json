@@ -1,0 +1,49 @@
+[
+  {
+    "action": "tap",
+    "xpos": 1535,
+    "ypos": 750,
+    "message": "click last opponent",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 1614,
+    "ypos": 830,
+    "message": "click  match",
+    "sleepTime": 3
+  },
+  {
+    "action": "sleep_detect",
+    "message": "Sleep until game done",
+    "sleepTime": 60,
+    "detectTimes": 20
+  },
+  {
+    "action": "do_penalty",
+    "message": "Sleep until game done",
+    "sleepTime": 1
+  },
+  {
+    "action": "kill",
+    "message": "Kill game",
+    "sleepTime": 2
+  },
+  {
+    "action": "launch",
+    "message": "launch game",
+    "sleepTime": 1
+  },
+  {
+    "action": "sleep",
+    "message": "Sleep until game is fully launched",
+    "sleepTime": 17
+  },
+  {
+    "action": "tap",
+    "xpos": 1000,
+    "ypos": 500,
+    "message": "click launch screen",
+    "sleepTime": 5
+  }
+]

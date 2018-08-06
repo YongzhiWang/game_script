@@ -1,9 +1,32 @@
 [
   {
-    "action": "tap",
-    "xpos": 960,
-    "ypos": 720,
-    "message": "click stupid button",
+    "action": "script",
+    "fileName": "s6_run_league.json",
+    "message": "league match",
+    "sleepTime": 1
+  },
+  {
+    "action": "script",
+    "fileName": "s6_run_league.json",
+    "message": "league match",
+    "sleepTime": 1
+  },
+  {
+    "action": "script",
+    "fileName": "s6_run_league.json",
+    "message": "league match",
+    "sleepTime": 1
+  },
+  {
+    "action": "script",
+    "fileName": "s6_run_league.json",
+    "message": "league match",
+    "sleepTime": 1
+  },
+  {
+    "action": "script",
+    "fileName": "s6_run_league.json",
+    "message": "league match",
     "sleepTime": 1
   },
   {
@@ -13,37 +36,16 @@
     "sleepTime": 5
   },
   {
-    "action": "tap",
-    "xpos": 960,
-    "ypos": 720,
-    "message": "click stupid button",
-    "sleepTime": 1
-  },
-  {
     "action": "script",
     "fileName": "s6_juqing_job.json",
     "message": "Do Juqing",
     "sleepTime": 5
   },
   {
-    "action": "tap",
-    "xpos": 960,
-    "ypos": 720,
-    "message": "click stupid button",
-    "sleepTime": 1
-  },
-  {
     "action": "script",
     "fileName": "s6_training_job.json",
     "message": "Do Traning",
     "sleepTime": 5
-  },
-  {
-    "action": "tap",
-    "xpos": 960,
-    "ypos": 720,
-    "message": "click stupid button",
-    "sleepTime": 1
   },
   {
     "action": "script",
@@ -52,37 +54,16 @@
     "sleepTime": 5
   },
   {
-    "action": "tap",
-    "xpos": 960,
-    "ypos": 720,
-    "message": "click stupid button",
-    "sleepTime": 1
-  },
-  {
     "action": "script",
     "fileName": "s6_juexing_job.json",
     "message": "Do Juqing",
     "sleepTime": 5
   },
   {
-    "action": "tap",
-    "xpos": 960,
-    "ypos": 720,
-    "message": "click stupid button",
-    "sleepTime": 1
-  },
-  {
     "action": "script",
     "fileName": "s6_training_job.json",
     "message": "Do Traning",
     "sleepTime": 5
-  },
-  {
-    "action": "tap",
-    "xpos": 960,
-    "ypos": 720,
-    "message": "click stupid button",
-    "sleepTime": 1
   },
   {
     "action": "script",

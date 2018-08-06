@@ -1,0 +1,114 @@
+[
+  {
+    "action": "tap",
+    "xpos": 1265,
+    "ypos": 950,
+    "message": "click back match",
+    "sleepTime": 8
+  },
+  {
+    "action": "tap",
+    "xpos": 1515,
+    "ypos": 950,
+    "message": "click  match",
+    "sleepTime": 8
+  },
+  {
+    "action": "tap",
+    "xpos": 1765,
+    "ypos": 950,
+    "message": "click  match",
+    "sleepTime": 8
+  },
+  {
+    "action": "tap",
+    "xpos": 1265,
+    "ypos": 950,
+    "message": "click back match",
+    "sleepTime": 8
+  },
+  {
+    "action": "tap",
+    "xpos": 1515,
+    "ypos": 950,
+    "message": "click  match",
+    "sleepTime": 8
+  },
+  {
+    "action": "tap",
+    "xpos": 1765,
+    "ypos": 950,
+    "message": "click  match",
+    "sleepTime": 8
+  },
+  {
+    "action": "tap",
+    "xpos": 1265,
+    "ypos": 950,
+    "message": "click back match",
+    "sleepTime": 8
+  },
+  {
+    "action": "tap",
+    "xpos": 1515,
+    "ypos": 950,
+    "message": "click  match",
+    "sleepTime": 8
+  },
+  {
+    "action": "tap",
+    "xpos": 1765,
+    "ypos": 950,
+    "message": "click  match",
+    "sleepTime": 8
+  },
+  {
+    "action": "tap",
+    "xpos": 1765,
+    "ypos": 950,
+    "message": "click  match",
+    "sleepTime": 8
+  },
+  {
+    "action": "tap",
+    "xpos": 1515,
+    "ypos": 950,
+    "message": "click  match",
+    "sleepTime": 8
+  },
+  {
+    "action": "tap",
+    "xpos": 1765,
+    "ypos": 950,
+    "message": "click  match",
+    "sleepTime": 8
+  },
+  {
+    "action": "tap",
+    "xpos": 1515,
+    "ypos": 950,
+    "message": "click back match",
+    "sleepTime": 8
+  },
+  {
+    "action": "tap",
+    "xpos": 1515,
+    "ypos": 950,
+    "message": "click  match",
+    "sleepTime": 8
+  },
+  {
+    "action": "tap",
+    "xpos": 1765,
+    "ypos": 950,
+    "message": "click  match",
+    "sleepTime": 8
+  },
+  {
+    "action": "tap",
+    "xpos": 1765,
+    "ypos": 950,
+    "message": "click  match",
+    "sleepTime": 8
+  }
+]
