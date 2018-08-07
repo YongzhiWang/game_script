@@ -17,7 +17,7 @@
     "action": "sleep_detect",
     "message": "Sleep until game done",
     "sleepTime": 60,
-    "detectTimes": 20
+    "detectTimes": 10
   },
   {
     "action": "do_penalty",

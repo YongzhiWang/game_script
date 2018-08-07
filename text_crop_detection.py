@@ -4,20 +4,26 @@ import cv2
 from subprocess import call
 import argparse
 
-FNULL = open(os.devnull, 'w')
+
 
 if __name__ == '__main__':
+    FNULL = open(os.devnull, 'w')
     input_image_path = "league.png"
-    crop_image_path = "./crop_league.png"
-    output_path = "./convert_text.txt"
+    crop_image_path = "./league_goal_crop.png"
+    output_path = "./convert_text"
     img = cv2.imread(input_image_path)
-    crop_img = img[640:640+57, 1290:1290+233]
+    crop_img = img[421:421+40, 563:563+120]
     cv2.imwrite(crop_image_path,crop_img)
     call(["tesseract", crop_image_path, output_path], stdout=FNULL)
     number = 0
-    with open(output_path, 'r') as f:
+    output_file = output_path + ".txt"
+    with open(output_file, 'r') as f:
         for line in f:
-            for s in line.split(','):
+            print(line)
+            for s in line.split('.'):
+                print(s)
+                s = s.replace(" ", "")
+                print(s)
                 number = int(s)
                 break
             break

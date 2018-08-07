@@ -1,0 +1,16 @@
+[
+  {
+    "action": "tap",
+    "xpos": 131,
+    "ypos": 1016,
+    "message": "click back match",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 131,
+    "ypos": 1016,
+    "message": "click back match",
+    "sleepTime": 1
+  }
+]

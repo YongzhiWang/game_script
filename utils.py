@@ -113,3 +113,29 @@ def isRunningPenatly():
         print("Matched Penalty!")
         return 1
     return 0
+
+def isValidLeagueGoalKeeper():
+    os.system('adb shell screencap -p /sdcard/league.png')
+    os.system('adb pull /sdcard/league.png')
+    FNULL = open(os.devnull, 'w')
+    input_image_path = "league.png"
+    crop_image_path = "./crop_league.png"
+    output_path = "./convert_text"
+    img = cv2.imread(input_image_path)
+    crop_img = img[421:421+40, 563:563+120]
+    cv2.imwrite(crop_image_path,crop_img)
+    call(["tesseract", crop_image_path, output_path], stdout=FNULL)
+    number = 0
+    output_file = output_path + ".txt"
+    with open(output_file, 'r') as f:
+        for line in f:
+            #Not sure why , is recognize as .
+            for s in line.split('.'):
+                s = s.replace(" ", "")
+                number = int(s)
+                print("detect number is {}".format(number))
+                break
+            break
+    if number < 10:
+        return 1
+    return 0

@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce5febb9-5b74-41ea-9395-2b3a054b58be" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/image_crop.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/s6_begin_league_match.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/s6_do_penalty.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/s6_go_back_home.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/s6_go_back_league.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/s6_run_league.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/text_crop_detection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/text_detection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s6_go_back_league_inner.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s6_go_into_league.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/actions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/s6_daily_job.json" beforeDir="false" afterPath="$PROJECT_DIR$/s6_daily_job.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/s6_self_north_coin.json" beforeDir="false" afterPath="$PROJECT_DIR$/s6_self_north_coin.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screencap.png" beforeDir="false" afterPath="$PROJECT_DIR$/screencap.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/s6_begin_league_match.json" beforeDir="false" afterPath="$PROJECT_DIR$/s6_begin_league_match.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/text_crop_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/text_crop_detection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -34,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="actions.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="actions.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/actions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-153">
-              <caret line="120" column="63" selection-start-line="120" selection-start-column="63" selection-end-line="120" selection-end-column="63" />
+            <state relative-caret-position="264">
+              <caret line="107" column="78" selection-start-line="107" selection-start-column="78" selection-end-line="107" selection-end-column="78" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -46,47 +39,29 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="s6_go_back_league_inner.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/s6_go_back_league_inner.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="s6_do_penalty.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/s6_do_penalty.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="109" column="13" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="13" />
+            <state relative-caret-position="180">
+              <caret line="12" column="21" selection-end-line="114" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="s6_juqing_job.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/s6_juqing_job.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="657">
-              <caret line="137" column="3" selection-start-line="116" selection-start-column="2" selection-end-line="137" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="s6_daily_job.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="s6_daily_job.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/s6_daily_job.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="66" column="4" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="s6_run_league.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/s6_run_league.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="s6_begin_league_match.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/s6_begin_league_match.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="4" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="25" selection-end-column="4" />
+            <state relative-caret-position="45">
+              <caret line="3" column="35" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -95,16 +70,16 @@
         <entry file="file://$PROJECT_DIR$/s6_go_back_league.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="s6_go_back_home.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/s6_go_back_home.json">
+      <file leaf-file-name="s6_go_into_league.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/s6_go_into_league.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+            <state relative-caret-position="240">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -113,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="657">
-              <caret line="112" column="24" selection-start-line="112" selection-start-column="24" selection-end-line="112" selection-end-column="24" />
+              <caret line="135" column="42" lean-forward="true" selection-start-line="135" selection-start-column="42" selection-end-line="135" selection-end-column="42" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -124,8 +99,20 @@
       <file leaf-file-name="text_detection.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/text_detection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+            <state relative-caret-position="537">
+              <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="text_crop_detection.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/text_crop_detection.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="38" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="38" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -168,15 +155,18 @@
         <option value="$PROJECT_DIR$/s6_self_north_coin.json" />
         <option value="$PROJECT_DIR$/text_detection.py" />
         <option value="$PROJECT_DIR$/image_crop.py" />
-        <option value="$PROJECT_DIR$/text_crop_detection.py" />
         <option value="$PROJECT_DIR$/s6_go_back_leage.json" />
         <option value="$PROJECT_DIR$/s6_run_league.json" />
-        <option value="$PROJECT_DIR$/utils.py" />
-        <option value="$PROJECT_DIR$/s6_begin_league_match.json" />
         <option value="$PROJECT_DIR$/s6_do_penalty.json" />
         <option value="$PROJECT_DIR$/s6_go_back_home.json" />
-        <option value="$PROJECT_DIR$/actions.py" />
+        <option value="$PROJECT_DIR$/s6_begin_league_match.json" />
         <option value="$PROJECT_DIR$/s6_daily_job.json" />
+        <option value="$PROJECT_DIR$/s6_go_back_league_inner.json" />
+        <option value="$PROJECT_DIR$/s6_go_into_league.json" />
+        <option value="$PROJECT_DIR$/text_crop_detection.py" />
+        <option value="$PROJECT_DIR$/utils.py" />
+        <option value="$PROJECT_DIR$/s6_go_back_league_win.json" />
+        <option value="$PROJECT_DIR$/actions.py" />
       </list>
     </option>
   </component>
@@ -189,9 +179,8 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="93" />
-    <option name="y" value="109" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="103" />
     <option name="width" value="1680" />
     <option name="height" value="947" />
   </component>
@@ -200,9 +189,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -214,6 +201,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -305,7 +294,9 @@
       <workItem from="1533104429395" duration="2047000" />
       <workItem from="1533114279772" duration="2421000" />
       <workItem from="1533197075830" duration="5901000" />
-      <workItem from="1533542475707" duration="8480000" />
+      <workItem from="1533542475707" duration="8602000" />
+      <workItem from="1533571478146" duration="7036000" />
+      <workItem from="1533651539371" duration="2227000" />
     </task>
     <servers>
       <JIRA url="https://jira01.corp.linkedin.com:8443">
@@ -314,10 +305,10 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51378000" />
+    <option name="totallyTimeSpent" value="60763000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="947" extended-state="6" />
+    <frame x="0" y="103" width="1680" height="947" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -334,7 +325,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2741148" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2802198" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="bottom" id="CodeSearch" order="7" show_stripe_button="false" />
@@ -359,33 +350,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/s6_coach_training.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/actions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1755">
-          <caret line="117" column="46" selection-start-line="117" selection-start-column="28" selection-end-line="117" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/s6_training_coach_job.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2940">
@@ -626,16 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/text_crop_detection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="23" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -650,23 +604,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/text_detection.py">
+    <entry file="file://$PROJECT_DIR$/s6_go_back_home.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
+    <entry file="file://$PROJECT_DIR$/s6_juqing_job.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="112" column="24" selection-start-line="112" selection-start-column="24" selection-end-line="112" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="2055">
+          <caret line="137" column="3" selection-start-line="116" selection-start-column="2" selection-end-line="137" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -677,55 +625,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/s6_go_back_league.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/s6_go_back_home.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/s6_juqing_job.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="137" column="3" selection-start-line="116" selection-start-column="2" selection-end-line="137" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/s6_begin_league_match.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="4" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="25" selection-end-column="4" />
+        <state relative-caret-position="600">
+          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/text_detection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/s6_do_penalty.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="109" column="13" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="13" />
+        <state relative-caret-position="180">
+          <caret line="12" column="21" selection-end-line="114" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/actions.py">
+    <entry file="file://$PROJECT_DIR$/s6_go_back_league.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="120" column="63" selection-start-line="120" selection-start-column="63" selection-end-line="120" selection-end-column="63" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="210">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/s6_daily_job.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="66" column="4" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="4" />
+        <state relative-caret-position="45">
+          <caret line="3" column="35" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/s6_go_into_league.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/text_crop_detection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="38" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="657">
+          <caret line="135" column="42" lean-forward="true" selection-start-line="135" selection-start-column="42" selection-end-line="135" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/s6_go_back_league_win.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/s6_go_back_league_inner.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="107" column="78" selection-start-line="107" selection-start-column="78" selection-end-line="107" selection-end-column="78" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
