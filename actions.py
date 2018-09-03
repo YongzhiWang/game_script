@@ -115,6 +115,27 @@ class LeagueActionInfo(BaseActionInfo):
         ScenarioExecutor("s6_go_back_home.json").execute()
         BaseActionInfo.execute(self)
 
+class LeagueDetectActionInfo(BaseActionInfo):
+    def __init__(self, message, sleepTime, count):
+        BaseActionInfo.__init__(self,message, sleepTime)
+        self.message = message
+        self.sleepTime = sleepTime
+        self.count = count
+
+    def execute(self):
+        for i in range(self.count):
+            result = utils.isValidLeagueUser()
+            if result > 0:
+                ScenarioExecutor("s6_go_into_league.json").execute()
+                goalkeeper = utils.isValidLeagueGoalKeeper()
+                if goalkeeper > 0:
+                    return
+                # goback to leage.
+                ScenarioExecutor("s6_go_back_league_inner.json").execute()
+            ScenarioExecutor("s6_go_back_league.json").execute()
+
+        ScenarioExecutor("s6_go_back_home.json").execute()
+        BaseActionInfo.execute(self)
 
 class PenaltyActionInfo(BaseActionInfo):
     def __init__(self, message, sleepTime):
@@ -131,6 +152,20 @@ class PenaltyActionInfo(BaseActionInfo):
         #    "xpos": 1515
         #    "xpos": 1765
 
+        BaseActionInfo.execute(self)
+
+class CheckAnimationInfo(BaseActionInfo):
+    def __init__(self, message, sleepTime):
+        BaseActionInfo.__init__(self,message, sleepTime)
+        self.sleepTime = sleepTime
+
+    def execute(self):
+        result = utils.isUnreadStory()
+        if result > 0:
+            # Just handle the 8v8 cases without fancy for loop.
+            ScenarioExecutor("s6_auto_self_animation.json").execute()
+        else:
+            ScenarioExecutor("s6_auto_self_juqing.json").execute()
         BaseActionInfo.execute(self)
 
 
@@ -162,8 +197,12 @@ class ActionExecutor:
             SwipeOnceActionInfo(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
         elif actionName == "league":
             LeagueActionInfo(self.jsonObject["message"], self.jsonObject["sleepTime"], self.jsonObject["count"]).execute()
+        elif actionName == "league_detect":
+            LeagueDetectActionInfo(self.jsonObject["message"], self.jsonObject["sleepTime"], self.jsonObject["count"]).execute()
         elif actionName == "do_penalty":
             PenaltyActionInfo(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
+        elif actionName == "check_animation":
+            CheckAnimationInfo(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
         elif actionName == "script":
             print "enter script"
             ScenarioExecutor(self.jsonObject["fileName"]).execute()

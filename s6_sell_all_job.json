@@ -1,0 +1,56 @@
+[
+  {
+    "action": "tap",
+    "xpos": 126,
+    "ypos": 980,
+    "message": "click Team button",
+    "sleepTime": 3
+  },
+  {
+    "action": "swipe_end",
+    "message": "swipe to end",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 1200,
+    "ypos": 620,
+    "message": "click Sell",
+    "sleepTime": 3
+  },
+  {
+    "action": "tap",
+    "xpos": 713,
+    "ypos": 1020,
+    "message": "click sell all",
+    "sleepTime": 4
+  },
+  {
+    "action": "tap",
+    "xpos": 1685,
+    "ypos": 1020,
+    "message": "click all",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 1160,
+    "ypos": 983,
+    "message": "click okay button",
+    "sleepTime": 4
+  },
+  {
+    "action": "tap",
+    "xpos": 960,
+    "ypos": 800,
+    "message": "click okay ",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 400,
+    "ypos": 1000,
+    "message": "click watch video button",
+    "sleepTime": 2
+  }
+]

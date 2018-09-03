@@ -14,9 +14,9 @@
     "sleepTime": 3
   },
   {
-    "action": "league",
+    "action": "league_detect",
     "message": "detect score",
     "sleepTime": 5,
-    "count": 60
+    "count": 90
   }
 ]

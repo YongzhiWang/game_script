@@ -1,6 +1,7 @@
 import os
 import time
 import cv2
+import sys
 from subprocess import call
 
 def tap_screen(x, y):
@@ -86,15 +87,35 @@ def isValidLeagueUser():
     output_file = output_path + ".txt"
     with open(output_file, 'r') as f:
         for line in f:
+            line = line.replace(".", ",")
+            print(line)
             for s in line.split(','):
+                s = s.replace(" ", "")
+                print(s)
                 number = int(s)
                 print("detect number is {}".format(number))
                 break
             break
-    if number < 500:
+    if number < 630:
         return 1
     return 0
 
+def isUnreadStory():
+    os.system('adb shell screencap -p /sdcard/screencap.png')
+    os.system('adb pull /sdcard/screencap.png')
+    img = cv2.imread('screencap.png', 0)
+    crop_img = img[0:340, 0:1920]
+    template = cv2.imread('unread_story.png', 0)
+    img = crop_img.copy()
+    method = eval('cv2.TM_CCOEFF_NORMED')
+    # Apply template Matching
+    res = cv2.matchTemplate(img, template, method)
+    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
+    print("Detect result {}!".format(max_val))
+    if max_val > 0.90:
+        print("Matched Story!")
+        return 1
+    return 0
 
 def isRunningPenatly():
     os.system('adb shell screencap -p /sdcard/screencap.png')
@@ -109,7 +130,7 @@ def isRunningPenatly():
     res = cv2.matchTemplate(img, template, method)
     min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
     print("Detect result {}!".format(max_val))
-    if max_val > 0.99:
+    if max_val > 0.90:
         print("Matched Penalty!")
         return 1
     return 0
@@ -130,12 +151,18 @@ def isValidLeagueGoalKeeper():
     with open(output_file, 'r') as f:
         for line in f:
             #Not sure why , is recognize as .
-            for s in line.split('.'):
+            line = line.replace(".", ",")
+            print(line)
+            for s in line.split(','):
                 s = s.replace(" ", "")
+                print s
                 number = int(s)
                 print("detect number is {}".format(number))
                 break
             break
     if number < 10:
+        print("Ruoji goal keeper!!!!!")
+        sys.exit(0)
+    if number < 18:
         return 1
     return 0

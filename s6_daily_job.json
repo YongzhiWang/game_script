@@ -1,36 +1,6 @@
 [
   {
     "action": "script",
-    "fileName": "s6_run_league.json",
-    "message": "league match",
-    "sleepTime": 1
-  },
-  {
-    "action": "script",
-    "fileName": "s6_run_league.json",
-    "message": "league match",
-    "sleepTime": 1
-  },
-  {
-    "action": "script",
-    "fileName": "s6_run_league.json",
-    "message": "league match",
-    "sleepTime": 1
-  },
-  {
-    "action": "script",
-    "fileName": "s6_run_league.json",
-    "message": "league match",
-    "sleepTime": 1
-  },
-  {
-    "action": "script",
-    "fileName": "s6_run_league.json",
-    "message": "league match",
-    "sleepTime": 1
-  },
-  {
-    "action": "script",
     "fileName": "s6_zhaomu_job.json",
     "message": "Zhao Mu",
     "sleepTime": 5

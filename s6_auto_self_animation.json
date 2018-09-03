@@ -1,0 +1,37 @@
+[
+  {
+    "action": "tap",
+    "xpos": 840,
+    "ypos": 260,
+    "message": "click animation and wait",
+    "sleepTime": 6
+  },
+  {
+    "action": "tap",
+    "xpos": 1800,
+    "ypos": 60,
+    "message": "click animation button",
+    "sleepTime": 2
+  },
+  {
+    "action": "tap",
+    "xpos": 950,
+    "ypos": 60,
+    "message": "click skip",
+    "sleepTime": 2
+  },
+  {
+    "action": "tap",
+    "xpos": 950,
+    "ypos": 60,
+    "message": "click skip",
+    "sleepTime": 5
+  },
+  {
+    "action": "tap",
+    "xpos": 400,
+    "ypos": 1000,
+    "message": "click home",
+    "sleepTime": 3
+  }
+]

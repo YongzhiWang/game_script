@@ -1,13 +1,6 @@
 [
   {
     "action": "tap",
-    "xpos": 740,
-    "ypos": 710,
-    "message": "click possible drop button match",
-    "sleepTime": 5
-  },
-  {
-    "action": "tap",
     "xpos": 1500,
     "ypos": 500,
     "message": "click Jing Dian match",
