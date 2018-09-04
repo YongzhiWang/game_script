@@ -1,0 +1,33 @@
+[
+  {
+    "action": "tap",
+    "xpos": 1500,
+    "ypos": 500,
+    "message": "click Jing Dian match",
+    "sleepTime": 4
+  },
+  {
+    "action": "tap",
+    "xpos": 945,
+    "ypos": 450,
+    "message": "click Huo Dong match",
+    "sleepTime": 5
+  },
+  {
+    "action": "tap",
+    "xpos": 280,
+    "ypos": 574,
+    "message": "click category",
+    "sleepTime": 4
+  },
+  {
+    "action": "swipe_bottom",
+    "message": "swipe to down",
+    "sleepTime": 1
+  },
+  {
+    "action": "check_match",
+    "message": "detect score",
+    "sleepTime": 5
+  }
+]
