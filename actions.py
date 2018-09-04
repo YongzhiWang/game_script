@@ -91,6 +91,15 @@ class SwipeOnceActionInfo(BaseActionInfo):
         utils.horizontal_swipe_screen_once()
         BaseActionInfo.execute(self)
 
+class SwipeToBottomActionInfo(BaseActionInfo):
+    def __init__(self, message, sleepTime):
+        BaseActionInfo.__init__(self,message, sleepTime)
+        self.sleepTime = sleepTime
+
+    def execute(self):
+        utils.vertical_swipe_screen_up()
+        BaseActionInfo.execute(self)
+
 class LeagueActionInfo(BaseActionInfo):
     def __init__(self, message, sleepTime, count):
         BaseActionInfo.__init__(self,message, sleepTime)
@@ -168,6 +177,29 @@ class CheckAnimationInfo(BaseActionInfo):
             ScenarioExecutor("s6_auto_self_juqing.json").execute()
         BaseActionInfo.execute(self)
 
+class CheckMatchInfo(BaseActionInfo):
+    def __init__(self, message, sleepTime):
+        BaseActionInfo.__init__(self,message, sleepTime)
+        self.sleepTime = sleepTime
+
+    def execute(self):
+        for i in range(0, 2):
+            easymatch, xpox, ypos = utils.hasEasyMatch()
+            if easymatch > 0:
+                utils.tap_screen(xpox, ypos)
+                ScenarioExecutor("s6_partial_match.json").execute()
+                return
+            else:
+                middleMatch, xpox, ypos = utils.hasMiddleMatch()
+                if middleMatch > 0:
+                    utils.tap_screen(xpox, ypos)
+                    ScenarioExecutor("s6_partial_match.json").execute()
+                    return
+                #dd
+            # not found
+            utils.vertical_swipe_screen_down()
+
+        BaseActionInfo.execute(self)
 
 class ActionExecutor:
 
@@ -185,6 +217,8 @@ class ActionExecutor:
             LaunchActionInfo(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
         elif actionName == "swipe_end":
             SwipeEndActionInfo(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
+        elif actionName == "swipe_bottom":
+            SwipeToBottomActionInfo(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
         elif actionName == "tap":
             TapActionInfo(self.jsonObject["xpos"], self.jsonObject["ypos"], self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
         elif actionName == "sleep":
@@ -203,6 +237,8 @@ class ActionExecutor:
             PenaltyActionInfo(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
         elif actionName == "check_animation":
             CheckAnimationInfo(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
+        elif actionName == "check_match":
+            CheckMatchInfo(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
         elif actionName == "script":
             print "enter script"
             ScenarioExecutor(self.jsonObject["fileName"]).execute()

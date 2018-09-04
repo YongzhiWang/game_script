@@ -1,0 +1,22 @@
+[
+  {
+    "action": "tap",
+    "xpos": 1500,
+    "ypos": 710,
+    "message": "click back match",
+    "sleepTime": 4
+  },
+  {
+    "action": "tap",
+    "xpos": 1650,
+    "ypos": 900,
+    "message": "click  match",
+    "sleepTime": 3
+  },
+  {
+    "action": "league",
+    "message": "detect score",
+    "sleepTime": 5,
+    "count": 60
+  }
+]

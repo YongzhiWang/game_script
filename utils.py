@@ -4,6 +4,8 @@ import cv2
 import sys
 from subprocess import call
 
+appVersion = 1
+
 def tap_screen(x, y):
     os.system('adb shell input tap {} {}'.format(x,y))
 
@@ -47,10 +49,22 @@ def image_detection():
     return 0
 
 def launch_app():
-    os.system('adb shell monkey -p com.klab.captain283.global -c android.intent.category.LAUNCHER 1')
+    if appVersion == 1:
+        os.system('adb shell monkey -p com.klab.captain283.global -c android.intent.category.LAUNCHER 1')
+    elif appVersion == 2:
+        os.system('adb shell monkey -p com.klab.captain283.globan -c android.intent.category.LAUNCHER 1')
+    elif appVersion == 3:
+        os.system('adb shell monkey -p com.klab.captain283.globao -c android.intent.category.LAUNCHER 1')
+
 
 def kill_app():
-    os.system('adb shell am force-stop com.klab.captain283.global')
+    if appVersion == 1:
+        os.system('adb shell am force-stop com.klab.captain283.global')
+    elif appVersion == 2:
+        os.system('adb shell am force-stop com.klab.captain283.globan')
+    elif appVersion == 3:
+        os.system('adb shell am force-stop com.klab.captain283.globao')
+
     kill_all()
 
 def kill_all():
@@ -70,6 +84,18 @@ def horizontal_swipe_screen():
 
 def horizontal_swipe_screen_once():
     os.system('adb shell input swipe 900 500 0 500')
+    time.sleep(0.2)
+
+def vertical_swipe_screen_up():
+    os.system('adb shell input swipe 1400 800 1400 100')
+    time.sleep(0.2)
+    os.system('adb shell input swipe 1400 800 1400 100')
+    time.sleep(0.2)
+    os.system('adb shell input swipe 1400 800 1400 100')
+    time.sleep(0.2)
+
+def vertical_swipe_screen_down():
+    os.system('adb shell input swipe 1400 100 1400 300')
     time.sleep(0.2)
 
 def isValidLeagueUser():
@@ -96,7 +122,7 @@ def isValidLeagueUser():
                 print("detect number is {}".format(number))
                 break
             break
-    if number < 630:
+    if number < 300:
         return 1
     return 0
 
@@ -162,7 +188,45 @@ def isValidLeagueGoalKeeper():
             break
     if number < 10:
         print("Ruoji goal keeper!!!!!")
-        sys.exit(0)
-    if number < 18:
+        #sys.exit(0)
+    if number < 16:
         return 1
     return 0
+
+def hasEasyMatch():
+    os.system('adb shell screencap -p /sdcard/screencap.png')
+    os.system('adb pull /sdcard/screencap.png')
+    img = cv2.imread('screencap.png', 0)
+    template = cv2.imread('match_easy.png', 0)
+    w, h = template.shape[::-1]
+    method = eval('cv2.TM_CCOEFF_NORMED')
+    # Apply template Matching
+    res = cv2.matchTemplate(img, template, method)
+    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
+    print("Detect result {}!".format(max_val))
+    if max_val > 0.95:
+        print("Matched Story!")
+        # If the method is TM_SQDIFF or TM_SQDIFF_NORMED, take minimum
+        top_left = max_loc
+        bottom_right = (top_left[0] + w, top_left[1] + h)
+        return 1, (top_left[0] + bottom_right[0]) / 2, (top_left[1] + bottom_right[1]) / 2
+    return 0, 0, 0
+
+def hasMiddleMatch():
+    os.system('adb shell screencap -p /sdcard/screencap.png')
+    os.system('adb pull /sdcard/screencap.png')
+    img = cv2.imread('screencap.png', 0)
+    template = cv2.imread('match_middle.png', 0)
+    w, h = template.shape[::-1]
+    method = eval('cv2.TM_CCOEFF_NORMED')
+    # Apply template Matching
+    res = cv2.matchTemplate(img, template, method)
+    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
+    print("Detect result {}!".format(max_val))
+    if max_val > 0.95:
+        print("Matched Story!")
+        # If the method is TM_SQDIFF or TM_SQDIFF_NORMED, take minimum
+        top_left = max_loc
+        bottom_right = (top_left[0] + w, top_left[1] + h)
+        return 1, (top_left[0] + bottom_right[0]) / 2, (top_left[1] + bottom_right[1]) / 2
+    return 0, 0, 0

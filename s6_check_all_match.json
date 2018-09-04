@@ -15,13 +15,18 @@
   },
   {
     "action": "tap",
-    "xpos": 1455,
+    "xpos": 280,
     "ypos": 574,
     "message": "click category",
     "sleepTime": 4
   },
   {
-    "action": "check_animation",
+    "action": "swipe_bottom",
+    "message": "swipe to down",
+    "sleepTime": 1
+  },
+  {
+    "action": "check_match",
     "message": "detect score",
     "sleepTime": 5
   }

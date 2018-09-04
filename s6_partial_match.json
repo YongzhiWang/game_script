@@ -1,0 +1,71 @@
+[
+  {
+    "action": "tap",
+    "xpos": 1500,
+    "ypos": 930,
+    "message": "click match begin button",
+    "sleepTime": 2
+  },
+  {
+    "action": "tap",
+    "xpos": 400,
+    "ypos": 500,
+    "message": "click self match",
+    "sleepTime": 7
+  },
+  {
+    "action": "tap",
+    "xpos": 800,
+    "ypos": 300,
+    "message": "click first match",
+    "sleepTime": 7
+  },
+  {
+    "action": "tap",
+    "xpos": 1600,
+    "ypos": 800,
+    "message": "click game ready button",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 970,
+    "ypos": 770,
+    "message": "click skip boost button",
+    "sleepTime": 1
+  },
+  {
+    "action": "sleep_detect",
+    "message": "Sleep until game done",
+    "sleepTime": 60,
+    "detectTimes": 20
+  },
+  {
+    "action": "kill",
+    "message": "Kill game",
+    "sleepTime": 2
+  },
+  {
+    "action": "launch",
+    "message": "launch game",
+    "sleepTime": 1
+  },
+  {
+    "action": "sleep",
+    "message": "Sleep until game is fully launched",
+    "sleepTime": 17
+  },
+  {
+    "action": "tap",
+    "xpos": 1000,
+    "ypos": 500,
+    "message": "click launch screen",
+    "sleepTime": 5
+  },
+  {
+    "action": "script",
+    "fileName": "s6_sell_all_job.json",
+    "message": "Do Juqing",
+    "sleepTime": 5
+  }
+]
