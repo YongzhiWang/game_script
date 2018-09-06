@@ -14,6 +14,11 @@
     "sleepTime": 2
   },
   {
+    "action": "check_energy",
+    "message": "click energy",
+    "sleepTime": 1
+  },
+  {
     "action": "tap",
     "xpos": 400,
     "ypos": 500,

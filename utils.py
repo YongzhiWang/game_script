@@ -4,24 +4,31 @@ import cv2
 import sys
 from subprocess import call
 
-appVersion = 1
+script_name = ""
+deviceID = ""
+accountVersion = 1
+league_team = 270
+goal_keeper = 7
+perfect_goal_keeper = 10
+perfect_goal_keeper_stop = 0
+run_middle = 0
 
 def tap_screen(x, y):
-    os.system('adb shell input tap {} {}'.format(x,y))
+    os.system('adb -s {} shell input tap {} {}'.format(deviceID, x,y))
 
 def sleep_wait(total_time):
    for i in range(total_time):
         print('sleep {} second.'.format(i))
         time.sleep(1)
         # keep the device on
-        os.system('adb shell input keyevent 82')
+        os.system('adb -s {} shell input keyevent 82'.format(deviceID))
 
 def sleep_wait_detect(total_time, detect_times):
     for i in range(total_time):
         print('sleep {} second.'.format(i))
         time.sleep(1)
         # keep the device on
-        os.system('adb shell input keyevent 82')
+        os.system('adb -s {} shell input keyevent 82'.format(deviceID))
 
     for j in range(detect_times):
         print("Detect rounds {}!".format(j))
@@ -30,9 +37,12 @@ def sleep_wait_detect(total_time, detect_times):
             return 1
     return 0
 
+def pull_screenshot():
+    os.system('adb -s {} shell screencap -p /sdcard/screencap.png'.format(deviceID))
+    os.system('adb -s {} pull  /sdcard/screencap.png'.format(deviceID))
+
 def image_detection():
-    os.system('adb shell screencap -p /sdcard/screencap.png')
-    os.system('adb pull /sdcard/screencap.png')
+    pull_screenshot()
     img = cv2.imread('screencap.png', 0)
     img2 = img.copy()
     template = cv2.imread('winning_flag.png', 0)
@@ -49,60 +59,49 @@ def image_detection():
     return 0
 
 def launch_app():
-    if appVersion == 1:
-        os.system('adb shell monkey -p com.klab.captain283.global -c android.intent.category.LAUNCHER 1')
-    elif appVersion == 2:
-        os.system('adb shell monkey -p com.klab.captain283.globan -c android.intent.category.LAUNCHER 1')
-    elif appVersion == 3:
-        os.system('adb shell monkey -p com.klab.captain283.globao -c android.intent.category.LAUNCHER 1')
+    if accountVersion == 1:
+        os.system('adb -s {} shell monkey -p com.klab.captain283.global -c android.intent.category.LAUNCHER 1'.format(deviceID))
+    elif accountVersion == 2:
+        os.system('adb -s {} shell monkey -p com.klab.captain283.globan -c android.intent.category.LAUNCHER 1'.format(deviceID))
+    elif accountVersion == 3:
+        os.system('adb -s {} shell monkey -p com.klab.captain283.globao -c android.intent.category.LAUNCHER 1'.format(deviceID))
 
 
 def kill_app():
-    if appVersion == 1:
-        os.system('adb shell am force-stop com.klab.captain283.global')
-    elif appVersion == 2:
-        os.system('adb shell am force-stop com.klab.captain283.globan')
-    elif appVersion == 3:
-        os.system('adb shell am force-stop com.klab.captain283.globao')
+    if accountVersion == 1:
+        os.system('adb -s {} shell am force-stop com.klab.captain283.global'.format(deviceID))
+    elif accountVersion == 2:
+        os.system('adb -s {} shell am force-stop com.klab.captain283.globan'.format(deviceID))
+    elif accountVersion == 3:
+        os.system('adb -s {} shell am force-stop com.klab.captain283.globao'.format(deviceID))
 
     kill_all()
 
 def kill_all():
-    os.system('adb shell am kill-all')
+    os.system('adb -s {} shell am kill-all'.format(deviceID))
 
 def horizontal_swipe_screen():
-    os.system('adb shell input swipe 1800 500 0 500')
-    time.sleep(0.2)
-    os.system('adb shell input swipe 1800 500 0 500')
-    time.sleep(0.2)
-    os.system('adb shell input swipe 1800 500 0 500')
-    time.sleep(0.2)
-    os.system('adb shell input swipe 1800 500 0 500')
-    time.sleep(0.2)
-    os.system('adb shell input swipe 1800 500 0 500')
-    time.sleep(0.2)
+    for i in range(0, 4):
+        os.system('adb -s {} shell input swipe 1800 500 0 500'.format(deviceID))
+        time.sleep(0.2)
 
 def horizontal_swipe_screen_once():
-    os.system('adb shell input swipe 900 500 0 500')
+    os.system('adb -s {} shell input swipe 900 500 0 500'.format(deviceID))
     time.sleep(0.2)
 
 def vertical_swipe_screen_up():
-    os.system('adb shell input swipe 1400 800 1400 100')
-    time.sleep(0.2)
-    os.system('adb shell input swipe 1400 800 1400 100')
-    time.sleep(0.2)
-    os.system('adb shell input swipe 1400 800 1400 100')
-    time.sleep(0.2)
+    for i in range(0,3):
+        os.system('adb -s {} shell input swipe 1400 800 1400 100'.format(deviceID))
+        time.sleep(0.2)
 
 def vertical_swipe_screen_down():
-    os.system('adb shell input swipe 1400 100 1400 300')
+    os.system('adb -s {} shell input swipe 1400 100 1400 300'.format(deviceID))
     time.sleep(0.2)
 
 def isValidLeagueUser():
-    os.system('adb shell screencap -p /sdcard/league.png')
-    os.system('adb pull /sdcard/league.png')
+    pull_screenshot()
     FNULL = open(os.devnull, 'w')
-    input_image_path = "league.png"
+    input_image_path = "screencap.png"
     crop_image_path = "./crop_league.png"
     output_path = "./convert_text"
     img = cv2.imread(input_image_path)
@@ -122,13 +121,12 @@ def isValidLeagueUser():
                 print("detect number is {}".format(number))
                 break
             break
-    if number < 300:
+    if number < league_team:
         return 1
     return 0
 
 def isUnreadStory():
-    os.system('adb shell screencap -p /sdcard/screencap.png')
-    os.system('adb pull /sdcard/screencap.png')
+    pull_screenshot()
     img = cv2.imread('screencap.png', 0)
     crop_img = img[0:340, 0:1920]
     template = cv2.imread('unread_story.png', 0)
@@ -144,8 +142,7 @@ def isUnreadStory():
     return 0
 
 def isRunningPenatly():
-    os.system('adb shell screencap -p /sdcard/screencap.png')
-    os.system('adb pull /sdcard/screencap.png')
+    pull_screenshot()
     img = cv2.imread('screencap.png', 0)
     img2 = img.copy()
     template = cv2.imread('penalty_flag.png', 0)
@@ -162,10 +159,9 @@ def isRunningPenatly():
     return 0
 
 def isValidLeagueGoalKeeper():
-    os.system('adb shell screencap -p /sdcard/league.png')
-    os.system('adb pull /sdcard/league.png')
+    pull_screenshot()
     FNULL = open(os.devnull, 'w')
-    input_image_path = "league.png"
+    input_image_path = "screencap.png"
     crop_image_path = "./crop_league.png"
     output_path = "./convert_text"
     img = cv2.imread(input_image_path)
@@ -186,16 +182,16 @@ def isValidLeagueGoalKeeper():
                 print("detect number is {}".format(number))
                 break
             break
-    if number < 10:
+    if number < perfect_goal_keeper:
         print("Ruoji goal keeper!!!!!")
-        #sys.exit(0)
-    if number < 16:
+        if perfect_goal_keeper_stop > 0:
+            sys.exit(0)
+    if number < goal_keeper:
         return 1
     return 0
 
 def hasEasyMatch():
-    os.system('adb shell screencap -p /sdcard/screencap.png')
-    os.system('adb pull /sdcard/screencap.png')
+    pull_screenshot()
     img = cv2.imread('screencap.png', 0)
     template = cv2.imread('match_easy.png', 0)
     w, h = template.shape[::-1]
@@ -213,8 +209,7 @@ def hasEasyMatch():
     return 0, 0, 0
 
 def hasMiddleMatch():
-    os.system('adb shell screencap -p /sdcard/screencap.png')
-    os.system('adb pull /sdcard/screencap.png')
+    pull_screenshot()
     img = cv2.imread('screencap.png', 0)
     template = cv2.imread('match_middle.png', 0)
     w, h = template.shape[::-1]
@@ -230,3 +225,51 @@ def hasMiddleMatch():
         bottom_right = (top_left[0] + w, top_left[1] + h)
         return 1, (top_left[0] + bottom_right[0]) / 2, (top_left[1] + bottom_right[1]) / 2
     return 0, 0, 0
+
+def hasEnergyAds():
+    pull_screenshot()
+    img = cv2.imread('screencap.png', 0)
+    template = cv2.imread('energy_watch_ads_patten.png', 0)
+    w, h = template.shape[::-1]
+    method = eval('cv2.TM_CCOEFF_NORMED')
+    # Apply template Matching
+    res = cv2.matchTemplate(img, template, method)
+    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
+    print("Detect hasEnergyAds result {}!".format(max_val))
+    if max_val > 0.95:
+        print("Matched hasEnergyAds!")
+        # If the method is TM_SQDIFF or TM_SQDIFF_NORMED, take minimum
+        return 1
+    return 0
+
+def hasEnergyBall():
+    pull_screenshot()
+    img = cv2.imread('screencap.png', 0)
+    template = cv2.imread('energy_ball_pattern.png', 0)
+    w, h = template.shape[::-1]
+    method = eval('cv2.TM_CCOEFF_NORMED')
+    # Apply template Matching
+    res = cv2.matchTemplate(img, template, method)
+    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
+    print("Detect hasEnergyBall result {}!".format(max_val))
+    if max_val > 0.95:
+        print("Matched hasEnergyBall!")
+        # If the method is TM_SQDIFF or TM_SQDIFF_NORMED, take minimum
+        return 1
+    return 0
+
+def hasTooManyWarning():
+    pull_screenshot()
+    img = cv2.imread('screencap.png', 0)
+    template = cv2.imread('too_many_pattern.png', 0)
+    w, h = template.shape[::-1]
+    method = eval('cv2.TM_CCOEFF_NORMED')
+    # Apply template Matching
+    res = cv2.matchTemplate(img, template, method)
+    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
+    print("Detect hasTooManyWarning result {}!".format(max_val))
+    if max_val > 0.95:
+        print("Matched hasTooManyWarning!")
+        # If the method is TM_SQDIFF or TM_SQDIFF_NORMED, take minimum
+        return 1
+    return 0

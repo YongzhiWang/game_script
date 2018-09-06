@@ -1,0 +1,23 @@
+[
+  {
+    "action": "tap",
+    "xpos": 1175,
+    "ypos": 900,
+    "message": "click energy ball button",
+    "sleepTime": 3
+  },
+  {
+    "action": "tap",
+    "xpos": 960,
+    "ypos": 720,
+    "message": "click okay button",
+    "sleepTime": 3
+  },
+  {
+    "action": "tap",
+    "xpos": 1600,
+    "ypos": 950,
+    "message": "click game ready button",
+    "sleepTime": 1
+  }
+]

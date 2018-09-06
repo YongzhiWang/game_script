@@ -1,0 +1,65 @@
+[
+  {
+    "action": "tap",
+    "xpos": 1400,
+    "ypos": 770,
+    "message": "click watch video button",
+    "sleepTime": 20
+  },
+  {
+    "action": "tap",
+    "xpos": 1845,
+    "ypos": 75,
+    "message": "click close ads button, not necessary?",
+    "sleepTime": 2
+  },
+  {
+    "action": "tap",
+    "xpos": 1845,
+    "ypos": 75,
+    "message": "click close ads button, not necessary?",
+    "sleepTime": 2
+  },
+  {
+    "action": "tap",
+    "xpos": 1845,
+    "ypos": 75,
+    "message": "click close ads button, not necessary?",
+    "sleepTime": 2
+  },
+  {
+    "action": "tap",
+    "xpos": 1000,
+    "ypos": 720,
+    "message": "click next page button",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 1200,
+    "ypos": 300,
+    "message": "click dream ball page",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 1000,
+    "ypos": 720,
+    "message": "click next page button",
+    "sleepTime": 3
+  },
+  {
+    "action": "tap",
+    "xpos": 960,
+    "ypos": 720,
+    "message": "click okay button",
+    "sleepTime": 3
+  },
+  {
+    "action": "tap",
+    "xpos": 1600,
+    "ypos": 800,
+    "message": "click game ready button",
+    "sleepTime": 1
+  }
+]

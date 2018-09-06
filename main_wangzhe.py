@@ -16,9 +16,6 @@ def init():
 
 if __name__=='__main__':
     init()
-    print('USAGE: just run python main.py. Put all the parameters into script_parameters.json!!!!!!!!')
-
-
     with open("script_parameters.json") as data_file:
         parameters = json.load(data_file)
         utils.script_name = parameters["script"]
@@ -28,7 +25,6 @@ if __name__=='__main__':
         utils.goal_keeper = parameters["goal_keeper"]
         utils.perfect_goal_keeper = parameters["perfect_goal_keeper"]
         utils.perfect_goal_keeper_stop = parameters["perfect_goal_keeper_stop"]
-        utils.run_middle = parameters["run_middle"]
         roundCount = parameters["count"]
         for i in range(roundCount):
             print('ROUND {} begins !!!!!!!!!!!!!!!!!!!!!!!!!!'.format(i))

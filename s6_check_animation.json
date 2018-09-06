@@ -14,8 +14,18 @@
     "sleepTime": 5
   },
   {
+    "action": "swipe",
+    "message": "click Huo Dong match",
+    "sleepTime": 1
+  },
+  {
+    "action": "swipe",
+    "message": "click Huo Dong match",
+    "sleepTime": 1
+  },
+  {
     "action": "tap",
-    "xpos": 1455,
+    "xpos": 1650,
     "ypos": 574,
     "message": "click category",
     "sleepTime": 4

@@ -14,21 +14,16 @@
     "sleepTime": 5
   },
   {
-    "action": "swipe_end",
-    "message": "swipe to end",
-    "sleepTime": 1
-  },
-  {
     "action": "tap",
-    "xpos": 1610,
+    "xpos": 280,
     "ypos": 500,
     "message": "click last match",
     "sleepTime": 4
   },
   {
     "action": "tap",
-    "xpos": 1400,
-    "ypos": 540,
+    "xpos": 844,
+    "ypos": 280,
     "message": "click very easy match",
     "sleepTime": 1
   },
@@ -112,7 +107,7 @@
   {
     "action": "sleep",
     "message": "Sleep until game done",
-    "sleepTime": 70
+    "sleepTime": 65
   },
   {
     "action": "kill",

@@ -2,7 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce5febb9-5b74-41ea-9395-2b3a054b58be" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/s6_check_all_huodong_match.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_wangzhe.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s6_sell_all_useless.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s6_use_energy_ball.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s6_watch_energy_ads.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s8_wangzherongyao.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script_parameters.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/actions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/convert_text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/convert_text.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crop_league.png" beforeDir="false" afterPath="$PROJECT_DIR$/crop_league.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/league.png" beforeDir="false" afterPath="$PROJECT_DIR$/league.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/s6_auto_self_juqing.json" beforeDir="false" afterPath="$PROJECT_DIR$/s6_auto_self_juqing.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/s6_check_all_match.json" beforeDir="false" afterPath="$PROJECT_DIR$/s6_check_all_match.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/s6_check_animation.json" beforeDir="false" afterPath="$PROJECT_DIR$/s6_check_animation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/s6_daily_job.json" beforeDir="false" afterPath="$PROJECT_DIR$/s6_daily_job.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/s6_juqing_job.json" beforeDir="false" afterPath="$PROJECT_DIR$/s6_juqing_job.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/s6_partial_match.json" beforeDir="false" afterPath="$PROJECT_DIR$/s6_partial_match.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/s6_run_league.json" beforeDir="false" afterPath="$PROJECT_DIR$/s6_run_league.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/s6_sell_all_job.json" beforeDir="false" afterPath="$PROJECT_DIR$/s6_sell_all_job.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screencap.png" beforeDir="false" afterPath="$PROJECT_DIR$/screencap.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,8 +45,8 @@
       <file leaf-file-name="actions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/actions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="176" column="25" selection-start-line="176" selection-start-column="25" selection-end-line="176" selection-end-column="25" />
+            <state relative-caret-position="151">
+              <caret line="208" column="20" selection-start-line="208" selection-start-column="20" selection-end-line="208" selection-end-column="20" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -33,20 +54,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="s6_check_all_huodong_match.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/s6_check_all_huodong_match.json">
+      <file leaf-file-name="s6_use_energy_ball.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/s6_use_energy_ball.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+            <state relative-caret-position="300">
+              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="s6_partial_match.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/s6_partial_match.json">
+      <file leaf-file-name="s6_sell_all_useless.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/s6_sell_all_useless.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+            <state relative-caret-position="627">
+              <caret line="147" column="35" selection-start-line="147" selection-start-column="35" selection-end-line="147" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="s6_juqing_job.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/s6_juqing_job.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="7" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -54,8 +84,8 @@
       <file leaf-file-name="s6_auto_self_juqing.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/s6_auto_self_juqing.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2">
-              <caret line="24" column="16" selection-end-line="78" />
+            <state relative-caret-position="270">
+              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -63,8 +93,8 @@
       <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="692">
-              <caret line="224" column="19" selection-start-line="224" selection-start-column="19" selection-end-line="224" selection-end-column="19" />
+            <state relative-caret-position="322">
+              <caret line="187" column="23" selection-start-line="187" selection-start-column="12" selection-end-line="187" selection-end-column="23" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -72,38 +102,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="s6_auto_run_match.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/s6_auto_run_match.json">
+      <file leaf-file-name="s6_partial_match.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/s6_partial_match.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="30" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="30" />
+            <state relative-caret-position="372">
+              <caret line="49" column="27" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="animation_detection.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/animation_detection.py">
+      <file leaf-file-name="script_parameters.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/script_parameters.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+            <state relative-caret-position="135">
+              <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="s6_check_animation.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/s6_check_animation.json">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="s6_juexing_job.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/s6_juexing_job.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" selection-start-line="15" selection-end-line="19" selection-end-column="4" />
+            <state relative-caret-position="270">
+              <caret line="18" column="101" selection-start-line="18" selection-start-column="101" selection-end-line="18" selection-end-column="101" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,8 +135,8 @@
       <file leaf-file-name="s6_check_all_match.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/s6_check_all_match.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+            <state relative-caret-position="330">
+              <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -122,7 +146,14 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>sleep_detect_co</find>
+      <find>appVersion</find>
+      <find>adb shell -s {}</find>
     </findStrings>
+    <replaceStrings>
+      <replace>adb(.*)'.format(deviceID))</replace>
+      <replace>accountVersion</replace>
+      <replace>adb -s {} shell</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -133,7 +164,6 @@
         <option value="$PROJECT_DIR$/s8_self_juqing.json" />
         <option value="$PROJECT_DIR$/s6_self_traning.json" />
         <option value="$PROJECT_DIR$/s6_self_training.json" />
-        <option value="$PROJECT_DIR$/s6_juqing_job.json" />
         <option value="$PROJECT_DIR$/s6_juexing_job.json" />
         <option value="$PROJECT_DIR$/s6_zhaomu_job.json" />
         <option value="$PROJECT_DIR$/s6_training_job.json" />
@@ -157,23 +187,31 @@
         <option value="$PROJECT_DIR$/s6_go_into_league.json" />
         <option value="$PROJECT_DIR$/text_crop_detection.py" />
         <option value="$PROJECT_DIR$/s6_go_back_league_win.json" />
-        <option value="$PROJECT_DIR$/s6_run_league.json" />
-        <option value="$PROJECT_DIR$/s6_daily_job.json" />
         <option value="$PROJECT_DIR$/s6_source_coin.json" />
         <option value="$PROJECT_DIR$/s6_run_league_detect.json" />
         <option value="$PROJECT_DIR$/s6_self_juqing.json" />
         <option value="$PROJECT_DIR$/s6_self_north_coin.json" />
-        <option value="$PROJECT_DIR$/s6_sell_all_job.json" />
-        <option value="$PROJECT_DIR$/s6_auto_self_juqing.json" />
         <option value="$PROJECT_DIR$/s6_auto_self_animation.json" />
-        <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/s6_check_animation.json" />
-        <option value="$PROJECT_DIR$/s6_partial_match.json" />
-        <option value="$PROJECT_DIR$/utils.py" />
-        <option value="$PROJECT_DIR$/s6_check_all_match.json" />
         <option value="$PROJECT_DIR$/animation_detection.py" />
-        <option value="$PROJECT_DIR$/actions.py" />
         <option value="$PROJECT_DIR$/s6_check_all_huodong_match.json" />
+        <option value="$PROJECT_DIR$/s8_wangzherongyao.json" />
+        <option value="$USER_HOME$/Documents/game_script/tencent/money.py" />
+        <option value="$PROJECT_DIR$/money.py" />
+        <option value="$PROJECT_DIR$/s6_run_league.json" />
+        <option value="$PROJECT_DIR$/s6_daily_job.json" />
+        <option value="$PROJECT_DIR$/s6_check_animation.json" />
+        <option value="$PROJECT_DIR$/s6_sell_all_job.json" />
+        <option value="$PROJECT_DIR$/s6_juqing_job.json" />
+        <option value="$PROJECT_DIR$/s6_watch_energy_ads.json" />
+        <option value="$PROJECT_DIR$/s6_auto_self_juqing.json" />
+        <option value="$PROJECT_DIR$/utils.py" />
+        <option value="$PROJECT_DIR$/s6_partial_match.json" />
+        <option value="$PROJECT_DIR$/s6_sell_all_useless.json" />
+        <option value="$PROJECT_DIR$/actions.py" />
+        <option value="$PROJECT_DIR$/s6_use_energy_ball.json" />
+        <option value="$PROJECT_DIR$/s6_check_all_match.json" />
+        <option value="$PROJECT_DIR$/script_parameters.json" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -186,7 +224,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="1920" />
     <option name="height" value="1200" />
   </component>
@@ -321,7 +359,7 @@
       <workItem from="1535353894527" duration="392000" />
       <workItem from="1535355579753" duration="2963000" />
       <workItem from="1535707625186" duration="19000" />
-      <workItem from="1535954634512" duration="12378000" />
+      <workItem from="1535954634512" duration="41454000" />
     </task>
     <servers>
       <JIRA url="https://jira01.corp.linkedin.com:8443">
@@ -331,10 +369,10 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91214000" />
+    <option name="totallyTimeSpent" value="120290000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="947" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -381,75 +419,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/s6_source_coin.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="61" column="21" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/s6_run_league.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1920">
-          <caret line="131" column="14" selection-start-line="131" selection-start-column="14" selection-end-line="131" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/IntelliJIdeaLI10/python_stubs/-1247972723/posix.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15240">
-          <caret line="1016" column="4" selection-start-line="1016" selection-start-column="4" selection-end-line="1016" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/s6_juexing_bronze.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/s6_juexing_job.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/s6_self_juqing.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/s6_self_north_coin.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="57" column="3" selection-start-line="57" selection-start-column="3" selection-end-line="57" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/actions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2010">
-          <caret line="135" selection-start-line="135" selection-end-line="135" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/s6_run_league_detect.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -620,31 +589,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/s6_sell_all_job.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/s6_daily_job.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="19" selection-end-line="24" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/s6_run_league_detect.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/s6_run_league.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="20" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -662,65 +610,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/s6_auto_self_animation.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/s6_run_easy_league.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/s6_juexing_job.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="19" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/s6_auto_self_juqing.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2">
-          <caret line="24" column="16" selection-end-line="78" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/s6_auto_run_match.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="30" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/s6_check_animation.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/s6_check_all_match.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/s6_partial_match.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -731,30 +627,169 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
+    <entry file="file://$PROJECT_DIR$/main_wangzhe.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="692">
-          <caret line="224" column="19" selection-start-line="224" selection-start-column="19" selection-end-line="224" selection-end-column="19" />
+        <state relative-caret-position="270">
+          <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/s8_wangzherongyao.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="175" column="19" lean-forward="true" selection-start-line="175" selection-start-column="19" selection-end-line="175" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/game_script/tencent/money.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="3" selection-start-line="3" selection-end-line="4" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/money.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/s6_run_league.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/s6_juexing_job.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/s6_check_all_huodong_match.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/s6_daily_job.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/s6_watch_energy_ads.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="657">
+          <caret line="63" column="3" selection-start-line="63" selection-start-column="3" selection-end-line="63" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/s6_check_animation.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/s6_auto_self_animation.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/s6_sell_all_job.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="47" column="4" selection-start-line="27" selection-start-column="2" selection-end-line="47" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/s6_juqing_job.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/s6_partial_match.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="49" column="27" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/s6_sell_all_useless.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="147" column="35" selection-start-line="147" selection-start-column="35" selection-end-line="147" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="187" column="23" selection-start-line="187" selection-start-column="12" selection-end-line="187" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/s6_use_energy_ball.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/actions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="176" column="25" selection-start-line="176" selection-start-column="25" selection-end-line="176" selection-end-column="25" />
+        <state relative-caret-position="151">
+          <caret line="208" column="20" selection-start-line="208" selection-start-column="20" selection-end-line="208" selection-end-column="20" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/s6_check_all_huodong_match.json">
+    <entry file="file://$PROJECT_DIR$/s6_auto_self_juqing.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+        <state relative-caret-position="270">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/s6_check_all_match.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_parameters.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="101" selection-start-line="18" selection-start-column="101" selection-end-line="18" selection-end-column="101" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

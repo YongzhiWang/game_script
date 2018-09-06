@@ -7,6 +7,11 @@
     "sleepTime": 4
   },
   {
+    "action": "check_too_many",
+    "message": "check too many warning",
+    "sleepTime": 1
+  },
+  {
     "action": "tap",
     "xpos": 380,
     "ypos": 450,
@@ -15,7 +20,7 @@
   },
   {
     "action": "tap",
-    "xpos": 280,
+    "xpos": 800,
     "ypos": 574,
     "message": "click category",
     "sleepTime": 4

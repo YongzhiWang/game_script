@@ -1,5 +1,6 @@
 import utils
 import json
+import sys
 
 class BaseActionInfo:
     globalDelay = 0
@@ -183,22 +184,63 @@ class CheckMatchInfo(BaseActionInfo):
         self.sleepTime = sleepTime
 
     def execute(self):
-        for i in range(0, 2):
+        for i in range(0, 10):
             easymatch, xpox, ypos = utils.hasEasyMatch()
+            print("Easy match result {}  {}   {}!".format(easymatch, xpox, ypos))
             if easymatch > 0:
                 utils.tap_screen(xpox, ypos)
+                utils.sleep_wait(1)
                 ScenarioExecutor("s6_partial_match.json").execute()
                 return
-            else:
+            elif utils.run_middle > 0:
                 middleMatch, xpox, ypos = utils.hasMiddleMatch()
+                print("Easy match result {}  {}   {}!".format(middleMatch, xpox, ypos))
                 if middleMatch > 0:
                     utils.tap_screen(xpox, ypos)
+                    utils.sleep_wait(1)
                     ScenarioExecutor("s6_partial_match.json").execute()
                     return
                 #dd
             # not found
             utils.vertical_swipe_screen_down()
 
+        BaseActionInfo.execute(self)
+
+class CheckEnergyNotEnough(BaseActionInfo):
+    def __init__(self, message, sleepTime):
+        BaseActionInfo.__init__(self,message, sleepTime)
+        self.sleepTime = sleepTime
+
+    def execute(self):
+        hasAdsEnergy = utils.hasEnergyAds()
+        if hasAdsEnergy > 0:
+            # click the ads energy
+            ScenarioExecutor("s6_watch_energy_ads.json").execute()
+        else:
+            hasEnergyBall = utils.hasEnergyBall()
+            if hasEnergyBall > 0:
+                ScenarioExecutor("s6_use_energy_ball.json").execute()
+
+        #nothing just return
+        BaseActionInfo.execute(self)
+
+class CheckTooMany(BaseActionInfo):
+    def __init__(self, message, sleepTime):
+        BaseActionInfo.__init__(self,message, sleepTime)
+        self.sleepTime = sleepTime
+
+    def execute(self):
+        hasTooManyWarning = utils.hasTooManyWarning()
+        if hasTooManyWarning > 0:
+            # click the ads energy
+            ScenarioExecutor("s6_sell_all_useless.json").execute()
+            hasTooManyWarning = utils.hasTooManyWarning()
+            if hasTooManyWarning > 0:
+                # need help
+                sys.exit(0)
+            return
+
+        #nothing just return
         BaseActionInfo.execute(self)
 
 class ActionExecutor:
@@ -239,6 +281,10 @@ class ActionExecutor:
             CheckAnimationInfo(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
         elif actionName == "check_match":
             CheckMatchInfo(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
+        elif actionName == "check_energy":
+            CheckEnergyNotEnough(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
+        elif actionName == "check_too_many":
+            CheckTooMany(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
         elif actionName == "script":
             print "enter script"
             ScenarioExecutor(self.jsonObject["fileName"]).execute()
