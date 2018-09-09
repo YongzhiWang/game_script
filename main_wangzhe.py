@@ -16,7 +16,7 @@ def init():
 
 if __name__=='__main__':
     init()
-    with open("script_parameters.json") as data_file:
+    with open("auto_match_script_parameters.json") as data_file:
         parameters = json.load(data_file)
         utils.script_name = parameters["script"]
         utils.deviceID = parameters["deviceID"]

@@ -1,63 +1,65 @@
 [
   {
     "action": "tap",
-    "xpos": 1500,
-    "ypos": 500,
+    "xpos": 2160,
+    "ypos": 650,
     "message": "click Jing Dian match",
-    "sleepTime": 4
+    "sleepTime": 5
   },
   {
     "action": "tap",
     "xpos": 750,
-    "ypos": 450,
+    "ypos": 600,
     "message": "click Huo Dong match",
     "sleepTime": 5
   },
   {
-    "action": "swipe_end",
-    "message": "swipe to end",
-    "sleepTime": 1
-  },
-  {
     "action": "tap",
-    "xpos": 1610,
-    "ypos": 500,
-    "message": "click last match",
+    "xpos": 640,
+    "ypos": 750,
+    "message": "click first category",
     "sleepTime": 4
   },
   {
     "action": "tap",
-    "xpos": 860,
-    "ypos": 280,
+    "xpos": 1360,
+    "ypos": 360,
     "message": "click very easy match",
     "sleepTime": 1
   },
   {
     "action": "tap",
-    "xpos": 1500,
-    "ypos": 930,
+    "xpos": 2260,
+    "ypos": 1245,
     "message": "click match begin button",
     "sleepTime": 2
   },
   {
     "action": "tap",
-    "xpos": 400,
-    "ypos": 500,
+    "xpos": 600,
+    "ypos": 600,
     "message": "click self match",
-    "sleepTime": 10
-  },
-  {
-    "action": "tap",
-    "xpos": 800,
-    "ypos": 300,
-    "message": "click first match",
     "sleepTime": 7
   },
   {
     "action": "tap",
-    "xpos": 1600,
-    "ypos": 800,
+    "xpos": 1250,
+    "ypos": 350,
+    "message": "click first friend button",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 2350,
+    "ypos": 1100,
     "message": "click game ready button",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 1480,
+    "ypos": 1060,
+    "message": "skip boost button",
     "sleepTime": 1
   },
   {

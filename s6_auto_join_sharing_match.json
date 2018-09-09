@@ -1,0 +1,65 @@
+[
+  {
+    "action": "tap",
+    "xpos": 1500,
+    "ypos": 500,
+    "message": "click Jing Dian match",
+    "sleepTime": 4
+  },
+  {
+    "action": "tap",
+    "xpos": 1350,
+    "ypos": 450,
+    "message": "click Jing Dian match",
+    "sleepTime": 5
+  },
+  {
+    "action": "detect_sharing",
+    "pattern_file": "join_sharing_pattern.png",
+    "message": "Sleep until pattern done",
+    "sleepTime": 1,
+    "detectTimes": 20
+  },
+  {
+    "action": "tap",
+    "xpos": 1100,
+    "ypos": 280,
+    "message": "click join match",
+    "sleepTime": 2
+  },
+  {
+    "action": "tap",
+    "xpos": 1600,
+    "ypos": 800,
+    "message": "click match ready button",
+    "sleepTime": 2
+  },
+  {
+    "action": "sleep_detect",
+    "message": "Sleep until game done",
+    "sleepTime": 65,
+    "detectTimes": 30
+  },
+  {
+    "action": "kill",
+    "message": "Kill game",
+    "sleepTime": 2
+  },
+  {
+    "action": "launch",
+    "message": "launch game",
+    "sleepTime": 1
+  },
+  {
+    "action": "sleep",
+    "message": "Sleep until game is fully launched",
+    "sleepTime": 17
+  },
+  {
+    "action": "tap",
+    "xpos": 1000,
+    "ypos": 500,
+    "message": "click launch screen",
+    "sleepTime": 5
+  }
+]

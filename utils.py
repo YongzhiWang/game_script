@@ -12,6 +12,8 @@ goal_keeper = 7
 perfect_goal_keeper = 10
 perfect_goal_keeper_stop = 0
 run_middle = 0
+run_hard = 0
+use_energy_ball = 0
 
 def tap_screen(x, y):
     os.system('adb -s {} shell input tap {} {}'.format(deviceID, x,y))
@@ -38,12 +40,13 @@ def sleep_wait_detect(total_time, detect_times):
     return 0
 
 def pull_screenshot():
-    os.system('adb -s {} shell screencap -p /sdcard/screencap.png'.format(deviceID))
-    os.system('adb -s {} pull  /sdcard/screencap.png'.format(deviceID))
+    os.system('adb -s {} shell screencap -p /sdcard/screencap{}.png'.format(deviceID, deviceID))
+    os.system('adb -s {} pull  /sdcard/screencap{}.png'.format(deviceID, deviceID))
+    return 'screencap{}.png'.format(deviceID)
 
 def image_detection():
-    pull_screenshot()
-    img = cv2.imread('screencap.png', 0)
+    screencap_file = pull_screenshot()
+    img = cv2.imread(screencap_file, 0)
     img2 = img.copy()
     template = cv2.imread('winning_flag.png', 0)
     w, h = template.shape[::-1]
@@ -99,9 +102,9 @@ def vertical_swipe_screen_down():
     time.sleep(0.2)
 
 def isValidLeagueUser():
-    pull_screenshot()
+    screencap_file = pull_screenshot()
     FNULL = open(os.devnull, 'w')
-    input_image_path = "screencap.png"
+    input_image_path = screencap_file
     crop_image_path = "./crop_league.png"
     output_path = "./convert_text"
     img = cv2.imread(input_image_path)
@@ -126,8 +129,8 @@ def isValidLeagueUser():
     return 0
 
 def isUnreadStory():
-    pull_screenshot()
-    img = cv2.imread('screencap.png', 0)
+    screencap_file = pull_screenshot()
+    img = cv2.imread(screencap_file, 0)
     crop_img = img[0:340, 0:1920]
     template = cv2.imread('unread_story.png', 0)
     img = crop_img.copy()
@@ -142,8 +145,8 @@ def isUnreadStory():
     return 0
 
 def isRunningPenatly():
-    pull_screenshot()
-    img = cv2.imread('screencap.png', 0)
+    screencap_file = pull_screenshot()
+    img = cv2.imread(screencap_file, 0)
     img2 = img.copy()
     template = cv2.imread('penalty_flag.png', 0)
     w, h = template.shape[::-1]
@@ -159,9 +162,9 @@ def isRunningPenatly():
     return 0
 
 def isValidLeagueGoalKeeper():
-    pull_screenshot()
+    screencap_file = pull_screenshot()
     FNULL = open(os.devnull, 'w')
-    input_image_path = "screencap.png"
+    input_image_path = screencap_file
     crop_image_path = "./crop_league.png"
     output_path = "./convert_text"
     img = cv2.imread(input_image_path)
@@ -190,45 +193,9 @@ def isValidLeagueGoalKeeper():
         return 1
     return 0
 
-def hasEasyMatch():
-    pull_screenshot()
-    img = cv2.imread('screencap.png', 0)
-    template = cv2.imread('match_easy.png', 0)
-    w, h = template.shape[::-1]
-    method = eval('cv2.TM_CCOEFF_NORMED')
-    # Apply template Matching
-    res = cv2.matchTemplate(img, template, method)
-    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
-    print("Detect result {}!".format(max_val))
-    if max_val > 0.95:
-        print("Matched Story!")
-        # If the method is TM_SQDIFF or TM_SQDIFF_NORMED, take minimum
-        top_left = max_loc
-        bottom_right = (top_left[0] + w, top_left[1] + h)
-        return 1, (top_left[0] + bottom_right[0]) / 2, (top_left[1] + bottom_right[1]) / 2
-    return 0, 0, 0
-
-def hasMiddleMatch():
-    pull_screenshot()
-    img = cv2.imread('screencap.png', 0)
-    template = cv2.imread('match_middle.png', 0)
-    w, h = template.shape[::-1]
-    method = eval('cv2.TM_CCOEFF_NORMED')
-    # Apply template Matching
-    res = cv2.matchTemplate(img, template, method)
-    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
-    print("Detect result {}!".format(max_val))
-    if max_val > 0.95:
-        print("Matched Story!")
-        # If the method is TM_SQDIFF or TM_SQDIFF_NORMED, take minimum
-        top_left = max_loc
-        bottom_right = (top_left[0] + w, top_left[1] + h)
-        return 1, (top_left[0] + bottom_right[0]) / 2, (top_left[1] + bottom_right[1]) / 2
-    return 0, 0, 0
-
 def hasEnergyAds():
-    pull_screenshot()
-    img = cv2.imread('screencap.png', 0)
+    screencap_file = pull_screenshot()
+    img = cv2.imread(screencap_file, 0)
     template = cv2.imread('energy_watch_ads_patten.png', 0)
     w, h = template.shape[::-1]
     method = eval('cv2.TM_CCOEFF_NORMED')
@@ -242,9 +209,27 @@ def hasEnergyAds():
         return 1
     return 0
 
+def patternDetect(target_pattern_file):
+    screencap_file = pull_screenshot()
+    img = cv2.imread(screencap_file, 0)
+    template = cv2.imread(target_pattern_file, 0)
+    w, h = template.shape[::-1]
+    method = eval('cv2.TM_CCOEFF_NORMED')
+    # Apply template Matching
+    res = cv2.matchTemplate(img, template, method)
+    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
+    print("Detect {} result {}!".format(target_pattern_file, max_val))
+    if max_val > 0.95:
+        print("Matched {}!".format(target_pattern_file))
+        # If the method is TM_SQDIFF or TM_SQDIFF_NORMED, take minimum
+        top_left = max_loc
+        bottom_right = (top_left[0] + w, top_left[1] + h)
+        return 1, (top_left[0] + bottom_right[0]) / 2, (top_left[1] + bottom_right[1]) / 2
+    return 0, 0, 0
+
 def hasEnergyBall():
-    pull_screenshot()
-    img = cv2.imread('screencap.png', 0)
+    screencap_file = pull_screenshot()
+    img = cv2.imread(screencap_file, 0)
     template = cv2.imread('energy_ball_pattern.png', 0)
     w, h = template.shape[::-1]
     method = eval('cv2.TM_CCOEFF_NORMED')
@@ -259,8 +244,8 @@ def hasEnergyBall():
     return 0
 
 def hasTooManyWarning():
-    pull_screenshot()
-    img = cv2.imread('screencap.png', 0)
+    screencap_file = pull_screenshot()
+    img = cv2.imread(screencap_file, 0)
     template = cv2.imread('too_many_pattern.png', 0)
     w, h = template.shape[::-1]
     method = eval('cv2.TM_CCOEFF_NORMED')

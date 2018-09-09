@@ -185,7 +185,7 @@ class CheckMatchInfo(BaseActionInfo):
 
     def execute(self):
         for i in range(0, 10):
-            easymatch, xpox, ypos = utils.hasEasyMatch()
+            easymatch, xpox, ypos = utils.patternDetect("match_easy.png")
             print("Easy match result {}  {}   {}!".format(easymatch, xpox, ypos))
             if easymatch > 0:
                 utils.tap_screen(xpox, ypos)
@@ -193,18 +193,79 @@ class CheckMatchInfo(BaseActionInfo):
                 ScenarioExecutor("s6_partial_match.json").execute()
                 return
             elif utils.run_middle > 0:
-                middleMatch, xpox, ypos = utils.hasMiddleMatch()
-                print("Easy match result {}  {}   {}!".format(middleMatch, xpox, ypos))
+                middleMatch, xpox, ypos =  utils.patternDetect("match_middle.png")
+                print("Middle match result {}  {}   {}!".format(middleMatch, xpox, ypos))
                 if middleMatch > 0:
                     utils.tap_screen(xpox, ypos)
                     utils.sleep_wait(1)
                     ScenarioExecutor("s6_partial_match.json").execute()
                     return
+                elif utils.run_hard > 0:
+                    hard_match, xpox, ypos =  utils.patternDetect("match_hard.png")
+                    print("Hard match result {}  {}   {}!".format(hard_match, xpox, ypos))
+                    if hard_match > 0:
+                        utils.tap_screen(xpox, ypos)
+                        utils.sleep_wait(1)
+                        ScenarioExecutor("s6_partial_match.json").execute()
+                        return
                 #dd
             # not found
             utils.vertical_swipe_screen_down()
 
         BaseActionInfo.execute(self)
+
+class CheckCategoryInfo(BaseActionInfo):
+    def __init__(self, message, sleepTime):
+        BaseActionInfo.__init__(self,message, sleepTime)
+        self.sleepTime = sleepTime
+
+    def execute(self):
+        for i in range(0, 10):
+            middle_match, xpox, ypos = utils.patternDetect("only_easy_done_pattern.png")
+            print("Find middle match result {}  {}   {}!".format(middle_match, xpox, ypos))
+            if middle_match > 0:
+                utils.tap_screen(xpox, ypos)
+                utils.sleep_wait(1)
+                return
+            elif utils.run_hard > 0:
+                hard_match, xpox, ypos = utils.patternDetect("only_hard_left_pattern.png")
+                print("Find hard match result {}  {}   {}!".format(hard_match, xpox, ypos))
+                if hard_match > 0:
+                    utils.tap_screen(xpox, ypos)
+                    utils.sleep_wait(1)
+                    return
+                #dd
+            # not found
+            utils.horizontal_swipe_screen_once()
+
+        BaseActionInfo.execute(self)
+
+class CheckEnergyV2Info(BaseActionInfo):
+    def __init__(self, message, sleepTime):
+        BaseActionInfo.__init__(self,message, sleepTime)
+        self.sleepTime = sleepTime
+
+    def execute(self):
+        notEnoughEnergy, _, _ = utils.patternDetect("no_enough_engergy_pattern.png")
+        if notEnoughEnergy:
+            hasAdsEnergy, _, _ = utils.patternDetect("energy_watch_ads_patten.png")
+            if hasAdsEnergy > 0:
+                # click the ads energy
+                ScenarioExecutor("s6_watch_energy_ads.json").execute()
+            elif utils.use_energy_ball > 0:
+                hasEnergyBall, _, _ = utils.patternDetect("energy_ball_pattern.png")
+                if hasEnergyBall > 0:
+                    ScenarioExecutor("s6_use_energy_ball.json").execute()
+                else:
+                    sys.exit(0)
+            else:
+                sys.exit(0)
+        else:
+            return
+
+        #nothing just return
+        BaseActionInfo.execute(self)
+
 
 class CheckEnergyNotEnough(BaseActionInfo):
     def __init__(self, message, sleepTime):
@@ -242,6 +303,55 @@ class CheckTooMany(BaseActionInfo):
 
         #nothing just return
         BaseActionInfo.execute(self)
+
+class DetectPatternAction(BaseActionInfo):
+    def __init__(self, message, sleepTime, pattern_file, detect_times, fallback_script):
+        BaseActionInfo.__init__(self,message, sleepTime)
+        self.sleepTime = sleepTime
+        self.pattern_file = pattern_file
+        self.detect_times = detect_times
+        self.fallback_script = fallback_script
+
+    def execute(self):
+        BaseActionInfo.execute(self)
+        containsPattern = 0
+        for j in range(self.detect_times):
+            print("Detect rounds {}!".format(j))
+            containsPattern, _, _ = utils.patternDetect(self.pattern_file)
+            if containsPattern > 0:
+                break
+
+        if containsPattern > 0:
+            #found it.
+            return
+        else:
+            if len(self.fallback_script) > 1:
+                ScenarioExecutor(self.fallback_script).execute()
+
+class DetectSharingAction(BaseActionInfo):
+    def __init__(self, message, sleepTime, pattern_file, detect_times):
+        BaseActionInfo.__init__(self,message, sleepTime)
+        self.sleepTime = sleepTime
+        self.pattern_file = pattern_file
+        self.detect_times = detect_times
+
+    def execute(self):
+        BaseActionInfo.execute(self)
+        containsPattern = 0
+        for j in range(self.detect_times):
+            print("Detect rounds {}!".format(j))
+            utils.tap_screen(1760, 1030)
+            utils.sleep_wait(1)
+            containsPattern, _, _ = utils.patternDetect(self.pattern_file)
+            if containsPattern > 0:
+                break
+
+        if containsPattern > 0:
+            #found it.
+            return
+        else:
+            print("No Sharing at all")
+            sys.exit(0)
 
 class ActionExecutor:
 
@@ -281,10 +391,18 @@ class ActionExecutor:
             CheckAnimationInfo(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
         elif actionName == "check_match":
             CheckMatchInfo(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
+        elif actionName == "check_category":
+            CheckCategoryInfo(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
         elif actionName == "check_energy":
             CheckEnergyNotEnough(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
         elif actionName == "check_too_many":
             CheckTooMany(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
+        elif actionName == "check_energy_v2":
+            CheckEnergyV2Info(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
+        elif actionName == "pattern_detect":
+            DetectPatternAction(self.jsonObject["message"], self.jsonObject["sleepTime"], self.jsonObject["pattern_file"], self.jsonObject["detectTimes"], self.jsonObject["fallback_script"]).execute()
+        elif actionName == "detect_sharing":
+            DetectSharingAction(self.jsonObject["message"], self.jsonObject["sleepTime"], self.jsonObject["pattern_file"], self.jsonObject["detectTimes"]).execute()
         elif actionName == "script":
             print "enter script"
             ScenarioExecutor(self.jsonObject["fileName"]).execute()

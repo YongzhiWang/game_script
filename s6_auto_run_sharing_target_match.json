@@ -1,0 +1,71 @@
+[
+  {
+    "action": "tap",
+    "xpos": 1500,
+    "ypos": 500,
+    "message": "click Jing Dian match",
+    "sleepTime": 4
+  },
+  {
+    "action": "tap",
+    "xpos": 800,
+    "ypos": 450,
+    "message": "click Jing Dian match",
+    "sleepTime": 5
+  },
+  {
+    "action": "tap",
+    "xpos": 800,
+    "ypos": 500,
+    "message": "click last match",
+    "sleepTime": 4
+  },
+  {
+    "action": "tap",
+    "xpos": 844,
+    "ypos": 280,
+    "message": "click very easy match",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 1500,
+    "ypos": 930,
+    "message": "click match begin button",
+    "sleepTime": 2
+  },
+  {
+    "action": "check_energy_v2",
+    "message": "click energy",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 1630,
+    "ypos": 500,
+    "message": "click sharing match",
+    "sleepTime": 6
+  },
+  {
+    "action": "tap",
+    "xpos": 1620,
+    "ypos": 800,
+    "message": "click sharing match",
+    "sleepTime": 8
+  },
+
+  {
+    "action": "pattern_detect",
+    "pattern_file": "someone_join_pattern.png",
+    "message": "Sleep until pattern done",
+    "sleepTime": 5,
+    "detectTimes": 20,
+    "fallback_script": "s6_auto_run_match_fallback_button.json"
+  },
+  {
+    "action": "script",
+    "fileName": "s6_auto_run_match_button.json",
+    "message": "Do Juqing",
+    "sleepTime": 1
+  }
+]

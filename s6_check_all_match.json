@@ -19,11 +19,9 @@
     "sleepTime": 5
   },
   {
-    "action": "tap",
-    "xpos": 800,
-    "ypos": 574,
-    "message": "click category",
-    "sleepTime": 4
+    "action": "check_category",
+    "message": "check category",
+    "sleepTime": 1
   },
   {
     "action": "swipe_bottom",

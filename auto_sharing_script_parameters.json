@@ -1,12 +1,12 @@
 {
-    "script": "s6_check_all_match.json",
+    "script": "s6_auto_run_sharing_target_match.json",
     "deviceID": "d777df4e",
-    "accountVersion": 3,
+    "accountVersion": 2,
     "league_team": 270,
     "goal_keeper": 7,
     "perfect_goal_keeper": 2,
     "perfect_goal_keeper_stop": 1,
     "run_middle":1,
-    "count": 15
+    "count": 7
 }
 
