@@ -3,6 +3,7 @@ import time
 import cv2
 import sys
 from subprocess import call
+import imutils
 
 script_name = ""
 deviceID = ""
@@ -14,19 +15,24 @@ perfect_goal_keeper_stop = 0
 run_middle = 0
 run_hard = 0
 use_energy_ball = 0
+x_offset_ratio = 1
+y_offset_ratio = 1
+x_offset = 0
+phone_perf = 1
 
 def tap_screen(x, y):
-    os.system('adb -s {} shell input tap {} {}'.format(deviceID, x,y))
+    print('adb -s {} shell input tap {} {}'.format(deviceID, x * x_offset_ratio + x_offset,y *y_offset_ratio))
+    os.system('adb -s {} shell input tap {} {}'.format(deviceID, x * x_offset_ratio + x_offset,y *y_offset_ratio))
 
 def sleep_wait(total_time):
-   for i in range(total_time):
+   for i in range((int)(total_time * phone_perf)):
         print('sleep {} second.'.format(i))
         time.sleep(1)
         # keep the device on
         os.system('adb -s {} shell input keyevent 82'.format(deviceID))
 
 def sleep_wait_detect(total_time, detect_times):
-    for i in range(total_time):
+    for i in range((int)(total_time * phone_perf)):
         print('sleep {} second.'.format(i))
         time.sleep(1)
         # keep the device on
@@ -56,7 +62,7 @@ def image_detection():
     res = cv2.matchTemplate(img, template, method)
     min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
     print("Detect result {}!".format(max_val))
-    if max_val > 0.99:
+    if max_val > 0.95:
         print("Matched!")
         return 1
     return 0
@@ -89,8 +95,8 @@ def horizontal_swipe_screen():
         time.sleep(0.2)
 
 def horizontal_swipe_screen_once():
-    os.system('adb -s {} shell input swipe 900 500 0 500'.format(deviceID))
-    time.sleep(0.2)
+    os.system('adb -s {} shell input swipe 400 500 0 500'.format(deviceID))
+    time.sleep(1)
 
 def vertical_swipe_screen_up():
     for i in range(0,3):
@@ -99,7 +105,7 @@ def vertical_swipe_screen_up():
 
 def vertical_swipe_screen_down():
     os.system('adb -s {} shell input swipe 1400 100 1400 300'.format(deviceID))
-    time.sleep(0.2)
+    time.sleep(1)
 
 def isValidLeagueUser():
     screencap_file = pull_screenshot()
@@ -212,6 +218,10 @@ def hasEnergyAds():
 def patternDetect(target_pattern_file):
     screencap_file = pull_screenshot()
     img = cv2.imread(screencap_file, 0)
+    if x_offset_ratio > 1 and y_offset_ratio > 1:
+        print("Need to resize")
+        img = imutils.resize(img, height=(int)(1440 / x_offset_ratio))
+
     template = cv2.imread(target_pattern_file, 0)
     w, h = template.shape[::-1]
     method = eval('cv2.TM_CCOEFF_NORMED')

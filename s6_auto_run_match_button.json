@@ -7,10 +7,31 @@
     "sleepTime": 1
   },
   {
+    "action": "tap",
+    "xpos": 1600,
+    "ypos": 900,
+    "message": "click game ready button",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 1600,
+    "ypos": 900,
+    "message": "click game ready button",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 1600,
+    "ypos": 900,
+    "message": "click game ready button",
+    "sleepTime": 1
+  },
+  {
     "action": "sleep_detect",
     "message": "Sleep until game done",
-    "sleepTime": 60,
-    "detectTimes": 20
+    "sleepTime": 88,
+    "detectTimes": 100
   },
   {
     "action": "kill",
@@ -32,6 +53,6 @@
     "xpos": 1000,
     "ypos": 500,
     "message": "click launch screen",
-    "sleepTime": 5
+    "sleepTime": 12
   }
 ]

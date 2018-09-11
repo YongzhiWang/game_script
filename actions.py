@@ -236,6 +236,7 @@ class CheckCategoryInfo(BaseActionInfo):
                     return
                 #dd
             # not found
+            print("swipe")
             utils.horizontal_swipe_screen_once()
 
         BaseActionInfo.execute(self)

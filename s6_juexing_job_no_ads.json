@@ -62,65 +62,16 @@
   },
   {
     "action": "tap",
-    "xpos": 1400,
+    "xpos": 970,
     "ypos": 770,
-    "message": "click watch video button",
-    "sleepTime": 20
-  },
-  {
-    "action": "tap",
-    "xpos": 1845,
-    "ypos": 75,
-    "message": "click close ads button, not necessary?",
-    "sleepTime": 2
-  },
-  {
-    "action": "tap",
-    "xpos": 1845,
-    "ypos": 75,
-    "message": "click close ads button, not necessary?",
-    "sleepTime": 2
-  },
-  {
-    "action": "tap",
-    "xpos": 1740,
-    "ypos": 75,
-    "message": "click close ads button, not necessary?",
-    "sleepTime": 2
-  },
-  {
-    "action": "tap",
-    "xpos": 1740,
-    "ypos": 75,
-    "message": "click close ads button, not necessary?",
-    "sleepTime": 2
-  },
-  {
-    "action": "tap",
-    "xpos": 1000,
-    "ypos": 720,
-    "message": "click next page button",
+    "message": "click skip boost button",
     "sleepTime": 1
-  },
-  {
-    "action": "tap",
-    "xpos": 1200,
-    "ypos": 300,
-    "message": "click dream ball page",
-    "sleepTime": 1
-  },
-  {
-    "action": "tap",
-    "xpos": 1000,
-    "ypos": 720,
-    "message": "click next page button",
-    "sleepTime": 3
   },
   {
     "action": "sleep_detect",
     "message": "Sleep until game done",
     "sleepTime": 60,
-    "detectTimes": 20
+    "detectTimes": 100
   },
   {
     "action": "kill",

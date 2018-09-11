@@ -11,7 +11,7 @@
     "xpos": 1650,
     "ypos": 900,
     "message": "click  match",
-    "sleepTime": 5
+    "sleepTime": 7
   },
   {
     "action": "league",

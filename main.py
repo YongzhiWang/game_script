@@ -30,6 +30,20 @@ if __name__=='__main__':
             utils.perfect_goal_keeper = parameters["perfect_goal_keeper"]
             utils.perfect_goal_keeper_stop = parameters["perfect_goal_keeper_stop"]
             utils.run_middle = parameters["run_middle"]
+
+            if 'run_hard' in parameters:
+                utils.run_hard = parameters["run_hard"]
+            if 'x_offset_ratio' in parameters:
+                utils.x_offset_ratio = parameters["x_offset_ratio"]
+            if 'y_offset_ratio' in parameters:
+                utils.y_offset_ratio = parameters["y_offset_ratio"]
+
+            if 'x_offset' in parameters:
+                utils.x_offset = parameters["x_offset"]
+
+            if 'phone_perf' in parameters:
+                utils.phone_perf = parameters["phone_perf"]
+
             roundCount = parameters["count"]
             for i in range(roundCount):
                 print('ROUND {} begins !!!!!!!!!!!!!!!!!!!!!!!!!!'.format(i))

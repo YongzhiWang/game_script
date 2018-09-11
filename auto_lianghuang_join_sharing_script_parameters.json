@@ -1,12 +1,13 @@
 {
     "script": "s6_auto_join_sharing_match.json",
-    "deviceID": "d777df4e",
+    "deviceID": "192.168.93.69:5556",
     "accountVersion": 1,
     "league_team": 270,
     "goal_keeper": 7,
     "perfect_goal_keeper": 2,
     "perfect_goal_keeper_stop": 1,
     "run_middle":1,
-    "count": 20
+    "x_offset":150,
+    "count": 2
 }
 

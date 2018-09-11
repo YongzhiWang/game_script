@@ -2,7 +2,7 @@
   {
     "action": "tap",
     "xpos": 1400,
-    "ypos": 770,
+    "ypos": 900,
     "message": "click watch video button",
     "sleepTime": 20
   },
@@ -57,9 +57,9 @@
   },
   {
     "action": "tap",
-    "xpos": 1600,
-    "ypos": 800,
-    "message": "click game ready button",
-    "sleepTime": 1
+    "xpos": 1500,
+    "ypos": 930,
+    "message": "click match begin button",
+    "sleepTime": 2
   }
 ]

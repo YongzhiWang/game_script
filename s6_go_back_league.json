@@ -4,7 +4,7 @@
     "xpos": 128,
     "ypos": 1023,
     "message": "click back match",
-    "sleepTime": 4
+    "sleepTime": 7
   },
   {
     "action": "tap",

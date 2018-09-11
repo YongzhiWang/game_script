@@ -1,7 +1,7 @@
 [
   {
     "action": "script",
-    "fileName": "s6_juqing_job.json",
+    "fileName": "s6_juqing_job_no_ads.json",
     "message": "Do Juqing",
     "sleepTime": 10
   },
@@ -13,13 +13,13 @@
   },
   {
     "action": "script",
-    "fileName": "s6_juexing_job.json",
+    "fileName": "s6_juexing_job_no_ads.json",
     "message": "Do Juqing",
     "sleepTime": 10
   },
   {
     "action": "script",
-    "fileName": "s6_juexing_job.json",
+    "fileName": "s6_juexing_job_no_ads.json",
     "message": "Do Juqing",
     "sleepTime": 10
   },
