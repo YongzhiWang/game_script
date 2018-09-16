@@ -19,6 +19,7 @@ x_offset_ratio = 1
 y_offset_ratio = 1
 x_offset = 0
 phone_perf = 1
+has_easy = 0
 
 def tap_screen(x, y):
     print('adb -s {} shell input tap {} {}'.format(deviceID, x * x_offset_ratio + x_offset,y *y_offset_ratio))
@@ -53,6 +54,11 @@ def pull_screenshot():
 def image_detection():
     screencap_file = pull_screenshot()
     img = cv2.imread(screencap_file, 0)
+
+    if x_offset_ratio > 1 and y_offset_ratio > 1:
+        print("Need to resize")
+        img = imutils.resize(img, height=(int)(1440 / x_offset_ratio))
+
     img2 = img.copy()
     template = cv2.imread('winning_flag.png', 0)
     w, h = template.shape[::-1]
@@ -74,6 +80,8 @@ def launch_app():
         os.system('adb -s {} shell monkey -p com.klab.captain283.globan -c android.intent.category.LAUNCHER 1'.format(deviceID))
     elif accountVersion == 3:
         os.system('adb -s {} shell monkey -p com.klab.captain283.globao -c android.intent.category.LAUNCHER 1'.format(deviceID))
+    elif accountVersion == 4:
+        os.system('adb -s {} shell monkey -p com.klab.captain283.globam -c android.intent.category.LAUNCHER 1'.format(deviceID))
 
 
 def kill_app():
@@ -83,11 +91,18 @@ def kill_app():
         os.system('adb -s {} shell am force-stop com.klab.captain283.globan'.format(deviceID))
     elif accountVersion == 3:
         os.system('adb -s {} shell am force-stop com.klab.captain283.globao'.format(deviceID))
+    elif accountVersion == 4:
+        os.system('adb -s {} shell am force-stop com.klab.captain283.globam'.format(deviceID))
 
     kill_all()
 
 def kill_all():
     os.system('adb -s {} shell am kill-all'.format(deviceID))
+
+def horizontal_swipe_screen_back():
+    for i in range(0, 4):
+        os.system('adb -s {} shell input swipe 0 500 1800 500'.format(deviceID))
+        time.sleep(0.2)
 
 def horizontal_swipe_screen():
     for i in range(0, 4):
@@ -174,6 +189,11 @@ def isValidLeagueGoalKeeper():
     crop_image_path = "./crop_league.png"
     output_path = "./convert_text"
     img = cv2.imread(input_image_path)
+
+    if x_offset_ratio > 1 and y_offset_ratio > 1:
+        print("Need to resize")
+        img = imutils.resize(img, height=(int)(1440 / x_offset_ratio))
+
     crop_img = img[421:421+40, 563:563+120]
     cv2.imwrite(crop_image_path,crop_img)
     call(["tesseract", crop_image_path, output_path], stdout=FNULL)
@@ -202,6 +222,11 @@ def isValidLeagueGoalKeeper():
 def hasEnergyAds():
     screencap_file = pull_screenshot()
     img = cv2.imread(screencap_file, 0)
+
+    if x_offset_ratio > 1 and y_offset_ratio > 1:
+        print("Need to resize")
+        img = imutils.resize(img, height=(int)(1440 / x_offset_ratio))
+
     template = cv2.imread('energy_watch_ads_patten.png', 0)
     w, h = template.shape[::-1]
     method = eval('cv2.TM_CCOEFF_NORMED')
@@ -229,7 +254,7 @@ def patternDetect(target_pattern_file):
     res = cv2.matchTemplate(img, template, method)
     min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
     print("Detect {} result {}!".format(target_pattern_file, max_val))
-    if max_val > 0.95:
+    if max_val > 0.955:
         print("Matched {}!".format(target_pattern_file))
         # If the method is TM_SQDIFF or TM_SQDIFF_NORMED, take minimum
         top_left = max_loc
@@ -240,6 +265,11 @@ def patternDetect(target_pattern_file):
 def hasEnergyBall():
     screencap_file = pull_screenshot()
     img = cv2.imread(screencap_file, 0)
+
+    if x_offset_ratio > 1 and y_offset_ratio > 1:
+        print("Need to resize")
+        img = imutils.resize(img, height=(int)(1440 / x_offset_ratio))
+
     template = cv2.imread('energy_ball_pattern.png', 0)
     w, h = template.shape[::-1]
     method = eval('cv2.TM_CCOEFF_NORMED')
@@ -256,6 +286,11 @@ def hasEnergyBall():
 def hasTooManyWarning():
     screencap_file = pull_screenshot()
     img = cv2.imread(screencap_file, 0)
+
+    if x_offset_ratio > 1 and y_offset_ratio > 1:
+        print("Need to resize")
+        img = imutils.resize(img, height=(int)(1440 / x_offset_ratio))
+
     template = cv2.imread('too_many_pattern.png', 0)
     w, h = template.shape[::-1]
     method = eval('cv2.TM_CCOEFF_NORMED')

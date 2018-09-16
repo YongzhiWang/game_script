@@ -220,12 +220,33 @@ class CheckCategoryInfo(BaseActionInfo):
         self.sleepTime = sleepTime
 
     def execute(self):
-        for i in range(0, 10):
+        # only check for not play first.
+        if utils.has_easy > 0:
+            for i in range(0, 7):
+                all_match, xpox, ypos = utils.patternDetect("all_match_left_pattern.png")
+                print("Find all_match match result {}  {}   {}!".format(all_match, xpox, ypos))
+                if all_match > 0:
+                    utils.tap_screen(xpox, ypos)
+                    utils.sleep_wait(1)
+                    ScenarioExecutor("s6_check_all_match_run_easy.json").execute()
+                    # execute the script
+                    return
+
+                print("swipe")
+                utils.horizontal_swipe_screen_once()
+
+            #swipe back
+            utils.horizontal_swipe_screen_back()
+            utils.sleep_wait(1)
+
+        # check others.
+        for i in range(0, 7):
             middle_match, xpox, ypos = utils.patternDetect("only_easy_done_pattern.png")
             print("Find middle match result {}  {}   {}!".format(middle_match, xpox, ypos))
             if middle_match > 0:
                 utils.tap_screen(xpox, ypos)
                 utils.sleep_wait(1)
+                ScenarioExecutor("s6_check_all_match_run_others.json").execute()
                 return
             elif utils.run_hard > 0:
                 hard_match, xpox, ypos = utils.patternDetect("only_hard_left_pattern.png")
@@ -233,12 +254,14 @@ class CheckCategoryInfo(BaseActionInfo):
                 if hard_match > 0:
                     utils.tap_screen(xpox, ypos)
                     utils.sleep_wait(1)
+                    ScenarioExecutor("s6_check_all_match_run_others.json").execute()
                     return
                 #dd
             # not found
             print("swipe")
             utils.horizontal_swipe_screen_once()
 
+        print("No Game category available!")
         BaseActionInfo.execute(self)
 
 class CheckEnergyV2Info(BaseActionInfo):
@@ -306,12 +329,13 @@ class CheckTooMany(BaseActionInfo):
         BaseActionInfo.execute(self)
 
 class DetectPatternAction(BaseActionInfo):
-    def __init__(self, message, sleepTime, pattern_file, detect_times, fallback_script):
+    def __init__(self, message, sleepTime, pattern_file, detect_times, fallback_script, success_script):
         BaseActionInfo.__init__(self,message, sleepTime)
         self.sleepTime = sleepTime
         self.pattern_file = pattern_file
         self.detect_times = detect_times
         self.fallback_script = fallback_script
+        self.success_script = success_script
 
     def execute(self):
         BaseActionInfo.execute(self)
@@ -323,10 +347,13 @@ class DetectPatternAction(BaseActionInfo):
                 break
 
         if containsPattern > 0:
+            print("Run success script {} ".format(self.success_script))
+            ScenarioExecutor(self.success_script).execute()
             #found it.
             return
         else:
             if len(self.fallback_script) > 1:
+                print("Run fallback script {} ".format(self.fallback_script))
                 ScenarioExecutor(self.fallback_script).execute()
 
 class DetectSharingAction(BaseActionInfo):
@@ -401,7 +428,7 @@ class ActionExecutor:
         elif actionName == "check_energy_v2":
             CheckEnergyV2Info(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
         elif actionName == "pattern_detect":
-            DetectPatternAction(self.jsonObject["message"], self.jsonObject["sleepTime"], self.jsonObject["pattern_file"], self.jsonObject["detectTimes"], self.jsonObject["fallback_script"]).execute()
+            DetectPatternAction(self.jsonObject["message"], self.jsonObject["sleepTime"], self.jsonObject["pattern_file"], self.jsonObject["detectTimes"], self.jsonObject["fallback_script"], self.jsonObject["success_script"]).execute()
         elif actionName == "detect_sharing":
             DetectSharingAction(self.jsonObject["message"], self.jsonObject["sleepTime"], self.jsonObject["pattern_file"], self.jsonObject["detectTimes"]).execute()
         elif actionName == "script":

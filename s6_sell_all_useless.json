@@ -57,6 +57,20 @@
   },
   {
     "action": "tap",
+    "xpos": 525,
+    "ypos": 860,
+    "message": "click has skill button",
+    "sleepTime": 0
+  },
+  {
+    "action": "tap",
+    "xpos": 928,
+    "ypos": 860,
+    "message": "click has skill button",
+    "sleepTime": 0
+  },
+  {
+    "action": "tap",
     "xpos": 1685,
     "ypos": 1020,
     "message": "click all",

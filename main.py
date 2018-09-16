@@ -44,6 +44,10 @@ if __name__=='__main__':
             if 'phone_perf' in parameters:
                 utils.phone_perf = parameters["phone_perf"]
 
+            if 'has_easy' in parameters:
+                utils.has_easy = parameters["has_easy"]
+
+
             roundCount = parameters["count"]
             for i in range(roundCount):
                 print('ROUND {} begins !!!!!!!!!!!!!!!!!!!!!!!!!!'.format(i))

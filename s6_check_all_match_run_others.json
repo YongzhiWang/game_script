@@ -1,0 +1,12 @@
+[
+  {
+    "action": "swipe_bottom",
+    "message": "swipe to down",
+    "sleepTime": 1
+  },
+  {
+    "action": "check_match",
+    "message": "detect score",
+    "sleepTime": 5
+  }
+]

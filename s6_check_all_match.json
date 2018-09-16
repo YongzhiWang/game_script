@@ -9,28 +9,18 @@
   {
     "action": "check_too_many",
     "message": "check too many warning",
-    "sleepTime": 1
+    "sleepTime": 3
   },
   {
     "action": "tap",
     "xpos": 380,
     "ypos": 450,
     "message": "click Huo Dong match",
-    "sleepTime": 5
+    "sleepTime": 7
   },
   {
     "action": "check_category",
     "message": "check category",
     "sleepTime": 1
-  },
-  {
-    "action": "swipe_bottom",
-    "message": "swipe to down",
-    "sleepTime": 1
-  },
-  {
-    "action": "check_match",
-    "message": "detect score",
-    "sleepTime": 5
   }
 ]

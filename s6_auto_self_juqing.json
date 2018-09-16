@@ -73,11 +73,5 @@
     "ypos": 500,
     "message": "click launch screen",
     "sleepTime": 5
-  },
-  {
-    "action": "script",
-    "fileName": "s6_sell_all_job.json",
-    "message": "Do Juqing",
-    "sleepTime": 5
   }
 ]

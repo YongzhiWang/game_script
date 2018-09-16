@@ -1,5 +1,5 @@
 {
-    "script": "s6_daily_job.json",
+    "script": "s6_daily_job_with_ads.json",
     "deviceID": "d777df4e",
     "accountVersion": 1,
     "league_team": 270,

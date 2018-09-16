@@ -1,0 +1,7 @@
+[
+  {
+    "action": "check_animation",
+    "message": "detect score",
+    "sleepTime": 5
+  }
+]

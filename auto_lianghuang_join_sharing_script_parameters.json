@@ -8,6 +8,8 @@
     "perfect_goal_keeper_stop": 1,
     "run_middle":1,
     "x_offset":150,
-    "count": 2
+    "x_offset_ratio":1.33,
+    "y_offset_ratio":1.33,
+    "phone_perf":1.2,
+    "count": 20
 }
-
