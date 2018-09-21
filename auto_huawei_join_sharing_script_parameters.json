@@ -1,13 +1,13 @@
 {
     "script": "s6_auto_join_sharing_match.json",
     "deviceID": "UYT0217A12005493",
-    "accountVersion": 1,
+    "accountVersion": 4,
     "league_team": 270,
     "goal_keeper": 7,
     "perfect_goal_keeper": 2,
     "perfect_goal_keeper_stop": 1,
     "run_middle":1,
     "phone_perf":1.5,
-    "count": 20
+    "count": 25
 }
 

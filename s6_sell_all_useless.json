@@ -90,8 +90,6 @@
     "message": "click okay ",
     "sleepTime": 1
   },
-
-
   {
     "action": "tap",
     "xpos": 1300,

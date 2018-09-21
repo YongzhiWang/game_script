@@ -47,6 +47,10 @@ if __name__=='__main__':
             if 'has_easy' in parameters:
                 utils.has_easy = parameters["has_easy"]
 
+            if 'sell_ssr' in parameters:
+                utils.sell_ssr = parameters["sell_ssr"]
+
+
 
             roundCount = parameters["count"]
             for i in range(roundCount):

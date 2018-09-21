@@ -4,6 +4,7 @@ import cv2
 import sys
 from subprocess import call
 import imutils
+import random
 
 script_name = ""
 deviceID = ""
@@ -20,10 +21,16 @@ y_offset_ratio = 1
 x_offset = 0
 phone_perf = 1
 has_easy = 0
+sell_ssr = 0
 
 def tap_screen(x, y):
-    print('adb -s {} shell input tap {} {}'.format(deviceID, x * x_offset_ratio + x_offset,y *y_offset_ratio))
-    os.system('adb -s {} shell input tap {} {}'.format(deviceID, x * x_offset_ratio + x_offset,y *y_offset_ratio))
+    targetX = x * x_offset_ratio + x_offset
+    targetY = y *y_offset_ratio
+    targetX = random.randint(-1, 1) + targetX
+    targetY = random.randint(-1, 1) + targetY
+
+    print('adb -s {} shell input tap {} {}'.format(deviceID, targetX, targetY))
+    os.system('adb -s {} shell input tap {} {}'.format(deviceID, targetX, targetY))
 
 def sleep_wait(total_time):
    for i in range((int)(total_time * phone_perf)):

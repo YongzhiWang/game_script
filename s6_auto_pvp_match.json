@@ -1,0 +1,65 @@
+[
+  {
+    "action": "tap",
+    "xpos": 1500,
+    "ypos": 950,
+    "message": "click PvP match",
+    "sleepTime": 2
+  },
+  {
+    "action": "tap",
+    "xpos": 1400,
+    "ypos": 460,
+    "message": "click Hard match",
+    "sleepTime": 4
+  },
+  {
+    "action": "tap",
+    "xpos": 1771,
+    "ypos": 934,
+    "message": "click go match",
+    "sleepTime": 4
+  },
+  {
+    "action": "tap",
+    "xpos": 1620,
+    "ypos": 934,
+    "message": "click go match",
+    "sleepTime": 4
+  },
+  {
+    "action": "sleep_detect",
+    "message": "Sleep until game done",
+    "sleepTime": 600,
+    "detectTimes": 300
+  },
+  {
+    "action": "kill",
+    "message": "Kill game",
+    "sleepTime": 2
+  },
+  {
+    "action": "launch",
+    "message": "launch game",
+    "sleepTime": 1
+  },
+  {
+    "action": "sleep",
+    "message": "Sleep until game is fully launched",
+    "sleepTime": 17
+  },
+  {
+    "action": "tap",
+    "xpos": 1000,
+    "ypos": 500,
+    "message": "click launch screen",
+    "sleepTime": 5
+  },
+  {
+    "action": "tap",
+    "xpos": 600,
+    "ypos": 475,
+    "message": "click possible drop button match",
+    "sleepTime": 6
+  }
+]

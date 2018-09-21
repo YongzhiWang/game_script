@@ -1,0 +1,16 @@
+{
+    "script": "s6_hard_point_match.json",
+    "deviceID": "1a4db670ec0b7ece",
+    "accountVersion": 1,
+    "league_team": 270,
+    "goal_keeper": 7,
+    "perfect_goal_keeper": 2,
+    "perfect_goal_keeper_stop": 1,
+    "run_middle":1,
+    "x_offset":150,
+    "x_offset_ratio":1.33,
+    "y_offset_ratio":1.33,
+    "phone_perf":1.5,
+    "sell_ssr":1,
+    "count": 300
+}

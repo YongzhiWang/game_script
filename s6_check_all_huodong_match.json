@@ -4,11 +4,16 @@
     "xpos": 1500,
     "ypos": 500,
     "message": "click Jing Dian match",
-    "sleepTime": 4
+    "sleepTime": 5
+  },
+  {
+    "action": "check_too_many",
+    "message": "check too many warning",
+    "sleepTime": 3
   },
   {
     "action": "tap",
-    "xpos": 945,
+    "xpos": 800,
     "ypos": 450,
     "message": "click Huo Dong match",
     "sleepTime": 5

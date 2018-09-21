@@ -1,0 +1,170 @@
+[
+  {
+    "action": "tap",
+    "xpos": 1170,
+    "ypos": 760,
+    "message": "click Sell button",
+    "sleepTime": 3
+  },
+  {
+    "action": "tap",
+    "xpos": 713,
+    "ypos": 1020,
+    "message": "click sell all",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 1300,
+    "ypos": 1000,
+    "message": "click reset button",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 350,
+    "ypos": 350,
+    "message": "click player button",
+    "sleepTime": 0
+  },
+  {
+    "action": "tap",
+    "xpos": 1100,
+    "ypos": 350,
+    "message": "click coach button",
+    "sleepTime": 0
+  },
+  {
+    "action": "tap",
+    "xpos": 750,
+    "ypos": 350,
+    "message": "click note button",
+    "sleepTime": 0
+  },
+  {
+    "action": "tap",
+    "xpos": 320,
+    "ypos": 610,
+    "message": "click N button",
+    "sleepTime": 0
+  },
+  {
+    "action": "tap",
+    "xpos": 530,
+    "ypos": 610,
+    "message": "click R button",
+    "sleepTime": 0
+  },
+  {
+    "action": "tap",
+    "xpos": 525,
+    "ypos": 860,
+    "message": "click has skill button",
+    "sleepTime": 0
+  },
+  {
+    "action": "tap",
+    "xpos": 928,
+    "ypos": 860,
+    "message": "click has skill button",
+    "sleepTime": 0
+  },
+  {
+    "action": "tap",
+    "xpos": 1685,
+    "ypos": 1020,
+    "message": "click all",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 1000,
+    "ypos": 983,
+    "message": "click okay button",
+    "sleepTime": 4
+  },
+  {
+    "action": "tap",
+    "xpos": 960,
+    "ypos": 800,
+    "message": "click okay ",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 1300,
+    "ypos": 1000,
+    "message": "click reset button",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 1100,
+    "ypos": 350,
+    "message": "click coach button",
+    "sleepTime": 0
+  },
+  {
+    "action": "tap",
+    "xpos": 750,
+    "ypos": 350,
+    "message": "click note button",
+    "sleepTime": 0
+  },
+  {
+    "action": "tap",
+    "xpos": 320,
+    "ypos": 610,
+    "message": "click N button",
+    "sleepTime": 0
+  },
+  {
+    "action": "tap",
+    "xpos": 530,
+    "ypos": 610,
+    "message": "click R button",
+    "sleepTime": 0
+  },
+  {
+    "action": "tap",
+    "xpos": 730,
+    "ypos": 610,
+    "message": "click SR button",
+    "sleepTime": 0
+  },
+  {
+    "action": "tap",
+    "xpos": 930,
+    "ypos": 610,
+    "message": "click SSR button",
+    "sleepTime": 0
+  },
+  {
+    "action": "tap",
+    "xpos": 1685,
+    "ypos": 1020,
+    "message": "click all",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 1000,
+    "ypos": 983,
+    "message": "click okay button",
+    "sleepTime": 4
+  },
+  {
+    "action": "tap",
+    "xpos": 960,
+    "ypos": 800,
+    "message": "click okay ",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 140,
+    "ypos": 1050,
+    "message": "click back button",
+    "sleepTime": 2
+  }
+]

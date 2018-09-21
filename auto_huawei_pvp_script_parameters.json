@@ -1,0 +1,15 @@
+{
+    "script": "s6_auto_pvp_match.json",
+    "deviceID": "UYT0217A12005493",
+    "accountVersion": 1,
+    "league_team": 270,
+    "goal_keeper": 7,
+    "perfect_goal_keeper": 2,
+    "perfect_goal_keeper_stop": 1,
+    "run_middle":1,
+    "run_hard":1,
+    "phone_perf":1.5,
+    "has_easy":0,
+    "count": 100
+}
+

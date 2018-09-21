@@ -1,7 +1,7 @@
 {
-    "script": "s6_check_all_match.json",
+    "script": "s6_check_all_huodong_match.json",
     "deviceID": "UYT0217A12005493",
-    "accountVersion": 1,
+    "accountVersion": 4,
     "league_team": 270,
     "goal_keeper": 7,
     "perfect_goal_keeper": 2,
@@ -10,6 +10,6 @@
     "run_hard":1,
     "phone_perf":1.5,
     "has_easy":0,
-    "count": 11
+    "count": 20
 }
 

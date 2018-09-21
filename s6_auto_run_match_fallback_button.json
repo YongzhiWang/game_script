@@ -28,6 +28,13 @@
     "sleepTime": 1
   },
   {
+    "action": "tap",
+    "xpos": 970,
+    "ypos": 770,
+    "message": "click skip boost button",
+    "sleepTime": 1
+  },
+  {
     "action": "sleep_detect",
     "message": "Sleep until game done",
     "sleepTime": 60,

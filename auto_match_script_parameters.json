@@ -1,5 +1,5 @@
 {
-    "script": "s6_check_all_match.json",
+    "script": "s6_check_all_huodong_match.json",
     "deviceID": "d777df4e",
     "accountVersion": 1,
     "league_team": 270,

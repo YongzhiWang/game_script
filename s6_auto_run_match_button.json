@@ -30,8 +30,8 @@
   {
     "action": "sleep_detect",
     "message": "Sleep until game done",
-    "sleepTime": 88,
-    "detectTimes": 100
+    "sleepTime": 60,
+    "detectTimes": 150
   },
   {
     "action": "kill",
@@ -54,5 +54,12 @@
     "ypos": 500,
     "message": "click launch screen",
     "sleepTime": 12
+  },
+  {
+    "action": "tap",
+    "xpos": 600,
+    "ypos": 475,
+    "message": "click possible drop button match",
+    "sleepTime": 6
   }
 ]

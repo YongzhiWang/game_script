@@ -14,16 +14,21 @@
     "sleepTime": 5
   },
   {
+    "action": "check_too_many",
+    "message": "check too many warning",
+    "sleepTime": 3
+  },
+  {
     "action": "tap",
-    "xpos": 800,
+    "xpos": 300,
     "ypos": 500,
     "message": "click last match",
     "sleepTime": 4
   },
   {
     "action": "tap",
-    "xpos": 844,
-    "ypos": 280,
+    "xpos": 1440,
+    "ypos": 800,
     "message": "click very easy match",
     "sleepTime": 1
   },
@@ -58,8 +63,8 @@
     "action": "pattern_detect",
     "pattern_file": "someone_join_pattern.png",
     "message": "Sleep until pattern done",
-    "sleepTime": 12,
-    "detectTimes": 20,
+    "sleepTime": 1,
+    "detectTimes": 1,
     "success_script":"s6_auto_run_match_button.json",
     "fallback_script": "s6_auto_run_match_fallback_button.json"
   }

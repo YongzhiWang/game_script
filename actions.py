@@ -318,7 +318,11 @@ class CheckTooMany(BaseActionInfo):
         hasTooManyWarning = utils.hasTooManyWarning()
         if hasTooManyWarning > 0:
             # click the ads energy
-            ScenarioExecutor("s6_sell_all_useless.json").execute()
+            if utils.sell_ssr > 0:
+                ScenarioExecutor("s6_sell_all_SSR_useless.json").execute()
+            else:
+                ScenarioExecutor("s6_sell_all_useless.json").execute()
+
             hasTooManyWarning = utils.hasTooManyWarning()
             if hasTooManyWarning > 0:
                 # need help
@@ -346,7 +350,7 @@ class DetectPatternAction(BaseActionInfo):
             if containsPattern > 0:
                 break
 
-        if containsPattern > 0:
+        if containsPattern > 0 and len(self.success_script) > 1:
             print("Run success script {} ".format(self.success_script))
             ScenarioExecutor(self.success_script).execute()
             #found it.
