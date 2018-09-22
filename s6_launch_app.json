@@ -1,0 +1,31 @@
+[
+  {
+    "action": "kill",
+    "message": "Kill game",
+    "sleepTime": 2
+  },
+  {
+    "action": "launch",
+    "message": "launch game",
+    "sleepTime": 1
+  },
+  {
+    "action": "sleep",
+    "message": "Sleep until game is fully launched",
+    "sleepTime": 16
+  },
+  {
+    "action": "tap",
+    "xpos": 1000,
+    "ypos": 500,
+    "message": "click launch screen",
+    "sleepTime": 5
+  },
+  {
+    "action": "tap",
+    "xpos": 740,
+    "ypos": 710,
+    "message": "click possible drop button match",
+    "sleepTime": 5
+  }
+]

@@ -315,6 +315,8 @@ class CheckTooMany(BaseActionInfo):
         self.sleepTime = sleepTime
 
     def execute(self):
+        #nothing just return
+        BaseActionInfo.execute(self)
         hasTooManyWarning = utils.hasTooManyWarning()
         if hasTooManyWarning > 0:
             # click the ads energy
@@ -329,8 +331,7 @@ class CheckTooMany(BaseActionInfo):
                 sys.exit(0)
             return
 
-        #nothing just return
-        BaseActionInfo.execute(self)
+
 
 class DetectPatternAction(BaseActionInfo):
     def __init__(self, message, sleepTime, pattern_file, detect_times, fallback_script, success_script):
@@ -385,6 +386,24 @@ class DetectSharingAction(BaseActionInfo):
             print("No Sharing at all")
             sys.exit(0)
 
+class DetectAndClickOrKillAction(BaseActionInfo):
+    def __init__(self, message, sleepTime, detect_times, pattern_file):
+        BaseActionInfo.__init__(self,message, sleepTime)
+        self.sleepTime = sleepTime
+        self.pattern_file = pattern_file
+        self.detect_times = detect_times
+
+    def execute(self):
+        # already sleep in this one.
+        BaseActionInfo.execute(self)
+
+        matched, centerX, centerY = utils.sleep_detect_pattern(0, self.detect_times, self.pattern_file)
+        if matched > 0:
+            utils.tap_screen(centerX, centerY)
+        else:
+            ScenarioExecutor("s6_launch_app.json").execute()
+            utils.exit_current_round = 1
+
 class ActionExecutor:
 
     def __init__(self, jsonObject):
@@ -435,6 +454,8 @@ class ActionExecutor:
             DetectPatternAction(self.jsonObject["message"], self.jsonObject["sleepTime"], self.jsonObject["pattern_file"], self.jsonObject["detectTimes"], self.jsonObject["fallback_script"], self.jsonObject["success_script"]).execute()
         elif actionName == "detect_sharing":
             DetectSharingAction(self.jsonObject["message"], self.jsonObject["sleepTime"], self.jsonObject["pattern_file"], self.jsonObject["detectTimes"]).execute()
+        elif actionName == "kill_detect":
+            DetectAndClickOrKillAction(self.jsonObject["message"], self.jsonObject["sleepTime"], self.jsonObject["detectTimes"], self.jsonObject["pattern_file"]).execute()
         elif actionName == "script":
             print "enter script"
             ScenarioExecutor(self.jsonObject["fileName"]).execute()
@@ -449,6 +470,7 @@ class ScenarioExecutor:
 
     def execute(self):
         for action in self.senario:
-            #print json.dumps(action, indent=4, sort_keys=True)
-            singleAction = ActionExecutor(action)
-            singleAction.executeJson()
+            if utils.exit_current_round == 0:
+                #print json.dumps(action, indent=4, sort_keys=True)
+                singleAction = ActionExecutor(action)
+                singleAction.executeJson()

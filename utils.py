@@ -22,6 +22,7 @@ x_offset = 0
 phone_perf = 1
 has_easy = 0
 sell_ssr = 0
+exit_current_round = 0
 
 def tap_screen(x, y):
     targetX = x * x_offset_ratio + x_offset
@@ -79,6 +80,19 @@ def image_detection():
         print("Matched!")
         return 1
     return 0
+
+def sleep_detect_pattern(presleepSeconds, detect_times, pattern):
+    sleep_wait(presleepSeconds)
+
+    for j in range(detect_times):
+        print("Detect rounds {} pattern: {}!".format(j, pattern))
+        result, centerX, centerY = patternDetect(pattern)
+        if result > 0:
+            print("Matched pattern !")
+            return result, centerX, centerY
+
+    return 0, 0, 0
+
 
 def launch_app():
     if accountVersion == 1:

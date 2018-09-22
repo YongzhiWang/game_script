@@ -1,5 +1,5 @@
 {
-    "script": "s6_hard_point_match.json",
+    "script": "s6_efficient_hard_point_match.json",
     "deviceID": "UYT0217A12005493",
     "accountVersion": 4,
     "league_team": 270,
@@ -9,6 +9,6 @@
     "run_middle":1,
     "phone_perf":1.2,
     "sell_ssr":1,
-    "count": 300
+    "count": 3
 }
 

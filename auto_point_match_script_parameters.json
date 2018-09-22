@@ -9,6 +9,8 @@
     "run_middle":1,
     "run_hard":1,
     "has_easy":0,
-    "count": 50
+    "phone_perf":1.1,
+    "sell_ssr":1,
+    "count": 300
 }
 

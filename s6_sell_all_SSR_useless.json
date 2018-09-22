@@ -78,14 +78,14 @@
   },
   {
     "action": "tap",
-    "xpos": 1000,
+    "xpos": 1100,
     "ypos": 983,
     "message": "click okay button",
     "sleepTime": 4
   },
   {
     "action": "tap",
-    "xpos": 960,
+    "xpos": 980,
     "ypos": 800,
     "message": "click okay ",
     "sleepTime": 1
@@ -148,14 +148,14 @@
   },
   {
     "action": "tap",
-    "xpos": 1000,
+    "xpos": 1100,
     "ypos": 983,
     "message": "click okay button",
     "sleepTime": 4
   },
   {
     "action": "tap",
-    "xpos": 960,
+    "xpos": 990,
     "ypos": 800,
     "message": "click okay ",
     "sleepTime": 1

@@ -1,0 +1,110 @@
+[
+  {
+    "action": "tap",
+    "xpos": 740,
+    "ypos": 710,
+    "message": "click possible drop button match",
+    "sleepTime": 5
+  },
+  {
+    "action": "tap",
+    "xpos": 1500,
+    "ypos": 500,
+    "message": "click Jing Dian match",
+    "sleepTime": 5
+  },
+  {
+    "action": "check_too_many",
+    "message": "check too many warning",
+    "sleepTime": 3
+  },
+  {
+    "action": "tap",
+    "xpos": 750,
+    "ypos": 450,
+    "message": "click Huo Dong match",
+    "sleepTime": 6
+  },
+  {
+    "action": "tap",
+    "xpos": 280,
+    "ypos": 500,
+    "message": "click last match",
+    "sleepTime": 4
+  },
+  {
+    "action": "tap",
+    "xpos": 1440,
+    "ypos": 280,
+    "message": "click very easy match",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 1500,
+    "ypos": 930,
+    "message": "click match begin button",
+    "sleepTime": 2
+  },
+  {
+    "action": "tap",
+    "xpos": 1000,
+    "ypos": 600,
+    "message": "click create global share match",
+    "sleepTime": 7
+  },
+  {
+    "action": "check_energy_v2",
+    "message": "click energy",
+    "sleepTime": 1
+  },
+  {
+    "action": "tap",
+    "xpos": 1000,
+    "ypos": 600,
+    "message": "click create global share match",
+    "sleepTime": 2
+  },
+  {
+    "action": "tap",
+    "xpos": 1600,
+    "ypos": 800,
+    "message": "click game ready button",
+    "sleepTime": 10
+  },
+  {
+    "action": "tap",
+    "xpos": 1600,
+    "ypos": 900,
+    "message": "click game ready button",
+    "sleepTime": 1
+  },
+  {
+    "action": "sleep_detect",
+    "message": "Sleep until game done",
+    "sleepTime": 68,
+    "detectTimes": 100
+  },
+  {
+    "action": "kill",
+    "message": "Kill game",
+    "sleepTime": 2
+  },
+  {
+    "action": "launch",
+    "message": "launch game",
+    "sleepTime": 1
+  },
+  {
+    "action": "sleep",
+    "message": "Sleep until game is fully launched",
+    "sleepTime": 16
+  },
+  {
+    "action": "tap",
+    "xpos": 1000,
+    "ypos": 500,
+    "message": "click launch screen",
+    "sleepTime": 5
+  }
+]

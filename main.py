@@ -56,6 +56,7 @@ if __name__=='__main__':
             for i in range(roundCount):
                 print('ROUND {} begins !!!!!!!!!!!!!!!!!!!!!!!!!!'.format(i))
                 a = datetime.datetime.now()
+                utils.exit_current_round = 0
                 actions.ScenarioExecutor(utils.script_name).execute()
                 b = datetime.datetime.now()
                 print('ROUND {} ENDS!!!!!!!!!!!!!!!!!!!!!!!!!!!.'.format(i))

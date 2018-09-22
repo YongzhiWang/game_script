@@ -141,7 +141,7 @@
   },
   {
     "action": "tap",
-    "xpos": 1000,
+    "xpos": 1100,
     "ypos": 983,
     "message": "click okay button",
     "sleepTime": 4
