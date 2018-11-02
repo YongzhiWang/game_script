@@ -1,70 +1,76 @@
 [
   {
-    "action": "tap",
-    "xpos": 1500,
-    "ypos": 500,
-    "message": "click Jing Dian match",
-    "sleepTime": 4
-  },
-  {
-    "action": "tap",
-    "xpos": 800,
-    "ypos": 450,
-    "message": "click Jing Dian match",
-    "sleepTime": 5
+    "action": "kill_detect",
+    "pattern_file": "jingdian_pattern.png",
+    "message": "click Jingdian Match",
+    "sleepTime": 0,
+    "detectTimes": 50
   },
   {
     "action": "check_too_many",
     "message": "check too many warning",
-    "sleepTime": 3
+    "sleepTime": 5
   },
   {
-    "action": "tap",
-    "xpos": 300,
-    "ypos": 500,
-    "message": "click last match",
-    "sleepTime": 4
+    "action": "kill_detect",
+    "pattern_file": "huodong_pattern.png",
+    "message": "click Huodong Match",
+    "sleepTime": 0,
+    "detectTimes": 30
   },
+
   {
-    "action": "tap",
-    "xpos": 1440,
-    "ypos": 800,
-    "message": "click very easy match",
-    "sleepTime": 1
+    "action": "kill_detect",
+    "pattern_file": "point_match.png",
+    "message": "click Point Match",
+    "sleepTime": 0,
+    "detectTimes": 40
   },
+
   {
-    "action": "tap",
-    "xpos": 1500,
-    "ypos": 930,
-    "message": "click match begin button",
-    "sleepTime": 2
+    "action": "kill_detect",
+    "pattern_file": "point_extrem_hard.png",
+    "message": "click extreme hard Match",
+    "sleepTime": 1,
+    "detectTimes": 40
   },
+
+  {
+    "action": "kill_detect",
+    "pattern_file": "begin_match.png",
+    "message": "click begin Match",
+    "sleepTime": 0,
+    "detectTimes": 40
+  },
+
   {
     "action": "check_energy_v2",
     "message": "click energy",
     "sleepTime": 1
   },
+
   {
-    "action": "tap",
-    "xpos": 1630,
-    "ypos": 500,
-    "message": "click sharing match",
-    "sleepTime": 6
+    "action": "kill_detect",
+    "pattern_file": "league_sharing_pattern.png",
+    "message": "click join single Match",
+    "sleepTime": 0,
+    "detectTimes": 40
   },
+
   {
-    "action": "tap",
-    "xpos": 1620,
-    "ypos": 800,
-    "message": "click sharing match",
-    "sleepTime": 8
+    "action": "kill_detect",
+    "pattern_file": "begin_self_sharing_pattern.png",
+    "message": "click join single Match",
+    "sleepTime": 0,
+    "detectTimes": 40
   },
 
   {
     "action": "pattern_detect",
     "pattern_file": "someone_join_pattern.png",
     "message": "Sleep until pattern done",
-    "sleepTime": 1,
-    "detectTimes": 1,
+    "sleepTime": 7,
+    "detectTimes": 10,
     "success_script":"s6_auto_run_match_button.json",
     "fallback_script": "s6_auto_run_match_fallback_button.json"
   }

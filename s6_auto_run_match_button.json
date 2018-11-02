@@ -28,9 +28,10 @@
     "sleepTime": 1
   },
   {
-    "action": "sleep_detect",
-    "message": "Sleep until game done",
-    "sleepTime": 60,
+    "action": "kill_detect",
+    "pattern_file": "winning_flag.png",
+    "message": "Match is done",
+    "sleepTime": 55,
     "detectTimes": 150
   },
   {
@@ -43,23 +44,12 @@
     "message": "launch game",
     "sleepTime": 1
   },
+
   {
-    "action": "sleep",
-    "message": "Sleep until game is fully launched",
-    "sleepTime": 17
-  },
-  {
-    "action": "tap",
-    "xpos": 1000,
-    "ypos": 500,
+    "action": "kill_detect",
+    "pattern_file": "launch_screen.png",
     "message": "click launch screen",
-    "sleepTime": 12
-  },
-  {
-    "action": "tap",
-    "xpos": 600,
-    "ypos": 475,
-    "message": "click possible drop button match",
-    "sleepTime": 6
+    "sleepTime": 8,
+    "detectTimes": 40
   }
 ]

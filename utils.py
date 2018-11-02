@@ -27,11 +27,14 @@ exit_current_round = 0
 def tap_screen(x, y):
     targetX = x * x_offset_ratio + x_offset
     targetY = y *y_offset_ratio
-    targetX = random.randint(-1, 1) + targetX
-    targetY = random.randint(-1, 1) + targetY
+    targetX = random.randint(-2, 2) + targetX
+    targetY = random.randint(-2, 2) + targetY
 
     print('adb -s {} shell input tap {} {}'.format(deviceID, targetX, targetY))
     os.system('adb -s {} shell input tap {} {}'.format(deviceID, targetX, targetY))
+
+def pure_sleep(total_time):
+    time.sleep(total_time)
 
 def sleep_wait(total_time):
    for i in range((int)(total_time * phone_perf)):
@@ -275,7 +278,7 @@ def patternDetect(target_pattern_file):
     res = cv2.matchTemplate(img, template, method)
     min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
     print("Detect {} result {}!".format(target_pattern_file, max_val))
-    if max_val > 0.955:
+    if max_val > 0.945:
         print("Matched {}!".format(target_pattern_file))
         # If the method is TM_SQDIFF or TM_SQDIFF_NORMED, take minimum
         top_left = max_loc

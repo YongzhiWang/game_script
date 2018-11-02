@@ -8,7 +8,7 @@
   },
   {
     "action": "tap",
-    "xpos": 1400,
+    "xpos": 1100,
     "ypos": 460,
     "message": "click Hard match",
     "sleepTime": 4

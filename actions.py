@@ -270,6 +270,9 @@ class CheckEnergyV2Info(BaseActionInfo):
         self.sleepTime = sleepTime
 
     def execute(self):
+        #nothing just return
+        BaseActionInfo.execute(self)
+
         notEnoughEnergy, _, _ = utils.patternDetect("no_enough_engergy_pattern.png")
         if notEnoughEnergy:
             hasAdsEnergy, _, _ = utils.patternDetect("energy_watch_ads_patten.png")
@@ -374,7 +377,7 @@ class DetectSharingAction(BaseActionInfo):
         for j in range(self.detect_times):
             print("Detect rounds {}!".format(j))
             utils.tap_screen(1760, 1030)
-            utils.sleep_wait(1)
+            utils.pure_sleep(1)
             containsPattern, _, _ = utils.patternDetect(self.pattern_file)
             if containsPattern > 0:
                 break

@@ -1,7 +1,7 @@
 {
-    "script": "s6_hard_point_match.json",
+    "script": "s6_efficient_hard_point_match.json",
     "deviceID": "d777df4e",
-    "accountVersion": 1,
+    "accountVersion": 3,
     "league_team": 270,
     "goal_keeper": 7,
     "perfect_goal_keeper": 2,

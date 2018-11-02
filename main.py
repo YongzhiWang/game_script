@@ -50,6 +50,10 @@ if __name__=='__main__':
             if 'sell_ssr' in parameters:
                 utils.sell_ssr = parameters["sell_ssr"]
 
+            if 'use_energy_ball' in parameters:
+                utils.use_energy_ball = parameters["use_energy_ball"]
+
+
 
 
             roundCount = parameters["count"]
