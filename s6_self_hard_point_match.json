@@ -8,6 +8,12 @@
   },
 
   {
+    "action": "check_too_many",
+    "message": "check too many warning",
+    "sleepTime": 3
+  },
+
+  {
     "action": "kill_detect",
     "pattern_file": "big_huodong_pattern.png",
     "message": "click Huodong Match",
@@ -39,6 +45,11 @@
     "detectTimes": 40
   },
 
+  {
+    "action": "check_energy_v2",
+    "message": "click energy",
+    "sleepTime": 1
+  },
 
   {
     "action": "kill_detect",
@@ -47,13 +58,6 @@
     "sleepTime": 0,
     "detectTimes": 40
   },
-
-  {
-    "action": "check_energy_v2",
-    "message": "click energy",
-    "sleepTime": 1
-  },
-
 
   {
     "action": "kill_detect",

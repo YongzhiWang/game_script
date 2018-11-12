@@ -2,8 +2,8 @@
     "script": "s6_run_league.json",
     "deviceID": "1a4db670ec0b7ece",
     "accountVersion": 1,
-    "league_team": 270,
-    "goal_keeper": 7,
+    "league_team": 560,
+    "goal_keeper": 13,
     "perfect_goal_keeper": 2,
     "perfect_goal_keeper_stop": 1,
     "run_middle":1,
@@ -11,5 +11,5 @@
     "x_offset_ratio":1.33,
     "y_offset_ratio":1.33,
     "phone_perf":1.5,
-    "count": 3
+    "count": 5
 }

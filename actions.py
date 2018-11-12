@@ -407,6 +407,24 @@ class DetectAndClickOrKillAction(BaseActionInfo):
             ScenarioExecutor("s6_launch_app.json").execute()
             utils.exit_current_round = 1
 
+class DetectAndClickOrKillScrollAction(BaseActionInfo):
+    def __init__(self, message, sleepTime, detect_times, pattern_file):
+        BaseActionInfo.__init__(self,message, sleepTime)
+        self.sleepTime = sleepTime
+        self.pattern_file = pattern_file
+        self.detect_times = detect_times
+
+    def execute(self):
+        # already sleep in this one.
+        BaseActionInfo.execute(self)
+
+        matched, centerX, centerY = utils.sleep_detect_scroll_pattern(0, self.detect_times, self.pattern_file)
+        if matched > 0:
+            utils.tap_screen(centerX, centerY)
+        else:
+            ScenarioExecutor("s6_launch_app.json").execute()
+            utils.exit_current_round = 1
+
 class ActionExecutor:
 
     def __init__(self, jsonObject):
@@ -459,6 +477,8 @@ class ActionExecutor:
             DetectSharingAction(self.jsonObject["message"], self.jsonObject["sleepTime"], self.jsonObject["pattern_file"], self.jsonObject["detectTimes"]).execute()
         elif actionName == "kill_detect":
             DetectAndClickOrKillAction(self.jsonObject["message"], self.jsonObject["sleepTime"], self.jsonObject["detectTimes"], self.jsonObject["pattern_file"]).execute()
+        elif actionName == "kill_detect_scroll":
+            DetectAndClickOrKillScrollAction(self.jsonObject["message"], self.jsonObject["sleepTime"], self.jsonObject["detectTimes"], self.jsonObject["pattern_file"]).execute()
         elif actionName == "script":
             print "enter script"
             ScenarioExecutor(self.jsonObject["fileName"]).execute()

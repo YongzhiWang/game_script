@@ -1,5 +1,5 @@
 {
-    "script": "s6_efficient_hard_point_match.json",
+    "script": "s6_efficient_tupo_match.json",
     "deviceID": "1a4db670ec0b7ece",
     "accountVersion": 1,
     "league_team": 270,

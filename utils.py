@@ -9,8 +9,8 @@ import random
 script_name = ""
 deviceID = ""
 accountVersion = 1
-league_team = 270
-goal_keeper = 7
+league_team = 560
+goal_keeper = 11
 perfect_goal_keeper = 10
 perfect_goal_keeper_stop = 0
 run_middle = 0
@@ -96,6 +96,19 @@ def sleep_detect_pattern(presleepSeconds, detect_times, pattern):
 
     return 0, 0, 0
 
+def sleep_detect_scroll_pattern(presleepSeconds, detect_times, pattern):
+    sleep_wait(presleepSeconds)
+
+    for j in range(detect_times):
+        print("Detect rounds {} pattern: {}!".format(j, pattern))
+        result, centerX, centerY = patternDetect(pattern)
+        if result > 0:
+            print("Matched pattern !")
+            return result, centerX, centerY
+        horizontal_swipe_screen_once()
+
+    return 0, 0, 0
+
 
 def launch_app():
     if accountVersion == 1:
@@ -134,7 +147,7 @@ def horizontal_swipe_screen():
         time.sleep(0.2)
 
 def horizontal_swipe_screen_once():
-    os.system('adb -s {} shell input swipe 400 500 0 500'.format(deviceID))
+    os.system('adb -s {} shell input swipe 600 500 0 500'.format(deviceID))
     time.sleep(1)
 
 def vertical_swipe_screen_up():
@@ -152,8 +165,15 @@ def isValidLeagueUser():
     input_image_path = screencap_file
     crop_image_path = "./crop_league.png"
     output_path = "./convert_text"
-    img = cv2.imread(input_image_path)
-    crop_img = img[640:640+57, 1290:1290+233]
+
+    img = cv2.imread(screencap_file, 0)
+
+    if x_offset_ratio > 1 and y_offset_ratio > 1:
+        print("Need to resize")
+        img = imutils.resize(img, height=(int)(1440 / x_offset_ratio))
+
+    #img = cv2.imread(input_image_path)
+    crop_img = img[640:640+57, (int)(1290 + x_offset): (int)(1290+233 + x_offset)]
     cv2.imwrite(crop_image_path,crop_img)
     call(["tesseract", crop_image_path, output_path], stdout=FNULL)
     number = 0
@@ -218,7 +238,7 @@ def isValidLeagueGoalKeeper():
         print("Need to resize")
         img = imutils.resize(img, height=(int)(1440 / x_offset_ratio))
 
-    crop_img = img[421:421+40, 563:563+120]
+    crop_img = img[421:421+40, (int) (x_offset + 563): (int)(563+120+ x_offset)]
     cv2.imwrite(crop_image_path,crop_img)
     call(["tesseract", crop_image_path, output_path], stdout=FNULL)
     number = 0
