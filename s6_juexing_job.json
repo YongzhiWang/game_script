@@ -69,14 +69,14 @@
   },
   {
     "action": "tap",
-    "xpos": 1845,
+    "xpos": 1880,
     "ypos": 75,
     "message": "click close ads button, not necessary?",
     "sleepTime": 2
   },
   {
     "action": "tap",
-    "xpos": 1845,
+    "xpos": 1880,
     "ypos": 75,
     "message": "click close ads button, not necessary?",
     "sleepTime": 2

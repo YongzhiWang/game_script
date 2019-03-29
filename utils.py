@@ -27,8 +27,8 @@ exit_current_round = 0
 def tap_screen(x, y):
     targetX = x * x_offset_ratio + x_offset
     targetY = y *y_offset_ratio
-    targetX = random.randint(-2, 2) + targetX
-    targetY = random.randint(-2, 2) + targetY
+    targetX = targetX
+    targetY = targetY
 
     print('adb -s {} shell input tap {} {}'.format(deviceID, targetX, targetY))
     os.system('adb -s {} shell input tap {} {}'.format(deviceID, targetX, targetY))
@@ -234,11 +234,11 @@ def isValidLeagueGoalKeeper():
     output_path = "./convert_text"
     img = cv2.imread(input_image_path)
 
-    if x_offset_ratio > 1 and y_offset_ratio > 1:
-        print("Need to resize")
-        img = imutils.resize(img, height=(int)(1440 / x_offset_ratio))
+    #if x_offset_ratio > 1 and y_offset_ratio > 1:
+    #    print("Need to resize")
+    #    img = imutils.resize(img, height=(int)(1440 / x_offset_ratio))
 
-    crop_img = img[421:421+40, (int) (x_offset + 563): (int)(563+120+ x_offset)]
+    crop_img = img[(int)(421 * y_offset_ratio): (int)((421+40) * y_offset_ratio), (int) ((x_offset + 563) * x_offset_ratio): (int)((563+120+ x_offset)*x_offset_ratio)]
     cv2.imwrite(crop_image_path,crop_img)
     call(["tesseract", crop_image_path, output_path], stdout=FNULL)
     number = 0

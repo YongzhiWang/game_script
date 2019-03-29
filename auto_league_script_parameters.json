@@ -1,0 +1,11 @@
+{
+    "script": "s6_run_league.json",
+    "deviceID": "d777df4e",
+    "accountVersion": 1,
+    "league_team": 610,
+    "goal_keeper": 13,
+    "perfect_goal_keeper": 2,
+    "perfect_goal_keeper_stop": 1,
+    "run_middle":1,
+    "count": 5
+}

@@ -37,13 +37,13 @@
   {
     "action": "sleep",
     "message": "Sleep until game is fully launched",
-    "sleepTime": 17
+    "sleepTime": 20
   },
   {
     "action": "tap",
     "xpos": 1000,
     "ypos": 500,
     "message": "click launch screen",
-    "sleepTime": 5
+    "sleepTime": 20
   }
 ]

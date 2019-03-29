@@ -112,14 +112,16 @@ class LeagueActionInfo(BaseActionInfo):
         for i in range(self.count):
             result = utils.isValidLeagueUser()
             if result > 0:
-                ScenarioExecutor("s6_go_into_league.json").execute()
-                goalkeeper = utils.isValidLeagueGoalKeeper()
-                if goalkeeper > 0:
-                    ScenarioExecutor("s6_go_back_league_inner.json").execute()
-                    ScenarioExecutor("s6_begin_league_match.json").execute()
-                    return
+                ScenarioExecutor("s6_begin_league_match.json").execute()
+                return
+                #ScenarioExecutor("s6_go_into_league.json").execute()
+                #goalkeeper = utils.isValidLeagueGoalKeeper()
+                #if goalkeeper > 0:
+                #    ScenarioExecutor("s6_go_back_league_inner.json").execute()
+                #    ScenarioExecutor("s6_begin_league_match.json").execute()
+                #    return
                 # goback to leage.
-                ScenarioExecutor("s6_go_back_league_inner.json").execute()
+                #ScenarioExecutor("s6_go_back_league_inner.json").execute()
             ScenarioExecutor("s6_go_back_league.json").execute()
 
         ScenarioExecutor("s6_go_back_home.json").execute()
