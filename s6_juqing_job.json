@@ -14,109 +14,71 @@
     "sleepTime": 5
   },
   {
+    "action": "swipe_end",
+    "message": "swipe to end",
+    "sleepTime": 1
+  },
+  {
     "action": "tap",
-    "xpos": 280,
+    "xpos": 1610,
     "ypos": 500,
     "message": "click last match",
-    "sleepTime": 4
-  },
-  {
-    "action": "tap",
-    "xpos": 844,
-    "ypos": 280,
-    "message": "click very easy match",
     "sleepTime": 1
   },
+
   {
-    "action": "tap",
-    "xpos": 1500,
-    "ypos": 930,
-    "message": "click match begin button",
-    "sleepTime": 2
+    "action": "kill_detect",
+    "pattern_file": "very_hard_done.png",
+    "message": "click extreme hard Match",
+    "sleepTime": 1,
+    "detectTimes": 40
   },
   {
-    "action": "tap",
-    "xpos": 400,
-    "ypos": 500,
-    "message": "click self match",
-    "sleepTime": 10
+    "action": "kill_detect",
+    "pattern_file": "begin_match.png",
+    "message": "click begin Match",
+    "sleepTime": 0,
+    "detectTimes": 40
   },
+
   {
-    "action": "tap",
-    "xpos": 800,
-    "ypos": 300,
-    "message": "click first match",
-    "sleepTime": 7
-  },
-  {
-    "action": "tap",
-    "xpos": 1600,
-    "ypos": 800,
-    "message": "click game ready button",
+    "action": "check_energy_v2",
+    "message": "click energy",
     "sleepTime": 1
   },
+
   {
-    "action": "tap",
-    "xpos": 1400,
-    "ypos": 770,
-    "message": "click watch video button",
-    "sleepTime": 20
+    "action": "kill_detect",
+    "pattern_file": "single_match_pattern.png",
+    "message": "click join single Match",
+    "sleepTime": 0,
+    "detectTimes": 40
   },
+
   {
-    "action": "tap",
-    "xpos": 1880,
-    "ypos": 75,
-    "message": "click close ads button, not necessary?",
-    "sleepTime": 2
+    "action": "kill_detect",
+    "pattern_file": "friend_selection_pattern.png",
+    "message": "click one friend",
+    "sleepTime": 3,
+    "detectTimes": 50
   },
+
   {
-    "action": "tap",
-    "xpos": 1880,
-    "ypos": 75,
-    "message": "click close ads button, not necessary?",
-    "sleepTime": 2
+    "action": "kill_detect",
+    "pattern_file": "match_begin_final.png",
+    "message": "click one friend",
+    "sleepTime": 0,
+    "detectTimes": 50
   },
+
   {
-    "action": "tap",
-    "xpos": 1740,
-    "ypos": 75,
-    "message": "click close ads button, not necessary?",
-    "sleepTime": 2
+    "action": "kill_detect",
+    "pattern_file": "winning_flag.png",
+    "message": "Match is done",
+    "sleepTime": 55,
+    "detectTimes": 150
   },
-  {
-    "action": "tap",
-    "xpos": 1740,
-    "ypos": 75,
-    "message": "click close ads button, not necessary?",
-    "sleepTime": 2
-  },
-  {
-    "action": "tap",
-    "xpos": 1000,
-    "ypos": 720,
-    "message": "click next page button",
-    "sleepTime": 1
-  },
-  {
-    "action": "tap",
-    "xpos": 1200,
-    "ypos": 300,
-    "message": "click dream ball page",
-    "sleepTime": 1
-  },
-  {
-    "action": "tap",
-    "xpos": 1000,
-    "ypos": 720,
-    "message": "click next page button",
-    "sleepTime": 3
-  },
-  {
-    "action": "sleep_detect",
-    "message": "Sleep until game done",
-    "sleepTime": 60,
-    "detectTimes": 20
-  },
+
   {
     "action": "kill",
     "message": "Kill game",
