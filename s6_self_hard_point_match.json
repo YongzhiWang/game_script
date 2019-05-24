@@ -15,7 +15,7 @@
 
   {
     "action": "kill_detect",
-    "pattern_file": "huodong_pattern.png",
+    "pattern_file": "big_huodong_pattern.png",
     "message": "click Huodong Match",
     "sleepTime": 0,
     "detectTimes": 30
@@ -53,7 +53,7 @@
 
   {
     "action": "kill_detect",
-    "pattern_file": "small_single_match_pattern.png",
+    "pattern_file": "single_match_pattern.png",
     "message": "click join single Match",
     "sleepTime": 0,
     "detectTimes": 40

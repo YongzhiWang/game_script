@@ -1,0 +1,15 @@
+{
+    "script": "s6_self_li_qianenng_match.json",
+    "deviceID": "R28M32C77CX",
+    "accountVersion": 1,
+    "league_team": 710,
+    "goal_keeper": 13,
+    "perfect_goal_keeper": 2,
+    "perfect_goal_keeper_stop": 1,
+    "run_middle":1,
+    "x_offset":170,
+    "x_offset_ratio":1.33,
+    "y_offset_ratio":1.33,
+    "phone_perf":1.5,
+    "count": 20
+}
