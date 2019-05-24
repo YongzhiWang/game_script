@@ -21,7 +21,7 @@
 
   {
     "action": "kill_detect",
-    "pattern_file": "point_match.png",
+    "pattern_file": "blackball.png",
     "message": "click Point Match",
     "sleepTime": 0,
     "detectTimes": 40
@@ -29,7 +29,7 @@
 
   {
     "action": "kill_detect",
-    "pattern_file": "point_extrem_hard.png",
+    "pattern_file": "easy_match_done.png",
     "message": "click extreme hard Match",
     "sleepTime": 1,
     "detectTimes": 40
@@ -51,7 +51,7 @@
 
   {
     "action": "kill_detect",
-    "pattern_file": "league_sharing_pattern.png",
+    "pattern_file": "start_global_sharing.png",
     "message": "click join single Match",
     "sleepTime": 0,
     "detectTimes": 40

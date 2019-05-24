@@ -1,0 +1,103 @@
+[
+  {
+    "action": "kill_detect",
+    "pattern_file": "jingdian_pattern.png",
+    "message": "click Jingdian Match",
+    "sleepTime": 0,
+    "detectTimes": 50
+  },
+
+  {
+    "action": "kill_detect",
+    "pattern_file": "huodong_pattern.png",
+    "message": "click Huodong Match",
+    "sleepTime": 0,
+    "detectTimes": 30
+  },
+
+  {
+    "action": "kill_detect_scroll",
+    "pattern_file": "blackball.png",
+    "message": "click Point Match",
+    "sleepTime": 2,
+    "detectTimes": 40
+  },
+
+  {
+    "action": "kill_detect",
+    "pattern_file": "easy_match_done.png",
+    "message": "click extreme hard Match",
+    "sleepTime": 3,
+    "detectTimes": 40
+  },
+
+  {
+    "action": "kill_detect",
+    "pattern_file": "begin_match.png",
+    "message": "click begin Match",
+    "sleepTime": 2,
+    "detectTimes": 40
+  },
+
+  {
+    "action": "check_energy_v2",
+    "message": "click energy",
+    "sleepTime": 1
+  },
+
+  {
+    "action": "kill_detect",
+    "pattern_file": "small_single_match_pattern.png",
+    "message": "click join single Match",
+    "sleepTime": 0,
+    "detectTimes": 40
+  },
+
+  {
+    "action": "kill_detect",
+    "pattern_file": "friend_selection_pattern.png",
+    "message": "click one friend",
+    "sleepTime": 3,
+    "detectTimes": 50
+  },
+
+  {
+    "action": "kill_detect",
+    "pattern_file": "match_begin_final.png",
+    "message": "click one friend",
+    "sleepTime": 0,
+    "detectTimes": 50
+  },
+  {
+    "action": "tap",
+    "xpos": 970,
+    "ypos": 770,
+    "message": "click skip boost button",
+    "sleepTime": 1
+  },
+  {
+    "action": "kill_detect",
+    "pattern_file": "winning_flag.png",
+    "message": "Match is done",
+    "sleepTime": 55,
+    "detectTimes": 150
+  },
+  {
+    "action": "kill",
+    "message": "Kill game",
+    "sleepTime": 2
+  },
+  {
+    "action": "launch",
+    "message": "launch game",
+    "sleepTime": 1
+  },
+
+  {
+    "action": "kill_detect",
+    "pattern_file": "launch_screen.png",
+    "message": "click launch screen",
+    "sleepTime": 8,
+    "detectTimes": 40
+  }
+]
