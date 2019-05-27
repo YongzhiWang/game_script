@@ -6,13 +6,11 @@
     "sleepTime": 0,
     "detectTimes": 50
   },
-
   {
     "action": "check_too_many",
     "message": "check too many warning",
-    "sleepTime": 3
+    "sleepTime": 5
   },
-
   {
     "action": "kill_detect",
     "pattern_file": "huodong_pattern.png",
@@ -53,7 +51,7 @@
 
   {
     "action": "kill_detect",
-    "pattern_file": "single_match_pattern.png",
+    "pattern_file": "join_global_sharing.png",
     "message": "click join single Match",
     "sleepTime": 0,
     "detectTimes": 40
@@ -61,25 +59,10 @@
 
   {
     "action": "kill_detect",
-    "pattern_file": "friend_selection_pattern.png",
-    "message": "click one friend",
-    "sleepTime": 3,
-    "detectTimes": 50
-  },
-
-  {
-    "action": "kill_detect",
-    "pattern_file": "match_begin_final.png",
-    "message": "click one friend",
+    "pattern_file": "join_global_sharing_button.png",
+    "message": "click join single Match",
     "sleepTime": 0,
-    "detectTimes": 50
-  },
-  {
-    "action": "tap",
-    "xpos": 970,
-    "ypos": 770,
-    "message": "click skip boost button",
-    "sleepTime": 1
+    "detectTimes": 40
   },
   {
     "action": "kill_detect",
