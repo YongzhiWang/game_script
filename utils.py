@@ -143,7 +143,7 @@ def horizontal_swipe_screen_back():
 
 def horizontal_swipe_screen():
     for i in range(0, 4):
-        os.system('adb -s {} shell input swipe 1800 500 0 500'.format(deviceID))
+        os.system('adb -s {} shell input swipe 1300 500 0 500'.format(deviceID))
         time.sleep(0.2)
 
 def horizontal_swipe_screen_once():
