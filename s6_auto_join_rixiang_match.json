@@ -1,0 +1,92 @@
+[
+  {
+    "action": "kill_detect",
+    "pattern_file": "jingdian_pattern.png",
+    "message": "click Jingdian Match",
+    "sleepTime": 0,
+    "detectTimes": 50
+  },
+  {
+    "action": "check_too_many",
+    "message": "check too many warning",
+    "sleepTime": 5
+  },
+  {
+    "action": "kill_detect",
+    "pattern_file": "big_huodong_pattern.png",
+    "message": "click Huodong Match",
+    "sleepTime": 0,
+    "detectTimes": 30
+  },
+
+  {
+    "action": "kill_detect_scroll",
+    "pattern_file": "rixiang_qianneng.png",
+    "message": "click Point Match",
+    "sleepTime": 0,
+    "detectTimes": 40
+  },
+
+  {
+    "action": "kill_detect",
+    "pattern_file": "point_extrem_hard.png",
+    "message": "click extreme hard Match",
+    "sleepTime": 1,
+    "detectTimes": 40
+  },
+
+  {
+    "action": "kill_detect",
+    "pattern_file": "begin_match_new.png",
+    "message": "click begin Match",
+    "sleepTime": 0,
+    "detectTimes": 40
+  },
+
+  {
+    "action": "check_energy_v2",
+    "message": "click energy",
+    "sleepTime": 1
+  },
+
+  {
+    "action": "kill_detect",
+    "pattern_file": "join_global_sharing.png",
+    "message": "click join single Match",
+    "sleepTime": 0,
+    "detectTimes": 40
+  },
+
+  {
+    "action": "kill_detect",
+    "pattern_file": "join_global_sharing_button.png",
+    "message": "click join single Match",
+    "sleepTime": 0,
+    "detectTimes": 40
+  },
+  {
+    "action": "kill_detect",
+    "pattern_file": "winning_flag.png",
+    "message": "Match is done",
+    "sleepTime": 70,
+    "detectTimes": 150
+  },
+  {
+    "action": "kill",
+    "message": "Kill game",
+    "sleepTime": 2
+  },
+  {
+    "action": "launch",
+    "message": "launch game",
+    "sleepTime": 1
+  },
+
+  {
+    "action": "kill_detect",
+    "pattern_file": "launch_screen.png",
+    "message": "click launch screen",
+    "sleepTime": 8,
+    "detectTimes": 40
+  }
+]

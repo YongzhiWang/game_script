@@ -13,7 +13,7 @@
   },
   {
     "action": "kill_detect",
-    "pattern_file": "huodong_pattern.png",
+    "pattern_file": "big_huodong_pattern.png",
     "message": "click Huodong Match",
     "sleepTime": 0,
     "detectTimes": 30
@@ -21,7 +21,7 @@
 
   {
     "action": "kill_detect_scroll",
-    "pattern_file": "speed_miji.png",
+    "pattern_file": "speed_qianneng.png",
     "message": "click Point Match",
     "sleepTime": 0,
     "detectTimes": 40

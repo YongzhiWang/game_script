@@ -4,6 +4,13 @@
     "xpos": 1000,
     "ypos": 1000,
     "message": "click Tong meng",
+    "sleepTime": 2
+  },
+  {
+    "action": "tap",
+    "xpos": 600,
+    "ypos": 500,
+    "message": "click Challenge",
     "sleepTime": 5
   },
   {
