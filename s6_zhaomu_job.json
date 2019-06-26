@@ -9,8 +9,13 @@
   {
     "action": "tap",
     "xpos": 600,
+<<<<<<< HEAD
+    "ypos": 400,
+    "message": "click Tong meng",
+=======
     "ypos": 500,
     "message": "click Challenge",
+>>>>>>> f88c745b30cf4eeebeb66a5c8302e7d4fb5b14cb
     "sleepTime": 5
   },
   {

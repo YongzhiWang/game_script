@@ -1,5 +1,5 @@
 {
-    "script": "s6_auto_join_black_ball_match.json",
+    "script": "s6_self_ji_qianenng_match.json",
     "deviceID": "R28M32C77CX",
     "accountVersion": 1,
     "league_team": 710,
@@ -11,5 +11,5 @@
     "x_offset_ratio":1.33,
     "y_offset_ratio":1.33,
     "phone_perf":1.5,
-    "count": 200
+    "count": 18
 }

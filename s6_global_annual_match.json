@@ -31,8 +31,8 @@
 
   {
     "action": "sleep",
-    "message": "click very easy match",
-    "sleepTime": 2
+    "message": "Sleep ",
+    "sleepTime": 3
   },
 
   {

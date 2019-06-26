@@ -22,13 +22,6 @@
   },
   {
     "action": "tap",
-    "xpos": 350,
-    "ypos": 350,
-    "message": "click player button",
-    "sleepTime": 0
-  },
-  {
-    "action": "tap",
     "xpos": 1100,
     "ypos": 350,
     "message": "click coach button",

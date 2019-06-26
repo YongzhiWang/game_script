@@ -9,15 +9,29 @@
 
   {
     "action": "kill_detect",
-    "pattern_file": "big_huodong_pattern.png",
+    "pattern_file": "huodong_pattern.png",
     "message": "click Huodong Match",
     "sleepTime": 0,
     "detectTimes": 30
   },
 
   {
+    "action": "swipe_end",
+    "pattern_file": "all_miji.png",
+    "message": "click Point Match",
+    "sleepTime": 2
+  },
+
+  {
+    "action": "swipe_end",
+    "pattern_file": "all_miji.png",
+    "message": "click Point Match",
+    "sleepTime": 2
+  },
+
+  {
     "action": "kill_detect_scroll",
-    "pattern_file": "ji_jinghua.png",
+    "pattern_file": "all_miji.png",
     "message": "click Point Match",
     "sleepTime": 2,
     "detectTimes": 40
@@ -47,7 +61,7 @@
 
   {
     "action": "kill_detect",
-    "pattern_file": "single_match_pattern.png",
+    "pattern_file": "small_single_match_pattern.png",
     "message": "click join single Match",
     "sleepTime": 0,
     "detectTimes": 40

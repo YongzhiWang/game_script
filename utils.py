@@ -147,7 +147,7 @@ def horizontal_swipe_screen():
         time.sleep(0.2)
 
 def horizontal_swipe_screen_once():
-    os.system('adb -s {} shell input swipe 600 500 0 500'.format(deviceID))
+    os.system('adb -s {} shell input swipe 900 500 0 500'.format(deviceID))
     time.sleep(1)
 
 def vertical_swipe_screen_up():

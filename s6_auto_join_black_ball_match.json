@@ -6,36 +6,39 @@
     "sleepTime": 0,
     "detectTimes": 50
   },
-
+  {
+    "action": "check_too_many",
+    "message": "check too many warning",
+    "sleepTime": 5
+  },
   {
     "action": "kill_detect",
-    "pattern_file": "big_huodong_pattern.png",
+    "pattern_file": "huodong_pattern.png",
     "message": "click Huodong Match",
     "sleepTime": 0,
     "detectTimes": 30
   },
-
   {
     "action": "kill_detect_scroll",
-    "pattern_file": "ji_jinghua.png",
+    "pattern_file": "black_ball.png",
     "message": "click Point Match",
-    "sleepTime": 2,
+    "sleepTime": 0,
     "detectTimes": 40
   },
 
   {
     "action": "kill_detect",
-    "pattern_file": "very_hard_done.png",
+    "pattern_file": "easy_match_done.png",
     "message": "click extreme hard Match",
-    "sleepTime": 3,
+    "sleepTime": 1,
     "detectTimes": 40
   },
 
   {
     "action": "kill_detect",
-    "pattern_file": "begin_match_new.png",
+    "pattern_file": "begin_match.png",
     "message": "click begin Match",
-    "sleepTime": 2,
+    "sleepTime": 0,
     "detectTimes": 40
   },
 
@@ -47,7 +50,7 @@
 
   {
     "action": "kill_detect",
-    "pattern_file": "single_match_pattern.png",
+    "pattern_file": "join_global_sharing.png",
     "message": "click join single Match",
     "sleepTime": 0,
     "detectTimes": 40
@@ -55,31 +58,16 @@
 
   {
     "action": "kill_detect",
-    "pattern_file": "friend_selection_pattern.png",
-    "message": "click one friend",
-    "sleepTime": 3,
-    "detectTimes": 50
-  },
-
-  {
-    "action": "kill_detect",
-    "pattern_file": "match_begin_final.png",
-    "message": "click one friend",
+    "pattern_file": "join_global_sharing_button.png",
+    "message": "click join single Match",
     "sleepTime": 0,
-    "detectTimes": 50
-  },
-  {
-    "action": "tap",
-    "xpos": 970,
-    "ypos": 770,
-    "message": "click skip boost button",
-    "sleepTime": 1
+    "detectTimes": 40
   },
   {
     "action": "kill_detect",
     "pattern_file": "winning_flag.png",
     "message": "Match is done",
-    "sleepTime": 55,
+    "sleepTime": 70,
     "detectTimes": 150
   },
   {

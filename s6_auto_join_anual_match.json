@@ -13,7 +13,7 @@
   },
   {
     "action": "kill_detect",
-    "pattern_file": "big_huodong_pattern.png",
+    "pattern_file": "huodong_pattern.png",
     "message": "click Huodong Match",
     "sleepTime": 0,
     "detectTimes": 30
@@ -32,10 +32,17 @@
     "message": "click very easy match",
     "sleepTime": 2
   },
+  {
+    "action": "tap",
+    "xpos": 1500,
+    "ypos": 800,
+    "message": "click very easy match",
+    "sleepTime": 2
+  },
 
   {
     "action": "kill_detect",
-    "pattern_file": "begin_match_new.png",
+    "pattern_file": "begin_match.png",
     "message": "click begin Match",
     "sleepTime": 0,
     "detectTimes": 40
