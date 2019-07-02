@@ -1,0 +1,50 @@
+{
+    "deviceID": "R28M32C77CX",
+    "accountVersion": 1,
+    "league_team": 710,
+    "goal_keeper": 13,
+    "perfect_goal_keeper": 2,
+    "perfect_goal_keeper_stop": 1,
+    "run_middle":1,
+    "x_offset":170,
+    "x_offset_ratio":1.33,
+    "y_offset_ratio":1.33,
+    "phone_perf":1.5,
+    "huodong_pattern" : "huodong_pattern.png",
+    "single_match_pattern" : "single_match_pattern.png",
+    "scenarios" : [
+        {
+            "script": "s6_self_run_match_template.json",
+            "swipe_count" : 2,
+            "target_match" : "zhensui_match.png",
+            "target_match_level" : "easy_match_done.png",
+            "begin_match" : "begin_match_new.png",
+            "count" : 3
+        },
+        {
+            "script": "s6_self_run_match_template.json",
+            "swipe_count" : 0,
+            "target_match" : "book_match.png",
+            "target_match_level" : "easy_match_done.png",
+            "begin_match" : "begin_match_new.png",
+            "count" : 1
+        },
+        {
+            "script": "s6_self_run_match_template.json",
+            "swipe_count" : 0,
+            "target_match" : "coach_match.png",
+            "target_match_level" : "easy_match_done.png",
+            "begin_match" : "begin_match_new.png",
+            "count" : 1
+        },
+        {
+            "script": "s6_self_run_match_template.json",
+            "swipe_count" : 0,
+            "target_match" : "coin_match.png",
+            "target_match_level" : "easy_match_done.png",
+            "begin_match" : "begin_match_new.png",
+            "count" : 1
+        }
+    ]
+
+}

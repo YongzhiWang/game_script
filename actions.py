@@ -2,6 +2,16 @@ import utils
 import json
 import sys
 
+action_params = {}
+
+def parseParams(param_to_parse):
+    if isinstance(param_to_parse, basestring) :
+        if param_to_parse.startswith('$') > 0:
+            #this should read a param
+            return action_params[param_to_parse[1:]]
+
+    return param_to_parse
+
 class BaseActionInfo:
     globalDelay = 0
 
@@ -84,12 +94,15 @@ class SwipeEndActionInfo(BaseActionInfo):
         BaseActionInfo.execute(self)
 
 class SwipeOnceActionInfo(BaseActionInfo):
-    def __init__(self, message, sleepTime):
+    def __init__(self, message, sleepTime, count):
         BaseActionInfo.__init__(self,message, sleepTime)
         self.sleepTime = sleepTime
+        self.count = parseParams(count)
 
     def execute(self):
-        utils.horizontal_swipe_screen_once()
+        for i in range(self.count):
+            utils.horizontal_swipe_screen_once()
+
         BaseActionInfo.execute(self)
 
 class SwipeToBottomActionInfo(BaseActionInfo):
@@ -395,7 +408,7 @@ class DetectAndClickOrKillAction(BaseActionInfo):
     def __init__(self, message, sleepTime, detect_times, pattern_file):
         BaseActionInfo.__init__(self,message, sleepTime)
         self.sleepTime = sleepTime
-        self.pattern_file = pattern_file
+        self.pattern_file = parseParams(pattern_file)
         self.detect_times = detect_times
 
     def execute(self):
@@ -413,7 +426,7 @@ class DetectAndClickOrKillScrollAction(BaseActionInfo):
     def __init__(self, message, sleepTime, detect_times, pattern_file):
         BaseActionInfo.__init__(self,message, sleepTime)
         self.sleepTime = sleepTime
-        self.pattern_file = pattern_file
+        self.pattern_file = parseParams(pattern_file)
         self.detect_times = detect_times
 
     def execute(self):
@@ -426,6 +439,31 @@ class DetectAndClickOrKillScrollAction(BaseActionInfo):
         else:
             ScenarioExecutor("s6_launch_app.json").execute()
             utils.exit_current_round = 1
+
+
+class DetectMatchLevelAction(BaseActionInfo):
+    def __init__(self, message, sleepTime, detect_times, pattern_file, xpos, ypos):
+        BaseActionInfo.__init__(self,message, sleepTime)
+        self.sleepTime = sleepTime
+        self.pattern_file = parseParams(pattern_file)
+        self.detect_times = detect_times
+        self.xpos = xpos
+        self.ypos = ypos
+
+    def execute(self):
+        # already sleep in this one.
+        BaseActionInfo.execute(self)
+
+        if not self.pattern_file:
+            utils.sleep_wait(3)
+            utils.tap_screen(self.xpos, self.ypos)
+        else:
+            matched, centerX, centerY = utils.sleep_detect_pattern(0, self.detect_times, self.pattern_file)
+            if matched > 0:
+                utils.tap_screen(centerX, centerY)
+            else:
+                ScenarioExecutor("s6_launch_app.json").execute()
+                utils.exit_current_round = 1
 
 class ActionExecutor:
 
@@ -454,7 +492,7 @@ class ActionExecutor:
         elif actionName == "sleep_detect_coach":
             SleepAndDetectCoachActionInfo(self.jsonObject["message"], self.jsonObject["sleepTime"], self.jsonObject["detectTimes"]).execute()
         elif actionName == "swipe":
-            SwipeOnceActionInfo(self.jsonObject["message"], self.jsonObject["sleepTime"]).execute()
+            SwipeOnceActionInfo(self.jsonObject["message"], self.jsonObject["sleepTime"], self.jsonObject["count"]).execute()
         elif actionName == "league":
             LeagueActionInfo(self.jsonObject["message"], self.jsonObject["sleepTime"], self.jsonObject["count"]).execute()
         elif actionName == "league_detect":
@@ -481,6 +519,10 @@ class ActionExecutor:
             DetectAndClickOrKillAction(self.jsonObject["message"], self.jsonObject["sleepTime"], self.jsonObject["detectTimes"], self.jsonObject["pattern_file"]).execute()
         elif actionName == "kill_detect_scroll":
             DetectAndClickOrKillScrollAction(self.jsonObject["message"], self.jsonObject["sleepTime"], self.jsonObject["detectTimes"], self.jsonObject["pattern_file"]).execute()
+
+        elif actionName == "detect_match_level":
+            DetectMatchLevelAction(self.jsonObject["message"], self.jsonObject["sleepTime"], self.jsonObject["detectTimes"], self.jsonObject["pattern_file"], self.jsonObject["xpos"], self.jsonObject["ypos"]).execute()
+
         elif actionName == "script":
             print "enter script"
             ScenarioExecutor(self.jsonObject["fileName"]).execute()

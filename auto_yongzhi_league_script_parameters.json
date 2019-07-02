@@ -2,7 +2,7 @@
     "script": "s6_run_league.json",
     "deviceID": "R28M32C77CX",
     "accountVersion": 1,
-    "league_team": 715,
+    "league_team": 750,
     "goal_keeper": 13,
     "perfect_goal_keeper": 2,
     "perfect_goal_keeper_stop": 1,

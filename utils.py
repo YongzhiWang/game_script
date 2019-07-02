@@ -5,6 +5,7 @@ import sys
 from subprocess import call
 import imutils
 import random
+import numpy as np
 
 script_name = ""
 deviceID = ""
@@ -296,14 +297,23 @@ def patternDetect(target_pattern_file):
     method = eval('cv2.TM_CCOEFF_NORMED')
     # Apply template Matching
     res = cv2.matchTemplate(img, template, method)
-    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
-    print("Detect {} result {}!".format(target_pattern_file, max_val))
-    if max_val > 0.945:
-        print("Matched {}!".format(target_pattern_file))
-        # If the method is TM_SQDIFF or TM_SQDIFF_NORMED, take minimum
-        top_left = max_loc
-        bottom_right = (top_left[0] + w, top_left[1] + h)
-        return 1, (top_left[0] + bottom_right[0]) / 2, (top_left[1] + bottom_right[1]) / 2
+
+    threshold = 0.945
+    loc = np.where( res >= threshold)
+    xpos = []
+    ypos = []
+    for pt in zip(*loc[::-1]):
+        print("Matched {} x: {} y:{}!".format(target_pattern_file, pt[0] + w /2, pt[1] + h /2))
+        xpos.append(pt[0] + w /2)
+        ypos.append(pt[1] + h /2)
+
+    if len(xpos) >= 1:
+        print("Total matched {}!".format(len(xpos)))
+        position = random.randint(1,len(xpos)) - 1
+        print("Random matched {}!".format(position))
+
+        return 1, xpos[position], ypos[position]
+
     return 0, 0, 0
 
 def hasEnergyBall():
