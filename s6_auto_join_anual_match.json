@@ -13,7 +13,7 @@
   },
   {
     "action": "kill_detect",
-    "pattern_file": "huodong_pattern.png",
+    "pattern_file": "big_huodong_pattern.png",
     "message": "click Huodong Match",
     "sleepTime": 0,
     "detectTimes": 30

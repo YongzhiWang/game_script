@@ -1,0 +1,104 @@
+[
+  {
+    "action": "kill_detect",
+    "pattern_file": "jingdian_pattern.png",
+    "message": "click Jingdian Match",
+    "sleepTime": 0,
+    "detectTimes": 50
+  },
+
+  {
+    "action": "check_too_many",
+    "message": "check too many warning",
+    "sleepTime": 3
+  },
+
+  {
+    "action": "kill_detect",
+    "pattern_file": "$huodong_pattern",
+    "message": "click Huodong Match",
+    "sleepTime": 0,
+    "detectTimes": 30
+  },
+
+  {
+    "action": "swipe",
+    "message": "swipe to end",
+    "count": "$swipe_count",
+    "sleepTime": 1
+  },
+
+    {
+    "action": "sleep",
+    "message": "click very easy match",
+    "sleepTime": 2
+  },
+
+  {
+    "action": "kill_detect_scroll",
+    "pattern_file": "$target_match",
+    "message": "click Point Match",
+    "sleepTime": 0,
+    "detectTimes": 40
+  },
+
+  {
+    "action": "detect_match_level",
+    "pattern_file": "$target_match_level",
+    "xpos": 1500,
+    "ypos": 560,
+    "message": "click match level",
+    "sleepTime": 0,
+    "detectTimes": 40
+  },
+
+  {
+    "action": "kill_detect",
+    "pattern_file": "$begin_match",
+    "message": "click begin Match",
+    "sleepTime": 0,
+    "detectTimes": 40
+  },
+
+  {
+    "action": "kill_detect",
+    "pattern_file": "join_global_sharing.png",
+    "message": "click join single Match",
+    "sleepTime": 0,
+    "detectTimes": 40
+  },
+
+    {
+    "action": "kill_detect",
+    "pattern_file": "join_global_sharing_button.png",
+    "message": "click join single Match",
+    "sleepTime": 0,
+    "detectTimes": 40
+  },
+
+  {
+    "action": "kill_detect",
+    "pattern_file": "winning_flag.png",
+    "message": "Match is done",
+    "sleepTime": 55,
+    "detectTimes": 150
+  },
+  {
+    "action": "kill",
+    "message": "Kill game",
+    "sleepTime": 2
+  },
+  {
+    "action": "launch",
+    "message": "launch game",
+    "sleepTime": 1
+  },
+
+  {
+    "action": "kill_detect",
+    "pattern_file": "launch_screen.png",
+    "message": "click launch screen",
+    "sleepTime": 8,
+    "detectTimes": 40
+  }
+]
