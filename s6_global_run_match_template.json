@@ -100,5 +100,19 @@
     "message": "click launch screen",
     "sleepTime": 8,
     "detectTimes": 40
+  },
+
+  {
+    "action": "sleep",
+    "message": "click very easy match",
+    "sleepTime": 2
+  },
+
+  {
+    "action": "tap",
+    "xpos": 600,
+    "ypos": 475,
+    "message": "click possible drop button match",
+    "sleepTime": 3
   }
 ]

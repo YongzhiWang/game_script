@@ -9,18 +9,17 @@
     "x_offset":170,
     "x_offset_ratio":1.33,
     "y_offset_ratio":1.33,
-    "sell_ssr":1,
     "phone_perf":1.5,
     "huodong_pattern" : "big_huodong_pattern.png",
     "single_match_pattern" : "small_single_match_pattern.png",
     "scenarios" : [
         {
-            "script": "s6_global_run_match_template.json",
+            "script": "s6_self_run_match_template.json",
             "swipe_count" : 0,
             "target_match" : "annual_match.png",
             "target_match_level" : "very_hard_done.png",
             "begin_match" : "begin_match.png",
-            "count" : 300
+            "count" : 10
         }
     ]
 

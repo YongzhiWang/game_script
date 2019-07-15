@@ -203,7 +203,7 @@ class CheckMatchInfo(BaseActionInfo):
             easymatch, xpox, ypos = utils.patternDetect("match_easy.png")
             print("Easy match result {}  {}   {}!".format(easymatch, xpox, ypos))
             if easymatch > 0:
-                utils.tap_screen(xpox, ypos)
+                utils.accurate_tap_screen(xpox, ypos)
                 utils.sleep_wait(1)
                 ScenarioExecutor("s6_partial_match.json").execute()
                 return
@@ -211,7 +211,7 @@ class CheckMatchInfo(BaseActionInfo):
                 middleMatch, xpox, ypos =  utils.patternDetect("match_middle.png")
                 print("Middle match result {}  {}   {}!".format(middleMatch, xpox, ypos))
                 if middleMatch > 0:
-                    utils.tap_screen(xpox, ypos)
+                    utils.accurate_tap_screen(xpox, ypos)
                     utils.sleep_wait(1)
                     ScenarioExecutor("s6_partial_match.json").execute()
                     return
@@ -219,7 +219,7 @@ class CheckMatchInfo(BaseActionInfo):
                     hard_match, xpox, ypos =  utils.patternDetect("match_hard.png")
                     print("Hard match result {}  {}   {}!".format(hard_match, xpox, ypos))
                     if hard_match > 0:
-                        utils.tap_screen(xpox, ypos)
+                        utils.accurate_tap_screen(xpox, ypos)
                         utils.sleep_wait(1)
                         ScenarioExecutor("s6_partial_match.json").execute()
                         return
@@ -241,7 +241,7 @@ class CheckCategoryInfo(BaseActionInfo):
                 all_match, xpox, ypos = utils.patternDetect("all_match_left_pattern.png")
                 print("Find all_match match result {}  {}   {}!".format(all_match, xpox, ypos))
                 if all_match > 0:
-                    utils.tap_screen(xpox, ypos)
+                    utils.accurate_tap_screen(xpox, ypos)
                     utils.sleep_wait(1)
                     ScenarioExecutor("s6_check_all_match_run_easy.json").execute()
                     # execute the script
@@ -259,7 +259,7 @@ class CheckCategoryInfo(BaseActionInfo):
             middle_match, xpox, ypos = utils.patternDetect("only_easy_done_pattern.png")
             print("Find middle match result {}  {}   {}!".format(middle_match, xpox, ypos))
             if middle_match > 0:
-                utils.tap_screen(xpox, ypos)
+                utils.accurate_tap_screen(xpox, ypos)
                 utils.sleep_wait(1)
                 ScenarioExecutor("s6_check_all_match_run_others.json").execute()
                 return
@@ -267,7 +267,7 @@ class CheckCategoryInfo(BaseActionInfo):
                 hard_match, xpox, ypos = utils.patternDetect("only_hard_left_pattern.png")
                 print("Find hard match result {}  {}   {}!".format(hard_match, xpox, ypos))
                 if hard_match > 0:
-                    utils.tap_screen(xpox, ypos)
+                    utils.accurate_tap_screen(xpox, ypos)
                     utils.sleep_wait(1)
                     ScenarioExecutor("s6_check_all_match_run_others.json").execute()
                     return
@@ -417,7 +417,7 @@ class DetectAndClickOrKillAction(BaseActionInfo):
 
         matched, centerX, centerY = utils.sleep_detect_pattern(0, self.detect_times, self.pattern_file)
         if matched > 0:
-            utils.tap_screen(centerX, centerY)
+            utils.accurate_tap_screen(centerX, centerY)
         else:
             ScenarioExecutor("s6_launch_app.json").execute()
             utils.exit_current_round = 1

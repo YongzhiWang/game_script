@@ -25,6 +25,17 @@ has_easy = 0
 sell_ssr = 0
 exit_current_round = 0
 
+
+def accurate_tap_screen(x, y):
+    targetX = x * x_offset_ratio
+    targetY = y *y_offset_ratio
+    targetX = targetX
+    targetY = targetY
+
+    print('adb -s {} shell input tap {} {}'.format(deviceID, targetX, targetY))
+    os.system('adb -s {} shell input tap {} {}'.format(deviceID, targetX, targetY))
+
+
 def tap_screen(x, y):
     targetX = x * x_offset_ratio + x_offset
     targetY = y *y_offset_ratio
@@ -303,9 +314,13 @@ def patternDetect(target_pattern_file):
     xpos = []
     ypos = []
     for pt in zip(*loc[::-1]):
+        #cv2.rectangle(img, pt, (pt[0] + w, pt[1] + h), (0,0,255), 2)
         print("Matched {} x: {} y:{}!".format(target_pattern_file, pt[0] + w /2, pt[1] + h /2))
         xpos.append(pt[0] + w /2)
         ypos.append(pt[1] + h /2)
+
+        #cv2.rectangle(img, pt, (pt[0] + w /2, pt[1] + h /2), (0,255,255), 2)
+    #cv2.imwrite('res.png',img)
 
     if len(xpos) >= 1:
         print("Total matched {}!".format(len(xpos)))

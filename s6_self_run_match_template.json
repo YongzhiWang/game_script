@@ -25,7 +25,7 @@
     "action": "swipe",
     "message": "swipe to end",
     "count": "$swipe_count",
-    "sleepTime": 1
+    "sleepTime": 2
   },
 
   {
