@@ -10,7 +10,7 @@
     "x_offset_ratio":1.33,
     "y_offset_ratio":1.33,
     "phone_perf":1.5,
-    "huodong_pattern" : "big_huodong_pattern.png",
+    "huodong_pattern" : "huodong_pattern.png",
     "single_match_pattern" : "single_match_pattern.png",
     "scenarios" : [
         {

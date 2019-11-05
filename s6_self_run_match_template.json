@@ -105,7 +105,15 @@
   {
     "action": "launch",
     "message": "launch game",
-    "sleepTime": 1
+    "sleepTime": 10
+  },
+
+    {
+    "action": "tap",
+    "xpos": 970,
+    "ypos": 720,
+    "message": "click possible drop button match",
+    "sleepTime": 3
   },
 
   {
@@ -114,5 +122,11 @@
     "message": "click launch screen",
     "sleepTime": 8,
     "detectTimes": 40
+  },
+
+    {
+    "action": "sleep",
+    "message": "click very easy match",
+    "sleepTime": 2
   }
 ]

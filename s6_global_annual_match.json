@@ -38,7 +38,7 @@
   {
     "action": "tap",
     "xpos": 1500,
-    "ypos": 560,
+    "ypos": 800,
     "message": "click very easy match",
     "sleepTime": 2
   },

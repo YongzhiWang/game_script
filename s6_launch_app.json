@@ -16,6 +16,14 @@
   },
   {
     "action": "tap",
+    "xpos": 970,
+    "ypos": 720,
+    "message": "click bug button match",
+    "sleepTime": 3
+  },
+  
+  {
+    "action": "tap",
     "xpos": 1000,
     "ypos": 500,
     "message": "click launch screen",

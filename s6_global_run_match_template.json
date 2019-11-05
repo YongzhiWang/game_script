@@ -91,7 +91,7 @@
   {
     "action": "launch",
     "message": "launch game",
-    "sleepTime": 1
+    "sleepTime": 5
   },
 
   {
